@@ -65,16 +65,6 @@ como R₂CuLi, `{ incognita: true }`, `{ flecha: '…' }` y `'+'`). Con
 `{ plegada: true, items: [...] }` quedan ocultas tras «Ver estructura». Úsalas siempre que el
 ejercicio no evalúe la nomenclatura. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
 
-### Contenido privado cifrado
-
-`content/qo1/privado/` guarda contenido que no debe ser público (las PEC reales del curso, ya entregadas) **cifrado** con AES-256-GCM. Se desbloquea desde *Ajustes → Códigos*. Para cifrar un archivo nuevo:
-
-```sh
-PK_CODIGO="el código" node tools/cifrar-privado.mjs pec.json content/qo1/privado/pec.enc.json
-```
-
-y añadirlo a `content/qo1/privado/indice.json`. El archivo en claro **nunca** se sube al repositorio. Con `PK_CODIGO` definido, `npm test` también valida el contenido descifrado.
-
 ## Publicar en GitHub Pages
 
 1. El repositorio tiene que ser **público** (o tu cuenta, GitHub Pro).
