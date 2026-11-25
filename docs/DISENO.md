@@ -153,7 +153,7 @@ Cada tipo se corresponde con un tipo de pregunta de examen.
 
 ### 4.1 Construir 🧱 — *«Formular o nombrar»*
 El juego da un **nombre IUPAC** o una descripción, y tú **dibujas la molécula** en el editor. También existe la variante inversa: el juego muestra una molécula y eliges o escribes su nombre.
-- **Variante «caza de isómeros»:** encuentra los N isómeros de una fórmula, por ejemplo C₄H₉Br (4), C₅H₁₁Br (8) o C₄H₁₀O (7). Un marcador muestra cuántos llevas.
+- **Variante «caza de isómeros»:** encuentra los N isómeros de una fórmula, por ejemplo C₄H₉Br (4), C₄H₈Cl₂ (9) o C₄H₁₀O (7). Un marcador muestra cuántos llevas.
 - **Validación:** se comparan las estructuras con SMILES canónico (RDKit). Si el puzle pide estereoquímica, se compara también.
 
 ### 4.2 Estereo 🪞 — *«Determinar la configuración absoluta»*
@@ -226,6 +226,13 @@ El mecanismo se valida contra una secuencia de pasos elementales definida en el 
 | *(ampliable)* | | | |
 
 Además hay **jefes de construcción**: moléculas grandes que se dibujan y analizan, como colesterol (8 centros quirales), morfina, testosterona o taxol. La tarea es construirlas, contar sus centros quirales, asignar R/S y encontrar la silla más estable de los anillos.
+
+### Pruebas de evaluación (en la bitácora) ✅
+- Pestaña **«Pruebas de evaluación»** dentro de la bitácora, con un **simulacro por PEC**.
+- Cada simulacro tiene las **mismas clases de preguntas** que la PEC del curso, cada una con **varias versiones con otras moléculas**. En cada intento se elige una versión al azar de cada pregunta y se barajan.
+- Sin pistas; nota sobre 10 (pregunta completa a la primera, la mitad con un fallo), desglose por tema y enlaces a las secciones que conviene repasar. Se guarda la mejor nota.
+- Por la misma razón, los niveles de la historia usan **moléculas análogas** a las de las PEC del curso en vigor: el repositorio es público y no debe contener las PEC resueltas.
+- *Simulacro PEC-1*: disponible (Fase 3). *Simulacro PEC-2*: cuando estén los Mundos 7-11.
 
 ### Modo Examen
 - Genera **5 preguntas** al azar (una por cada tipo de pregunta de examen), ponderadas según las horas de la guía.

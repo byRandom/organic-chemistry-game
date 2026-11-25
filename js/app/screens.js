@@ -14,6 +14,7 @@ import { formula, prettyFormula, toSmiles } from '../chem/mol.js';
 import { canonical } from '../chem/rdkit.js';
 import { go } from './router.js';
 import { installState, promptInstall } from './pwa.js';
+import { pestanasBitacora } from './screens-pruebas.js';
 
 const estrellas = (n, total = 3) => '★'.repeat(n) + '☆'.repeat(Math.max(0, total - n));
 
@@ -183,6 +184,7 @@ export async function pantallaBitacora(root) {
   const fichas = await todasLasFichas();
   const main = h('main.page');
   root.append(topbar('Bitácora', '#/'), main);
+  main.appendChild(pestanasBitacora('fichas'));
   main.appendChild(h('p.lead', 'Todo lo que K.E.K.U.L.É. ha recordado gracias a ti. Es tu resumen de estudio.'));
   let mundoActual = null;
   for (const f of fichas) {

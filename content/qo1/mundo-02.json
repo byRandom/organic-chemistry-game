@@ -146,16 +146,16 @@
           "pistaFallo": "Los sustituyentes se citan por orden alfabético, no por su número."
         },
         {
-          "texto": "Este compuesto aparece en la PEC-1. ¿Cómo se llama?",
-          "smiles": "CCC(C)C(Cl)(CC)CC",
+          "texto": "¿Cómo se llama?",
+          "smiles": "CC(C)C(Cl)(CC)CC",
           "opciones": [
-            "4-Cloro-4-etil-3-metilhexano",
-            "3-Cloro-3-etil-4-metilhexano",
-            "3-Etil-3-cloro-4-metilhexano",
-            "2-Etil-2-cloro-3-metilpentano"
+            "2-Metil-3-cloro-3-etilpentano",
+            "3-Cloro-3-etil-2-metilpentano",
+            "3-Etil-3-cloro-2-metilpentano",
+            "3-Cloro-3-isopropilpentano"
           ],
           "correcta": 1,
-          "explicacion": "Cadena de 6 C. Desde un extremo los localizadores son {3,4,4}; desde el otro, **{3,3,4}**, que son más bajos. Orden alfabético: cloro, etil, metil → **3-cloro-3-etil-4-metilhexano**."
+          "explicacion": "Cadena de 5 C (cualquiera de los dos etilos sirve). Localizadores más bajos: **{2,3,3}**. Orden alfabético: cloro, etil, metil → **3-cloro-3-etil-2-metilpentano**."
         },
         {
           "texto": "¿Cómo se llama?",
@@ -207,37 +207,38 @@
     {
       "id": "m2-05",
       "tipo": "isomeros",
-      "titulo": "Ocho bromuros (PEC-1)",
+      "titulo": "Nueve diclorobutanos",
       "dialogo": [
         {
-          "texto": "Esto sale tal cual en la PEC-1: dibujar **todos** los isómeros constitucionales de {C5H11Br}. Yo cuento ocho. A ver si tú también."
+          "texto": "Un tanque contiene una mezcla de todos los isómeros de {C4H8Cl2}. Yo cuento nueve. ¿Los encuentras todos?"
         }
       ],
-      "enunciado": "Encuentra los **ocho** isómeros constitucionales de {C5H11Br}.",
+      "enunciado": "Encuentra los **nueve** isómeros constitucionales de {C4H8Cl2}.",
       "editor": {
         "elementos": [
           "C",
-          "Br"
+          "Cl"
         ],
         "anillos": false
       },
       "objetivo": {
-        "formula": "C5H11Br",
-        "total": 8,
+        "formula": "C4H8Cl2",
+        "total": 9,
         "nombres": {
-          "BrCCCCC": "1-bromopentano",
-          "CC(Br)CCC": "2-bromopentano",
-          "CCC(Br)CC": "3-bromopentano",
-          "BrCC(C)CC": "1-bromo-2-metilbutano",
-          "CC(C)(Br)CC": "2-bromo-2-metilbutano",
-          "CC(Br)C(C)C": "2-bromo-3-metilbutano",
-          "BrCCC(C)C": "1-bromo-3-metilbutano",
-          "BrCC(C)(C)C": "1-bromo-2,2-dimetilpropano"
+          "CCCC(Cl)Cl": "1,1-diclorobutano",
+          "CCC(Cl)CCl": "1,2-diclorobutano",
+          "CC(Cl)CCCl": "1,3-diclorobutano",
+          "ClCCCCCl": "1,4-diclorobutano",
+          "CCC(C)(Cl)Cl": "2,2-diclorobutano",
+          "CC(Cl)C(C)Cl": "2,3-diclorobutano",
+          "CC(C)C(Cl)Cl": "1,1-dicloro-2-metilpropano",
+          "CC(C)(Cl)CCl": "1,2-dicloro-2-metilpropano",
+          "CC(CCl)CCl": "1,3-dicloro-2-metilpropano"
         }
       },
       "pistas": [
-        "Parte de los tres esqueletos de {C5H12} (pentano, 2-metilbutano, 2,2-dimetilpropano) y coloca el Br en cada posición **distinta**.",
-        "Pentano: 3 posiciones distintas. 2-Metilbutano: 4. 2,2-Dimetilpropano: 1."
+        "Parte de los dos esqueletos de C₄ (butano e isobutano). Coloca el primer Cl y después recorre todas las posiciones posibles del segundo, también en el mismo carbono.",
+        "Butano: 6 isómeros. Isobutano: 3."
       ]
     },
     {
@@ -324,20 +325,20 @@
     {
       "id": "m2-09",
       "tipo": "newman",
-      "titulo": "1-Bromopropano (PEC-1)",
+      "titulo": "1,2-Dicloroetano",
       "dialogo": [
         {
-          "texto": "Pregunta de la PEC-1: Newman de **mayor energía** del 1-bromopropano sobre el enlace C1–C2. Sin diagrama: razónalo."
+          "texto": "El 1,2-dicloroetano es un disolvente industrial. Sin diagrama: razona cuál es su conformación de **mayor energía**."
         }
       ],
-      "enunciado": "1-Bromopropano visto sobre el enlace C1–C2 (delante C1, detrás C2). Busca la conformación de **mayor energía**.",
+      "enunciado": "1,2-Dicloroetano visto sobre el enlace C1–C2. Busca la conformación de **mayor energía**.",
       "delante": [
-        "Br",
+        "Cl",
         "H",
         "H"
       ],
       "detras": [
-        "CH₃",
+        "Cl",
         "H",
         "H"
       ],
@@ -350,15 +351,15 @@
       "pistas": [
         "La peor situación: los dos grupos más grandes, uno encima del otro."
       ],
-      "exito": "Br eclipsado con CH₃: la conformación sinperiplanar. La de menor energía es la **anti** (Br y CH₃ a 180°)."
+      "exito": "Los dos Cl eclipsados (sinperiplanar). La de menor energía es la **anti** (Cl a 180°)."
     },
     {
       "id": "m2-10",
       "tipo": "newman",
-      "titulo": "3-Metilpentano (PEC-1)",
-      "enunciado": "3-Metilpentano sobre el enlace C3–C4 (delante C3, detrás C4). Busca la conformación de **menor energía**.",
+      "titulo": "2-Metilbutano",
+      "enunciado": "2-Metilbutano sobre el enlace C2–C3 (delante C2, detrás C3). Busca la conformación de **menor energía**.",
       "delante": [
-        "CH₂CH₃",
+        "CH₃",
         "CH₃",
         "H"
       ],
@@ -374,9 +375,9 @@
         "tipo": "min"
       },
       "pistas": [
-        "El CH₃ trasero siempre quedará gauche a dos grupos y anti al tercero. ¿A cuál te conviene que sea anti?"
+        "El CH₃ trasero quedará gauche a dos grupos y anti al tercero. ¿A cuál te conviene que sea anti?"
       ],
-      "exito": "El CH₃ trasero **anti al etilo** (el grupo más voluminoso) y gauche al metilo y al H."
+      "exito": "El CH₃ trasero **anti a un metilo** y gauche al otro metilo y al H: una sola interacción gauche CH₃/CH₃ (0,9 kcal/mol)."
     },
     {
       "id": "m2-11",
@@ -486,9 +487,9 @@
     {
       "id": "m2-13",
       "tipo": "construir",
-      "titulo": "PEC-1: el 3-etilhexano",
-      "enunciado": "Dibuja el producto mayoritario de la reacción de la PEC-1: **3-etilhexano** + Br₂, hν.",
-      "inicial": "CCCC(CC)CC",
+      "titulo": "Bromación del 3-metilhexano",
+      "enunciado": "Dibuja el producto mayoritario de **3-metilhexano** + Br₂, hν.",
+      "inicial": "CCCC(C)CC",
       "editor": {
         "elementos": [
           "C",
@@ -498,27 +499,27 @@
       },
       "objetivo": {
         "smiles": [
-          "CCCC(Br)(CC)CC"
+          "CCCC(C)(Br)CC"
         ]
       },
       "pistas": [
         "Busca el único H terciario."
       ],
-      "exito": "**3-Bromo-3-etilhexano**."
+      "exito": "**3-Bromo-3-metilhexano**: el único H terciario."
     },
     {
       "id": "m2-14",
       "tipo": "construir",
-      "titulo": "Corey-House (PEC-1)",
+      "titulo": "Corey-House",
       "dialogo": [
         {
-          "texto": "Necesito **2,2-dimetilpentano** para un aditivo. Tengo **2-cloro-2-metilpropano**, que con Li y CuI se convierte en el cuprato **[(CH₃)₃C]₂CuLi**."
+          "texto": "Necesito **2,2-dimetilhexano** para un aditivo. Tengo **2-cloro-2-metilpropano**, que con Li y CuI se convierte en el cuprato **[(CH₃)₃C]₂CuLi**."
         },
         {
-          "texto": "¿Qué **halogenuro de alquilo** debo añadir al cuprato para obtener el 2,2-dimetilpentano?"
+          "texto": "¿Qué **halogenuro de alquilo** debo añadir al cuprato para obtener el 2,2-dimetilhexano?"
         }
       ],
-      "enunciado": "Dibuja el halogenuro de alquilo que, con di-terc-butilcuprato de litio, da **2,2-dimetilpentano**.",
+      "enunciado": "Dibuja el halogenuro de alquilo que, con di-terc-butilcuprato de litio, da **2,2-dimetilhexano**.",
       "editor": {
         "elementos": [
           "C",
@@ -530,22 +531,21 @@
       },
       "objetivo": {
         "smiles": [
-          "BrCCC",
-          "ClCCC",
-          "ICCC"
+          "BrCCCC",
+          "ClCCCC",
+          "ICCCC"
         ],
         "errores": {
-          "CC(C)Br": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**.",
-          "CC(C)Cl": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**.",
-          "CC(C)I": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**."
+          "CCC(C)Br": "Ese da un esqueleto ramificado (2,2,3-trimetilpentano), y además en Corey-House el halogenuro debe ser **primario**.",
+          "CC(C)CBr": "Ese da 2,2,4-trimetilpentano, no el 2,2-dimetilhexano."
         }
       },
       "pistas": [
-        "2,2-Dimetilpentano = (CH₃)₃C– unido a una cadena de 3 carbonos.",
+        "2,2-Dimetilhexano = (CH₃)₃C– unido a una cadena lineal de 4 carbonos.",
         "El halogenuro (R'–X) tiene que ser **primario**."
       ],
       "ficha": "obtencion-alcanos",
-      "exito": "Un **halogenuro de propilo** (1-bromopropano, por ejemplo): (CH₃)₃C–CH₂CH₂CH₃."
+      "exito": "Un **halogenuro de butilo** (1-bromobutano, por ejemplo): (CH₃)₃C–CH₂CH₂CH₂CH₃."
     },
     {
       "id": "m2-15",
@@ -554,16 +554,16 @@
       "enunciado": "Métodos de obtención de alcanos.",
       "preguntas": [
         {
-          "texto": "1-Cloro-2-metilpropano + Na (síntesis de Wurtz, PEC-1). ¿Qué se obtiene?",
-          "smiles": "ClCC(C)C",
+          "texto": "1-Bromo-3-metilbutano + Na (síntesis de Wurtz). ¿Qué se obtiene?",
+          "smiles": "BrCCC(C)C",
           "opciones": [
-            "2,5-Dimetilhexano",
-            "2-Metilpropano",
-            "2,2-Dimetiloctano",
-            "Octano"
+            "2,7-Dimetiloctano",
+            "3-Metilbutano",
+            "2,2-Dimetilhexano",
+            "Decano"
           ],
           "correcta": 0,
-          "explicacion": "Wurtz une **dos** restos iguales: (CH₃)₂CHCH₂–CH₂CH(CH₃)₂ = **2,5-dimetilhexano**."
+          "explicacion": "Wurtz une **dos** restos iguales: (CH₃)₂CHCH₂CH₂–CH₂CH₂CH(CH₃)₂ = **2,7-dimetiloctano**."
         },
         {
           "texto": "¿Por qué no se debe usar Wurtz con dos halogenuros **distintos**?",
@@ -577,19 +577,19 @@
           "explicacion": "R–X + R'–X + Na da R–R, R'–R' y R–R': una **mezcla** difícil de separar."
         },
         {
-          "texto": "2-Cloro-3-metilbutano + Zn/HCl (PEC-1). ¿Qué se obtiene?",
-          "smiles": "CC(Cl)C(C)C",
+          "texto": "2-Cloro-2-metilpentano + Zn/HCl. ¿Qué se obtiene?",
+          "smiles": "CCCC(C)(C)Cl",
           "opciones": [
-            "2-Metilbutano",
-            "2-Metilbut-2-eno",
-            "3-Metilbutan-2-ol",
-            "2,3-Dimetilbutano"
+            "2-Metilpentano",
+            "2-Metil-2-penteno",
+            "2-Metil-2-pentanol",
+            "2,2-Dimetilpentano"
           ],
           "correcta": 0,
-          "explicacion": "Zn/HCl **reduce** el halogenuro: el Cl se sustituye por H → **2-metilbutano**."
+          "explicacion": "Zn/HCl **reduce** el halogenuro: el Cl se sustituye por H → **2-metilpentano**."
         },
         {
-          "texto": "Isobutano a partir de bromuro de terc-butilo (PEC-1). ¿Qué secuencia funciona?",
+          "texto": "Butano a partir de 2-bromobutano. ¿Qué secuencia funciona?",
           "opciones": [
             "1) Mg, éter; 2) H₂O",
             "1) Na; 2) H₂O",
@@ -597,7 +597,7 @@
             "Br₂, hν"
           ],
           "correcta": 0,
-          "explicacion": "Se forma el **reactivo de Grignard** (CH₃)₃C–MgBr y el agua lo protona: **(CH₃)₃C–H**."
+          "explicacion": "Se forma el **reactivo de Grignard** CH₃CH₂CH(MgBr)CH₃ y el agua lo protona: **butano**."
         }
       ]
     },

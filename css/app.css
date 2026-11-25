@@ -445,3 +445,19 @@ a.lvl:hover { background: var(--card2); }
 .scheme.scroll > * { flex-shrink: 0; }
 .scheme.scroll .mol-card .mol-view { max-height: 120px; }
 .puzzle { padding-bottom: 1.2rem; }
+
+/* ---------- bitácora: pestañas y simulacros ---------- */
+.tabs { display: flex; gap: .4rem; margin-bottom: 1rem; overflow-x: auto; }
+.tab { flex: 1 0 auto; text-align: center; padding: .6rem .9rem; border-radius: 12px; background: var(--card); border: 1px solid var(--line); color: var(--text); text-decoration: none; font-weight: 700; }
+.tab[aria-current='page'] { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #06101f; border-color: transparent; }
+main.page > .sec { margin-bottom: .6rem; }
+.exam-list { margin: .5rem 0; padding-left: 1.2rem; color: var(--muted); }
+.exam-head { display: flex; flex-direction: column; gap: .4rem; }
+.exam-progress { display: flex; gap: .3rem; flex-wrap: wrap; }
+.exam-title { font-size: .85rem; color: var(--muted); font-weight: 700; }
+.exam-nota { font-size: 3.4rem; font-weight: 900; text-align: center; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.exam-table { width: 100%; border-collapse: collapse; margin: .6rem 0; font-size: .92rem; }
+.exam-table th, .exam-table td { text-align: left; padding: .4rem .3rem; border-bottom: 1px solid var(--line); }
+.exam-table td:nth-child(2), .exam-table td:nth-child(3), .exam-table th:nth-child(2), .exam-table th:nth-child(3) { text-align: center; white-space: nowrap; }
+.exam-repaso { text-align: left; }
+.exam-repaso h3 { margin: .6rem 0 .3rem; }

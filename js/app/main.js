@@ -7,6 +7,7 @@ import {
   pantallaInicio, pantallaMapa, pantallaMundo, pantallaNivel,
   pantallaBitacora, pantallaLaboratorio, pantallaAjustes,
 } from './screens.js';
+import { pantallaPruebas, pantallaPrueba } from './screens-pruebas.js';
 
 initPWA();
 
@@ -22,6 +23,8 @@ route('/nivel/:mundo/:nivel', pantallaNivel);
 route('/bitacora', pantallaBitacora);
 route('/laboratorio', pantallaLaboratorio);
 route('/ajustes', pantallaAjustes);
+route('/pruebas', pantallaPruebas);
+route('/prueba/:id', pantallaPrueba);
 
 const app = document.getElementById('app');
 const splash = document.getElementById('splash');

@@ -1,12 +1,20 @@
 {
   "descripcion": "En la enfermería empiezan las **reacciones** de verdad. Los halogenuros de alquilo intercambian su halógeno por otros grupos: por un camino (**SN2**) o por otro (**SN1**). Aprenderás a predecir cuál, con qué estereoquímica y cuándo el carbocatión se reorganiza.",
   "intro": [
-    { "texto": "La **enfermería**. Aquí el sintetizador fabrica medicamentos cambiando unos grupos por otros: la **sustitución nucleófila**." },
-    { "texto": "A partir de ahora usarás **reactivos**. Cada uno que domines pasa a tu caja de herramientas. Cuidado: el mismo reactivo puede hacer cosas muy distintas según la molécula." }
+    {
+      "texto": "La **enfermería**. Aquí el sintetizador fabrica medicamentos cambiando unos grupos por otros: la **sustitución nucleófila**."
+    },
+    {
+      "texto": "A partir de ahora usarás **reactivos**. Cada uno que domines pasa a tu caja de herramientas. Cuidado: el mismo reactivo puede hacer cosas muy distintas según la molécula."
+    }
   ],
   "outro": [
-    { "texto": "Enfermería **operativa**. Ya distingo una SN2 de una SN1, sé cuándo se invierte la configuración y cuándo se racemiza, y por qué los carbocationes se transponen." },
-    { "texto": "Siguiente: la **planta de polímeros**. Allí lo que queremos es lo contrario: que los halogenuros **pierdan** HX y formen dobles enlaces." }
+    {
+      "texto": "Enfermería **operativa**. Ya distingo una SN2 de una SN1, sé cuándo se invierte la configuración y cuándo se racemiza, y por qué los carbocationes se transponen."
+    },
+    {
+      "texto": "Siguiente: la **planta de polímeros**. Allí lo que queremos es lo contrario: que los halogenuros **pierdan** HX y formen dobles enlaces."
+    }
   ],
   "fichas": {
     "halogenuros": {
@@ -45,22 +53,48 @@
       "id": "m5-01",
       "tipo": "test",
       "titulo": "El punto débil",
-      "dialogo": [{ "texto": "Antes de tocar el sintetizador, necesito saber dónde atacar. Mira el enlace carbono–halógeno." }],
+      "dialogo": [
+        {
+          "texto": "Antes de tocar el sintetizador, necesito saber dónde atacar. Mira el enlace carbono–halógeno."
+        }
+      ],
       "enunciado": "Halogenuros de alquilo: estructura y clasificación.",
       "preguntas": [
         {
-          "texto": "En el bromoetano, ¿qué átomo es **electrófilo** (atrae a los nucleófilos)?", "smiles": "CCBr", "resaltar": [1],
-          "opciones": ["El carbono unido al Br (δ+)", "El bromo (δ−)", "El carbono del CH₃"], "correcta": 0,
+          "texto": "En el bromoetano, ¿qué átomo es **electrófilo** (atrae a los nucleófilos)?",
+          "smiles": "CCBr",
+          "resaltar": [
+            1
+          ],
+          "opciones": [
+            "El carbono unido al Br (δ+)",
+            "El bromo (δ−)",
+            "El carbono del CH₃"
+          ],
+          "correcta": 0,
           "explicacion": "El Br, más electronegativo, deja al carbono con carga parcial **δ+**: ese es el carbono que ataca el nucleófilo."
         },
         {
-          "texto": "¿Qué tipo de halogenuro es?", "smiles": "CC(C)(C)Br",
-          "opciones": ["Primario", "Secundario", "Terciario", "De metilo"], "correcta": 2,
+          "texto": "¿Qué tipo de halogenuro es?",
+          "smiles": "CC(C)(C)Br",
+          "opciones": [
+            "Primario",
+            "Secundario",
+            "Terciario",
+            "De metilo"
+          ],
+          "correcta": 2,
           "explicacion": "El carbono con el Br está unido a **tres** carbonos: **terciario**."
         },
         {
-          "texto": "¿Qué tipo de halogenuro es el 1-bromo-2,2-dimetilpropano?", "smiles": "CC(C)(C)CBr",
-          "opciones": ["Primario", "Secundario", "Terciario"], "correcta": 0,
+          "texto": "¿Qué tipo de halogenuro es el 1-bromo-2,2-dimetilpropano?",
+          "smiles": "CC(C)(C)CBr",
+          "opciones": [
+            "Primario",
+            "Secundario",
+            "Terciario"
+          ],
+          "correcta": 0,
           "explicacion": "El carbono con el Br solo está unido a **un** carbono: **primario**, aunque muy impedido (neopentílico)."
         }
       ],
@@ -71,20 +105,38 @@
       "tipo": "isomeros",
       "titulo": "Cuatro bromuros",
       "enunciado": "Encuentra los **cuatro** isómeros de {C4H9Br} (ejercicio 2 del Tema 5).",
-      "editor": { "elementos": ["C", "Br"], "anillos": false },
-      "objetivo": {
-        "formula": "C4H9Br", "total": 4,
-        "nombres": { "BrCCCC": "1-bromobutano (1°)", "CC(Br)CC": "2-bromobutano (2°)", "BrCC(C)C": "1-bromo-2-metilpropano (1°)", "CC(C)(C)Br": "2-bromo-2-metilpropano (3°)" }
+      "editor": {
+        "elementos": [
+          "C",
+          "Br"
+        ],
+        "anillos": false
       },
-      "pistas": ["Hay dos esqueletos de C₄ (butano e isobutano) y dos posiciones distintas en cada uno."]
+      "objetivo": {
+        "formula": "C4H9Br",
+        "total": 4,
+        "nombres": {
+          "BrCCCC": "1-bromobutano (1°)",
+          "CC(Br)CC": "2-bromobutano (2°)",
+          "BrCC(C)C": "1-bromo-2-metilpropano (1°)",
+          "CC(C)(C)Br": "2-bromo-2-metilpropano (3°)"
+        }
+      },
+      "pistas": [
+        "Hay dos esqueletos de C₄ (butano e isobutano) y dos posiciones distintas en cada uno."
+      ]
     },
     {
       "id": "m5-03",
       "tipo": "reaccion",
       "titulo": "Primer intercambio",
       "dialogo": [
-        { "texto": "Primera prueba del sintetizador: **1-clorobutano** con **cianuro de sodio** en DMSO. El cianuro es un nucleófilo excelente." },
-        { "texto": "Elige el producto. El mecanismo te lo pediré cuando sepas más." }
+        {
+          "texto": "Primera prueba del sintetizador: **1-clorobutano** con **cianuro de sodio** en DMSO. El cianuro es un nucleófilo excelente."
+        },
+        {
+          "texto": "Elige el producto. El mecanismo te lo pediré cuando sepas más."
+        }
       ],
       "enunciado": "¿Qué se forma al tratar el **1-clorobutano** con **NaCN** en DMSO?",
       "sustrato": "CCCCCl",
@@ -92,7 +144,9 @@
       "pedirMecanismo": false,
       "esperado": "CCCCC#N",
       "mecanismo": "SN2",
-      "pistas": ["El nucleófilo ocupa el lugar del grupo saliente."],
+      "pistas": [
+        "El nucleófilo ocupa el lugar del grupo saliente."
+      ],
       "ficha": "sn2",
       "exito": "**Pentanonitrilo**: el CN⁻ desplaza al Cl⁻ en un solo paso. ¡Has ganado un carbono!"
     },
@@ -100,13 +154,19 @@
       "id": "m5-04",
       "tipo": "reaccion",
       "titulo": "El paraguas que se da la vuelta",
-      "dialogo": [{ "texto": "Ahora con un sustrato **quiral**: el (R)-2-bromobutano. Mira bien hacia dónde apunta cada grupo en el producto." }],
+      "dialogo": [
+        {
+          "texto": "Ahora con un sustrato **quiral**: el (R)-2-bromobutano. Mira bien hacia dónde apunta cada grupo en el producto."
+        }
+      ],
       "enunciado": "**(R)-2-Bromobutano** + CH₃SNa. Elige el mecanismo y el producto **con su estereoquímica**.",
       "sustrato": "CC[C@@H](C)Br",
       "reactivo": "CH3SNa",
       "esperado": "CC[C@H](C)SC",
       "mecanismo": "SN2",
-      "pistas": ["En la SN2 el nucleófilo entra por el lado contrario al Br, como un paraguas que se da la vuelta con el viento."],
+      "pistas": [
+        "En la SN2 el nucleófilo entra por el lado contrario al Br, como un paraguas que se da la vuelta con el viento."
+      ],
       "exito": "**Inversión de Walden**: se obtiene el (S)-2-(metiltio)butano."
     },
     {
@@ -114,36 +174,79 @@
       "tipo": "test",
       "titulo": "Más rápido, más lento",
       "enunciado": "Factores de la SN2 (ejercicios 4 y 6 del Tema 5).",
-      "pistas": ["SN2: el nucleófilo tiene que llegar al carbono. Menos impedimento, mejor nucleófilo y mejor grupo saliente = más rápida."],
+      "pistas": [
+        "SN2: el nucleófilo tiene que llegar al carbono. Menos impedimento, mejor nucleófilo y mejor grupo saliente = más rápida."
+      ],
       "preguntas": [
         {
           "texto": "¿Qué halogenuro reacciona **más rápido** por SN2?",
-          "opciones": [{ "smiles": "CBr", "texto": "CH₃Br" }, { "smiles": "CCBr", "texto": "CH₃CH₂Br" }, { "smiles": "CC(C)Br", "texto": "(CH₃)₂CHBr" }], "correcta": 0,
+          "opciones": [
+            {
+              "smiles": "CBr",
+              "texto": "CH₃Br"
+            },
+            {
+              "smiles": "CCBr",
+              "texto": "CH₃CH₂Br"
+            },
+            {
+              "smiles": "CC(C)Br",
+              "texto": "(CH₃)₂CHBr"
+            }
+          ],
+          "correcta": 0,
           "explicacion": "Metilo > primario > secundario: cuanto menos impedido está el carbono, más fácil es el ataque por detrás."
         },
         {
           "texto": "¿Cuál es **mejor grupo saliente**?",
-          "opciones": ["I⁻", "Br⁻", "Cl⁻", "F⁻"], "correcta": 0,
+          "opciones": [
+            "I⁻",
+            "Br⁻",
+            "Cl⁻",
+            "F⁻"
+          ],
+          "correcta": 0,
           "explicacion": "El **yoduro**: es la base más débil (el HI es el ácido más fuerte) y aguanta mejor la carga negativa."
         },
         {
           "texto": "¿Qué especie es **más nucleófila**: HS⁻ o HO⁻?",
-          "opciones": ["HS⁻", "HO⁻", "Son iguales"], "correcta": 0,
+          "opciones": [
+            "HS⁻",
+            "HO⁻",
+            "Son iguales"
+          ],
+          "correcta": 0,
           "explicacion": "Al bajar en el grupo, el átomo es más grande y **polarizable**: el S cede sus electrones con más facilidad."
         },
         {
           "texto": "¿Qué especie es **más nucleófila**: NH₃ o H₂O?",
-          "opciones": ["NH₃", "H₂O"], "correcta": 0,
+          "opciones": [
+            "NH₃",
+            "H₂O"
+          ],
+          "correcta": 0,
           "explicacion": "En el mismo periodo, la nucleofilia disminuye con la electronegatividad: N < O en electronegatividad, así que **NH₃** es más nucleófilo."
         },
         {
           "texto": "¿Qué disolvente **acelera** una SN2?",
-          "opciones": ["DMSO (aprótico polar)", "Agua (prótico)", "Etanol (prótico)", "Hexano (apolar)"], "correcta": 0,
+          "opciones": [
+            "DMSO (aprótico polar)",
+            "Agua (prótico)",
+            "Etanol (prótico)",
+            "Hexano (apolar)"
+          ],
+          "correcta": 0,
           "explicacion": "Los **apróticos polares** solvatan al catión pero no al anión: el nucleófilo queda «desnudo» y más reactivo."
         },
         {
           "texto": "Si se duplica la concentración del nucleófilo, ¿qué le pasa a la velocidad de una SN2?",
-          "opciones": ["Se duplica", "No cambia", "Se reduce a la mitad", "Se cuadruplica"], "correcta": 0,
+          "opciones": [
+            "Se duplica",
+            "No cambia",
+            "Se reduce a la mitad",
+            "Se cuadruplica"
+          ],
+          "correcta": 0,
           "explicacion": "Cinética de **segundo orden**: v = k [RX] [Nu⁻]."
         }
       ],
@@ -153,28 +256,36 @@
       "id": "m5-06",
       "tipo": "reaccion",
       "titulo": "Agua y paciencia",
-      "dialogo": [{ "texto": "Prueba esto: **bromuro de terc-butilo** en **agua**. El agua es un nucleófilo malísimo… y aun así reacciona. ¿Cómo?" }],
+      "dialogo": [
+        {
+          "texto": "Prueba esto: **bromuro de terc-butilo** en **agua**. El agua es un nucleófilo malísimo… y aun así reacciona. ¿Cómo?"
+        }
+      ],
       "enunciado": "**2-Bromo-2-metilpropano** + H₂O. Mecanismo y producto mayoritario.",
       "sustrato": "CC(C)(C)Br",
       "reactivo": "H2O",
       "esperado": "CC(C)(C)O",
       "mecanismo": "SN1",
-      "pistas": ["Un carbono terciario no deja pasar a ningún nucleófilo por detrás. Pero puede perder el Br él solo…"],
+      "pistas": [
+        "Un carbono terciario no deja pasar a ningún nucleófilo por detrás. Pero puede perder el Br él solo…"
+      ],
       "ficha": "sn1",
       "exito": "**2-Metil-2-propanol**. Primero se va el Br⁻ y queda un carbocatión terciario; después lo captura el agua."
     },
     {
       "id": "m5-07",
       "tipo": "reaccion",
-      "titulo": "Racemización (PEC-1)",
-      "enunciado": "PEC-1: **(S)-2-bromobutano** en **etanol**. Mecanismo y producto mayoritario.",
-      "sustrato": "CC[C@H](C)Br",
-      "reactivo": "EtOH",
-      "esperado": "CCOC(C)CC",
+      "titulo": "Racemización",
+      "enunciado": "**(R)-2-bromopentano** en **metanol**. Mecanismo y producto mayoritario.",
+      "sustrato": "CCC[C@@H](C)Br",
+      "reactivo": "CH3OH",
+      "esperado": "CCCC(C)OC",
       "mecanismo": "SN1",
       "racemico": true,
-      "pistas": ["Secundario, nucleófilo débil y disolvente prótico. ¿Qué forma tiene el intermedio?"],
-      "exito": "El carbocatión es **plano**: el etanol ataca por las dos caras y se obtiene el éter **racémico**."
+      "pistas": [
+        "Secundario, nucleófilo débil y disolvente prótico. ¿Qué forma tiene el intermedio?"
+      ],
+      "exito": "El carbocatión es **plano**: el metanol ataca por las dos caras y se obtiene el éter **racémico**."
     },
     {
       "id": "m5-08",
@@ -184,22 +295,53 @@
       "preguntas": [
         {
           "texto": "Según el texto base, ¿cuál es el orden de estabilidad correcto?",
-          "opciones": ["terciario > bencílico > secundario > alílico > primario > metilo", "metilo > primario > secundario > terciario", "alílico > terciario > bencílico > secundario", "secundario > terciario > primario > metilo"], "correcta": 0,
+          "opciones": [
+            "terciario > bencílico > secundario > alílico > primario > metilo",
+            "metilo > primario > secundario > terciario",
+            "alílico > terciario > bencílico > secundario",
+            "secundario > terciario > primario > metilo"
+          ],
+          "correcta": 0,
           "explicacion": "Hiperconjugación y efecto inductivo para los alquilos; **resonancia** para alílico y bencílico."
         },
         {
           "texto": "¿Qué halogenuro reacciona **más rápido** por SN1?",
-          "opciones": [{ "smiles": "CC(C)(C)Br", "texto": "(CH₃)₃CBr" }, { "smiles": "CC(C)Br", "texto": "(CH₃)₂CHBr" }, { "smiles": "CCBr", "texto": "CH₃CH₂Br" }], "correcta": 0,
+          "opciones": [
+            {
+              "smiles": "CC(C)(C)Br",
+              "texto": "(CH₃)₃CBr"
+            },
+            {
+              "smiles": "CC(C)Br",
+              "texto": "(CH₃)₂CHBr"
+            },
+            {
+              "smiles": "CCBr",
+              "texto": "CH₃CH₂Br"
+            }
+          ],
+          "correcta": 0,
           "explicacion": "La velocidad depende de la estabilidad del **carbocatión**: el terciario es el más estable."
         },
         {
           "texto": "¿Por qué la SN1 sigue una cinética de **primer orden**?",
-          "opciones": ["Porque el paso lento es la salida del halógeno, sin participación del nucleófilo", "Porque solo hay un reactivo", "Porque el nucleófilo es muy fuerte", "Porque ocurre en un solo paso"], "correcta": 0,
+          "opciones": [
+            "Porque el paso lento es la salida del halógeno, sin participación del nucleófilo",
+            "Porque solo hay un reactivo",
+            "Porque el nucleófilo es muy fuerte",
+            "Porque ocurre en un solo paso"
+          ],
+          "correcta": 0,
           "explicacion": "v = k [RX]: el paso limitante es la formación del carbocatión."
         },
         {
           "texto": "Verdadero o falso (examen 2022): «La solvólisis del bromuro de etilo en agua transcurre por SN1».",
-          "opciones": ["Falso: el carbocatión primario es demasiado inestable", "Verdadero: el agua es prótica", "Verdadero: el bromo es buen grupo saliente"], "correcta": 0,
+          "opciones": [
+            "Falso: el carbocatión primario es demasiado inestable",
+            "Verdadero: el agua es prótica",
+            "Verdadero: el bromo es buen grupo saliente"
+          ],
+          "correcta": 0,
           "explicacion": "Los halogenuros **primarios no dan SN1**: el carbocatión etilo es muy inestable."
         }
       ],
@@ -209,14 +351,20 @@
       "id": "m5-09",
       "tipo": "reaccion",
       "titulo": "El esqueleto que se mueve",
-      "dialogo": [{ "texto": "Extraño: el sintetizador mezcló **bromuro de isobutilo** con **metanol** y salió un éter con un esqueleto **distinto**. Investiga." }],
+      "dialogo": [
+        {
+          "texto": "Extraño: el sintetizador mezcló **bromuro de isobutilo** con **metanol** y salió un éter con un esqueleto **distinto**. Investiga."
+        }
+      ],
       "enunciado": "**1-Bromo-2-metilpropano** + CH₃OH. Mecanismo y producto mayoritario.",
       "sustrato": "CC(C)CBr",
       "reactivo": "CH3OH",
       "esperado": "COC(C)(C)C",
       "mecanismo": "SN1",
       "transposicion": "hidruro",
-      "pistas": ["Primario impedido + nucleófilo débil: la SN2 casi no ocurre. Si se forma un carbocatión primario, ¿qué hará el H del carbono de al lado?"],
+      "pistas": [
+        "Primario impedido + nucleófilo débil: la SN2 casi no ocurre. Si se forma un carbocatión primario, ¿qué hará el H del carbono de al lado?"
+      ],
       "ficha": "transposicion",
       "exito": "El carbocatión isobutilo (1°) se **transpone** a terc-butilo (3°) por desplazamiento de hidruro: se obtiene **terc-butil metil éter**."
     },
@@ -230,20 +378,24 @@
       "esperado": "CCOC(C)(C)C(C)C",
       "mecanismo": "SN1",
       "transposicion": "metilo",
-      "pistas": ["El carbono vecino no tiene H, pero sí tres metilos."],
+      "pistas": [
+        "El carbono vecino no tiene H, pero sí tres metilos."
+      ],
       "exito": "Desplazamiento 1,2 de **metilo**: el carbocatión secundario pasa a terciario. Producto: **2-etoxi-2,3-dimetilbutano** (y algo de 2,3-dimetil-2-buteno por E1)."
     },
     {
       "id": "m5-11",
       "tipo": "reaccion",
-      "titulo": "Azida (PEC-1)",
-      "enunciado": "PEC-1: **(S)-1-bromo-1-fenil-2-metilpropano** + NaN₃ en DMF. Mecanismo y producto.",
-      "sustrato": "CC(C)[C@H](Br)c1ccccc1",
+      "titulo": "Azida",
+      "enunciado": "**(S)-1-bromo-1-feniletano** + NaN₃ en DMF. Mecanismo y producto.",
+      "sustrato": "C[C@H](Br)c1ccccc1",
       "reactivo": "NaN3",
-      "esperado": "CC(C)[C@@H](N=[N+]=[N-])c1ccccc1",
+      "esperado": "C[C@@H](N=[N+]=[N-])c1ccccc1",
       "mecanismo": "SN2",
-      "pistas": ["Buen nucleófilo, poco básico, disolvente aprótico polar y carbono secundario."],
-      "exito": "SN2 con **inversión**: (R)-1-azido-1-fenil-2-metilpropano."
+      "pistas": [
+        "Buen nucleófilo, poco básico, disolvente aprótico polar y carbono secundario (aunque sea bencílico)."
+      ],
+      "exito": "SN2 con **inversión**: (R)-1-azido-1-feniletano."
     },
     {
       "id": "m5-12",
@@ -255,7 +407,9 @@
       "esperado": "CC1(C)CCC(C)(I)C1",
       "mecanismo": "SN1",
       "racemico": true,
-      "pistas": ["Aunque el yoduro es buen nucleófilo, en un carbono terciario no hay SN2."],
+      "pistas": [
+        "Aunque el yoduro es buen nucleófilo, en un carbono terciario no hay SN2."
+      ],
       "exito": "**SN1**: carbocatión terciario plano y ataque por ambas caras → mezcla racémica del yoduro."
     },
     {
@@ -274,32 +428,60 @@
       "tipo": "sintesis",
       "titulo": "Dos negaciones afirman",
       "dialogo": [
-        { "texto": "Necesito **(R)-2-(metiltio)butano** y solo tengo **(R)-2-bromobutano**. Si uso CH₃SNa directamente, la SN2 me lo da al revés: (S)." },
-        { "texto": "Monta un **programa** de reactivos y ejecútalo. Piensa en lo que hace cada SN2 con la configuración." }
+        {
+          "texto": "Necesito **(R)-2-(metiltio)butano** y solo tengo **(R)-2-bromobutano**. Si uso CH₃SNa directamente, la SN2 me lo da al revés: (S)."
+        },
+        {
+          "texto": "Monta un **programa** de reactivos y ejecútalo. Piensa en lo que hace cada SN2 con la configuración."
+        }
       ],
       "enunciado": "Obtén el **(R)**-2-(metiltio)butano a partir del **(R)**-2-bromobutano.",
       "partida": "CC[C@@H](C)Br",
       "objetivo": "CC[C@@H](C)SC",
-      "reactivos": ["CH3SNa", "NaI", "EtOH", "NaCN"],
-      "solucion": ["NaI", "CH3SNa"],
+      "reactivos": [
+        "CH3SNa",
+        "NaI",
+        "EtOH",
+        "NaCN"
+      ],
+      "solucion": [
+        "NaI",
+        "CH3SNa"
+      ],
       "optimo": 2,
       "maxPasos": 3,
-      "pistas": ["Una SN2 invierte la configuración. ¿Y dos SN2 seguidas?", "El yoduro es buen nucleófilo… y también un excelente grupo saliente."],
+      "pistas": [
+        "Una SN2 invierte la configuración. ¿Y dos SN2 seguidas?",
+        "El yoduro es buen nucleófilo… y también un excelente grupo saliente."
+      ],
       "exito": "**Doble inversión** = retención: Br → I (inversión) y I → SCH₃ (otra inversión)."
     },
     {
       "id": "m5-15",
       "tipo": "sintesis",
       "titulo": "El antidetonante",
-      "dialogo": [{ "texto": "La nave necesita **MTBE** (terc-butil metil éter), un aditivo de combustible. Tengo bromuro de terc-butilo. Elige bien el reactivo: hay uno que parece obvio y es una **trampa**." }],
+      "dialogo": [
+        {
+          "texto": "La nave necesita **MTBE** (terc-butil metil éter), un aditivo de combustible. Tengo bromuro de terc-butilo. Elige bien el reactivo: hay uno que parece obvio y es una **trampa**."
+        }
+      ],
       "enunciado": "Obtén **terc-butil metil éter** a partir del **2-bromo-2-metilpropano** en un solo paso.",
       "partida": "CC(C)(C)Br",
       "objetivo": "COC(C)(C)C",
-      "reactivos": ["CH3ONa", "CH3OH", "NaOH", "tBuOK"],
-      "solucion": ["CH3OH"],
+      "reactivos": [
+        "CH3ONa",
+        "CH3OH",
+        "NaOH",
+        "tBuOK"
+      ],
+      "solucion": [
+        "CH3OH"
+      ],
       "optimo": 1,
       "maxPasos": 2,
-      "pistas": ["El metóxido es una base fuerte. ¿Qué hace una base fuerte con un halogenuro terciario?"],
+      "pistas": [
+        "El metóxido es una base fuerte. ¿Qué hace una base fuerte con un halogenuro terciario?"
+      ],
       "exito": "Con **metanol** (nucleófilo débil) el halogenuro terciario da **SN1**. El metóxido daría casi solo **eliminación** (2-metilpropeno)."
     },
     {
@@ -308,8 +490,13 @@
       "jefe": true,
       "titulo": "Emergencia: el lote invertido",
       "dialogo": [
-        { "quien": "sistema", "texto": "⚠ ALERTA · Síntesis de fármaco con configuración incorrecta · Intervención manual requerida" },
-        { "texto": "El sintetizador de la enfermería ha producido el enantiómero equivocado. Recupera el control antes del siguiente lote." }
+        {
+          "quien": "sistema",
+          "texto": "⚠ ALERTA · Síntesis de fármaco con configuración incorrecta · Intervención manual requerida"
+        },
+        {
+          "texto": "El sintetizador de la enfermería ha producido el enantiómero equivocado. Recupera el control antes del siguiente lote."
+        }
       ],
       "enunciado": "Supera las **tres fases** de la emergencia.",
       "pasos": [
@@ -324,9 +511,32 @@
         {
           "tipo": "esquema",
           "enunciado": "**Fase 2.** Completa el esquema.",
-          "cadena": [{ "smiles": "CCCCCC[C@@H](C)Br" }, { "letra": "A" }, { "smiles": "CCCCCC[C@@H](C)C#N" }],
-          "flechas": [{ "reactivo": "NaI" }, { "letra": "B", "esperado": "NaCN" }],
-          "reactivos": ["NaCN", "EtONa", "H2O", "NaN3"]
+          "cadena": [
+            {
+              "smiles": "CCCCCC[C@@H](C)Br"
+            },
+            {
+              "letra": "A"
+            },
+            {
+              "smiles": "CCCCCC[C@@H](C)C#N"
+            }
+          ],
+          "flechas": [
+            {
+              "reactivo": "NaI"
+            },
+            {
+              "letra": "B",
+              "esperado": "NaCN"
+            }
+          ],
+          "reactivos": [
+            "NaCN",
+            "EtONa",
+            "H2O",
+            "NaN3"
+          ]
         },
         {
           "tipo": "reaccion",

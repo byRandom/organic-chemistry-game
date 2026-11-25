@@ -10,6 +10,12 @@ export async function cargarIndice() {
   return indice;
 }
 
+let pruebas = null;
+export async function cargarPruebas() {
+  if (!pruebas) pruebas = (await (await fetch(BASE + 'pruebas.json')).json()).pruebas;
+  return pruebas;
+}
+
 export async function cargarMundo(id) {
   if (mundos.has(id)) return mundos.get(id);
   const idx = await cargarIndice();

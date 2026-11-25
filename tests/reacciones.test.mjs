@@ -1,4 +1,4 @@
-// Ejemplos del texto base (Temas 5 y 6) y de la PEC-1 / exámenes.
+// Ejemplos del texto base (Temas 5 y 6) y de exámenes de cursos anteriores.
 import { test, before } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadRDKitNode } from './helpers.mjs';
@@ -64,10 +64,10 @@ test('SN2 con inversión de la configuración (Walden)', () => {
   const p = mayores(r)[0];
   assert.match(p, /@/);
   assert.equal(p, C('CC[C@H](C)SC')); // inversión
-  // PEC-1 6b: (S)-1-bromo-1-fenil-2-metilpropano + NaN3 (DMF) → SN2 con inversión
-  const az = reaccionar('CC(C)[C@H](Br)c1ccccc1', 'NaN3');
+  // halogenuro bencílico secundario + NaN3 (DMF) → SN2 con inversión
+  const az = reaccionar('C[C@H](Br)c1ccccc1', 'NaN3');
   assert.equal(az.mecanismo, 'SN2');
-  assert.notEqual(mayores(az)[0], C('CC(C)[C@H](N=[N+]=[N-])c1ccccc1'));
+  assert.equal(mayores(az)[0], C('C[C@@H](N=[N+]=[N-])c1ccccc1'));
 });
 
 test('doble inversión: dos SN2 seguidas conservan la configuración', () => {
@@ -76,12 +76,12 @@ test('doble inversión: dos SN2 seguidas conservan la configuración', () => {
   assert.equal(b, C('CC[C@@H](C)SC'));
 });
 
-test('SN1: racemización ((S)-2-bromobutano + EtOH, PEC-1 7d)', () => {
-  const r = reaccionar('CC[C@H](C)Br', 'EtOH');
+test('SN1: racemización ((R)-2-bromopentano + CH₃OH)', () => {
+  const r = reaccionar('CCC[C@@H](C)Br', 'CH3OH');
   assert.equal(r.mecanismo, 'SN1');
   const p = r.productos.find((x) => x.mecanismo === 'SN1');
   assert.ok(p.racemico);
-  assert.equal(p.smiles, C('CCOC(C)CC'));
+  assert.equal(p.smiles, C('CCCC(C)OC'));
 });
 
 test('SN1 con desplazamiento de metilo (examen 2022: 3-bromo-2,2-dimetilbutano + EtOH)', () => {
@@ -91,10 +91,10 @@ test('SN1 con desplazamiento de metilo (examen 2022: 3-bromo-2,2-dimetilbutano +
   assert.deepEqual(menores(r), [C('CC(C)=C(C)C')]);
 });
 
-test('PEC-1 6a: 2-bromo-1,1-dimetilciclohexano + EtOH (transposición de metilo en el anillo)', () => {
-  const r = reaccionar('CC1(C)CCCCC1Br', 'EtOH');
+test('transposición de metilo en un anillo (2-bromo-1,1-dimetilciclopentano + EtOH)', () => {
+  const r = reaccionar('CC1(C)CCCC1Br', 'EtOH');
   assert.equal(r.transposicion, 'metilo');
-  assert.deepEqual(mayores(r), [C('CCOC1(C)CCCCC1C')]);
+  assert.deepEqual(mayores(r), [C('CCOC1(C)CCCC1C')]);
 });
 
 test('E2 Saytzeff frente a Hofmann (2-bromo-2-metilbutano)', () => {

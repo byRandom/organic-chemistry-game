@@ -1,13 +1,24 @@
 {
   "descripcion": "Para fabricar plásticos hacen falta **alquenos**. Aquí aprenderás a obtenerlos eliminando HX de los halogenuros: **E2** y **E1**, la regla de **Saytzeff**, la excepción de **Hofmann**, la exigencia **antiperiplanar** y cómo decidir entre sustitución y eliminación (Tabla 6.1).",
   "intro": [
-    { "texto": "La **planta de polímeros**. Los plásticos de la nave se fabrican a partir de **alquenos**, y los alquenos, a partir de halogenuros que **pierden HX**." },
-    { "texto": "Es la misma química de la enfermería, pero ahora el reactivo actúa como **base**: no ataca al carbono, sino que arranca un **H** del carbono de al lado." }
+    {
+      "texto": "La **planta de polímeros**. Los plásticos de la nave se fabrican a partir de **alquenos**, y los alquenos, a partir de halogenuros que **pierden HX**."
+    },
+    {
+      "texto": "Es la misma química de la enfermería, pero ahora el reactivo actúa como **base**: no ataca al carbono, sino que arranca un **H** del carbono de al lado."
+    }
   ],
   "outro": [
-    { "texto": "Planta de polímeros **en marcha**. Ya recuerdo la E2 y la E1, Saytzeff y Hofmann, y sé decidir entre SN1, SN2, E1 y E2 con la Tabla 6.1." },
-    { "texto": "Con esto está completo todo lo de la **PEC-1** (temas 1 a 6). La siguiente sección es la **destilería**: los alcoholes." },
-    { "quien": "sistema", "texto": "SECCIÓN 7 · DESTILERÍA — Disponible en la Fase 4 del desarrollo." }
+    {
+      "texto": "Planta de polímeros **en marcha**. Ya recuerdo la E2 y la E1, Saytzeff y Hofmann, y sé decidir entre SN1, SN2, E1 y E2 con la Tabla 6.1."
+    },
+    {
+      "texto": "Con esto está completo todo lo de la **PEC-1** (temas 1 a 6). La siguiente sección es la **destilería**: los alcoholes."
+    },
+    {
+      "quien": "sistema",
+      "texto": "SECCIÓN 7 · DESTILERÍA — Disponible en la Fase 4 del desarrollo."
+    }
   ],
   "fichas": {
     "e2": {
@@ -46,13 +57,19 @@
       "id": "m6-01",
       "tipo": "reaccion",
       "titulo": "Base, no nucleófilo",
-      "dialogo": [{ "texto": "Trata el **bromuro de terc-butilo** con **etóxido de sodio**, una base fuerte. Ojo: en la enfermería vimos que en un terciario no cabe ningún nucleófilo por detrás…" }],
+      "dialogo": [
+        {
+          "texto": "Trata el **bromuro de terc-butilo** con **etóxido de sodio**, una base fuerte. Ojo: en la enfermería vimos que en un terciario no cabe ningún nucleófilo por detrás…"
+        }
+      ],
       "enunciado": "**2-Bromo-2-metilpropano** + EtO⁻Na⁺ en etanol. Mecanismo y producto mayoritario.",
       "sustrato": "CC(C)(C)Br",
       "reactivo": "EtONa",
       "esperado": "C=C(C)C",
       "mecanismo": "E2",
-      "pistas": ["La base arranca un H de un carbono vecino al que lleva el Br."],
+      "pistas": [
+        "La base arranca un H de un carbono vecino al que lleva el Br."
+      ],
       "ficha": "e2",
       "exito": "**2-Metilpropeno** (97 %): la base arranca un H en β y se forma el doble enlace en un solo paso."
     },
@@ -65,7 +82,9 @@
       "reactivo": "EtONa",
       "esperado": "CC=C(C)C",
       "mecanismo": "E2",
-      "pistas": ["Hay H en tres carbonos vecinos. ¿Qué alqueno queda con más carbonos unidos al doble enlace?"],
+      "pistas": [
+        "Hay H en tres carbonos vecinos. ¿Qué alqueno queda con más carbonos unidos al doble enlace?"
+      ],
       "ficha": "saytzeff",
       "exito": "**2-Metil-2-buteno**, el alqueno más sustituido: regla de Saytzeff."
     },
@@ -73,7 +92,11 @@
       "id": "m6-03",
       "tipo": "reaccion",
       "titulo": "La base gorda",
-      "dialogo": [{ "texto": "Mismo halogenuro, pero ahora con **terc-butóxido de potasio**: una base enorme. ¿Seguirá eligiendo el mismo H?" }],
+      "dialogo": [
+        {
+          "texto": "Mismo halogenuro, pero ahora con **terc-butóxido de potasio**: una base enorme. ¿Seguirá eligiendo el mismo H?"
+        }
+      ],
       "enunciado": "**2-Bromo-2-metilbutano** + (CH₃)₃CO⁻K⁺. ¿Qué alqueno es el mayoritario?",
       "sustrato": "CCC(C)(C)Br",
       "reactivo": "tBuOK",
@@ -86,12 +109,23 @@
       "id": "m6-04",
       "tipo": "sintesis",
       "titulo": "Elige tu alqueno",
-      "dialogo": [{ "texto": "La línea de polímeros necesita **2,3-dimetil-1-buteno**, no el 2-buteno. Tengo 2-bromo-2,3-dimetilbutano. Elige el reactivo adecuado." }],
+      "dialogo": [
+        {
+          "texto": "La línea de polímeros necesita **2,3-dimetil-1-buteno**, no el 2-buteno. Tengo 2-bromo-2,3-dimetilbutano. Elige el reactivo adecuado."
+        }
+      ],
       "enunciado": "Obtén **2,3-dimetil-1-buteno** a partir de **2-bromo-2,3-dimetilbutano**.",
       "partida": "CC(C)C(C)(C)Br",
       "objetivo": "C=C(C)C(C)C",
-      "reactivos": ["EtONa", "tBuOK", "H2O", "NaCN"],
-      "solucion": ["tBuOK"],
+      "reactivos": [
+        "EtONa",
+        "tBuOK",
+        "H2O",
+        "NaCN"
+      ],
+      "solucion": [
+        "tBuOK"
+      ],
       "optimo": 1,
       "maxPasos": 2,
       "exito": "Con terc-butóxido se forma el alqueno **menos** sustituido. Con etóxido saldría el 2,3-dimetil-2-buteno (Saytzeff)."
@@ -105,20 +139,28 @@
       "reactivo": "EtONa",
       "esperado": "C/C=C/C",
       "mecanismo": "E2",
-      "pistas": ["Saytzeff decide la posición del doble enlace. Entre E y Z, ¿cuál es más estable?"],
+      "pistas": [
+        "Saytzeff decide la posición del doble enlace. Entre E y Z, ¿cuál es más estable?"
+      ],
       "exito": "**(E)-2-buteno**: más sustituido que el 1-buteno y, como isómero trans, más estable que el cis."
     },
     {
       "id": "m6-06",
       "tipo": "reaccion",
       "titulo": "Estereoespecífica",
-      "dialogo": [{ "texto": "Cuando los **dos** carbonos implicados son estereocentros, la E2 no te deja elegir: la disposición **antiperiplanar** decide si sale E o Z. Dibuja mentalmente la Newman." }],
+      "dialogo": [
+        {
+          "texto": "Cuando los **dos** carbonos implicados son estereocentros, la E2 no te deja elegir: la disposición **antiperiplanar** decide si sale E o Z. Dibuja mentalmente la Newman."
+        }
+      ],
       "enunciado": "**(2R,3S)-2-bromo-3-fenilbutano** + EtO⁻Na⁺. ¿Qué isómero del 2-fenil-2-buteno se forma?",
       "sustrato": "C[C@@H](Br)[C@@H](C)c1ccccc1",
       "reactivo": "EtONa",
       "esperado": "C/C=C(/C)c1ccccc1",
       "mecanismo": "E2",
-      "pistas": ["Pon el Br y el H del C3 a 180° en una Newman y mira qué grupos quedan del mismo lado."],
+      "pistas": [
+        "Pon el Br y el H del C3 a 180° en una Newman y mira qué grupos quedan del mismo lado."
+      ],
       "exito": "Con el Br y el H anti, el **CH₃ del C1 y el fenilo** quedan del mismo lado: sale el isómero **Z**. El diastereoisómero (2R,3R) daría el E."
     },
     {
@@ -129,22 +171,43 @@
       "preguntas": [
         {
           "texto": "¿Qué mecanismo es **estereoespecífico** (exige H y X antiperiplanares)?",
-          "opciones": ["E2", "E1", "Los dos", "Ninguno"], "correcta": 0,
+          "opciones": [
+            "E2",
+            "E1",
+            "Los dos",
+            "Ninguno"
+          ],
+          "correcta": 0,
           "explicacion": "En la **E2** todo ocurre en un paso: los orbitales del C–H y del C–X tienen que estar alineados (a 180°)."
         },
         {
           "texto": "¿En cuál puede haber **transposición**?",
-          "opciones": ["E1", "E2", "En las dos", "En ninguna"], "correcta": 0,
+          "opciones": [
+            "E1",
+            "E2",
+            "En las dos",
+            "En ninguna"
+          ],
+          "correcta": 0,
           "explicacion": "Solo cuando hay **carbocatión**, es decir, en la **E1**."
         },
         {
           "texto": "Aumentar la concentración de la base, ¿qué mecanismo favorece?",
-          "opciones": ["E2", "E1"], "correcta": 0,
+          "opciones": [
+            "E2",
+            "E1"
+          ],
+          "correcta": 0,
           "explicacion": "La base participa en el paso limitante de la **E2** (v = k [RX] [B⁻]); en la E1, no."
         },
         {
           "texto": "Orden de reactividad de los halogenuros en la eliminación (E1 y E2):",
-          "opciones": ["3° > 2° > 1°", "1° > 2° > 3°", "2° > 1° > 3°"], "correcta": 0,
+          "opciones": [
+            "3° > 2° > 1°",
+            "1° > 2° > 3°",
+            "2° > 1° > 3°"
+          ],
+          "correcta": 0,
           "explicacion": "En los dos mecanismos: **3° > 2° > 1°** (alqueno más sustituido o carbocatión más estable)."
         }
       ],
@@ -159,20 +222,28 @@
       "reactivo": "EtOH",
       "esperado": "CCOC(C)(C)CC",
       "mecanismo": "SN1",
-      "pistas": ["Sin base fuerte, el carbocatión se forma solo. ¿Qué le pasa después, mayoritariamente?"],
+      "pistas": [
+        "Sin base fuerte, el carbocatión se forma solo. ¿Qué le pasa después, mayoritariamente?"
+      ],
       "exito": "**SN1** mayoritaria (≈80 %): 2-etoxi-2-metilbutano. La **E1** (2-metil-2-buteno) es la minoritaria."
     },
     {
       "id": "m6-09",
       "tipo": "reaccion",
       "titulo": "Mentol en la planta",
-      "dialogo": [{ "texto": "Del mentol se obtiene el **cloruro de mentilo**. Con etóxido debería dar el alqueno más sustituido… pero el sintetizador da **otro**. Averigua por qué." }],
+      "dialogo": [
+        {
+          "texto": "Del mentol se obtiene el **cloruro de mentilo**. Con etóxido debería dar el alqueno más sustituido… pero el sintetizador da **otro**. Averigua por qué."
+        }
+      ],
       "enunciado": "**Cloruro de mentilo** + EtO⁻Na⁺. ¿Qué alqueno se forma?",
       "sustrato": "CC(C)[C@@H]1CC[C@@H](C)C[C@H]1Cl",
       "reactivo": "EtONa",
       "esperado": "CC(C)C1CCC(C)C=C1",
       "mecanismo": "E2",
-      "pistas": ["En el ciclohexano, el H que se elimina tiene que ser **trans** al Cl (los dos axiales). ¿Cuál de los dos carbonos vecinos tiene un H trans?"],
+      "pistas": [
+        "En el ciclohexano, el H que se elimina tiene que ser **trans** al Cl (los dos axiales). ¿Cuál de los dos carbonos vecinos tiene un H trans?"
+      ],
       "ficha": "e2-anillos",
       "exito": "Solo el H del CH₂ está trans al Cl: se forma el **2-menteno** (el menos sustituido), en contra de Saytzeff."
     },
@@ -191,37 +262,77 @@
       "id": "m6-11",
       "tipo": "test",
       "titulo": "La Tabla 6.1",
-      "dialogo": [{ "texto": "Esta es la pregunta que más cae: dado un halogenuro y un reactivo, ¿qué mecanismo domina? Memorízate la Tabla 6.1… o mejor, entiéndela." }],
+      "dialogo": [
+        {
+          "texto": "Esta es la pregunta que más cae: dado un halogenuro y un reactivo, ¿qué mecanismo domina? Memorízate la Tabla 6.1… o mejor, entiéndela."
+        }
+      ],
       "enunciado": "Indica el mecanismo **principal** en cada caso.",
       "preguntas": [
         {
           "texto": "Halogenuro **primario no impedido** + CH₃O⁻ (base fuerte no impedida):",
-          "opciones": ["SN2", "E2", "SN1", "E1"], "correcta": 0,
+          "opciones": [
+            "SN2",
+            "E2",
+            "SN1",
+            "E1"
+          ],
+          "correcta": 0,
           "explicacion": "Carbono muy accesible: domina la **SN2** (>90 % para el 1-bromopropano)."
         },
         {
           "texto": "Halogenuro **primario** + (CH₃)₃CO⁻K⁺:",
-          "opciones": ["E2", "SN2", "SN1", "E1"], "correcta": 0,
+          "opciones": [
+            "E2",
+            "SN2",
+            "SN1",
+            "E1"
+          ],
+          "correcta": 0,
           "explicacion": "La base voluminosa no llega al carbono: **E2** (>80 %)."
         },
         {
           "texto": "Halogenuro **secundario** + CN⁻ (buen nucleófilo, poco básico):",
-          "opciones": ["SN2", "E2", "SN1", "E1"], "correcta": 0,
+          "opciones": [
+            "SN2",
+            "E2",
+            "SN1",
+            "E1"
+          ],
+          "correcta": 0,
           "explicacion": "Buen nucleófilo que no es base fuerte: **SN2** casi exclusiva."
         },
         {
           "texto": "Halogenuro **secundario** + EtO⁻ (base fuerte):",
-          "opciones": ["E2 (con algo de SN2)", "SN2 exclusiva", "SN1", "No reacciona"], "correcta": 0,
+          "opciones": [
+            "E2 (con algo de SN2)",
+            "SN2 exclusiva",
+            "SN1",
+            "No reacciona"
+          ],
+          "correcta": 0,
           "explicacion": "Base fuerte con secundario: **E2** ≈ 80 %, SN2 ≈ 20 %."
         },
         {
           "texto": "Halogenuro **terciario** + etanol (sin base):",
-          "opciones": ["SN1 (con algo de E1)", "SN2", "E2", "No reacciona"], "correcta": 0,
+          "opciones": [
+            "SN1 (con algo de E1)",
+            "SN2",
+            "E2",
+            "No reacciona"
+          ],
+          "correcta": 0,
           "explicacion": "Nucleófilo débil en medio prótico: **SN1** ≈ 80 % y **E1** ≈ 20 %."
         },
         {
           "texto": "Halogenuro **terciario** + HO⁻ concentrado:",
-          "opciones": ["E2", "SN2", "SN1", "E1"], "correcta": 0,
+          "opciones": [
+            "E2",
+            "SN2",
+            "SN1",
+            "E1"
+          ],
+          "correcta": 0,
           "explicacion": "Base fuerte con terciario: **E2**. La SN2 es imposible."
         }
       ],
@@ -236,28 +347,30 @@
       "reactivo": "EtONa",
       "esperado": "C=C(C)C",
       "mecanismo": "E2",
-      "pistas": ["Es primario, pero el carbono vecino está ramificado: el acceso al carbono está más impedido."],
+      "pistas": [
+        "Es primario, pero el carbono vecino está ramificado: el acceso al carbono está más impedido."
+      ],
       "exito": "Primario **ramificado en β**: la base fuerte da **E2** (≈60 %) frente a la SN2 (≈40 %)."
     },
     {
       "id": "m6-13",
       "tipo": "reaccion",
-      "titulo": "PEC-1: el yoduro primario",
-      "enunciado": "PEC-1: **(2-yodoetil)ciclohexano** + EtO⁻Na⁺ en etanol. Mecanismo y producto mayoritario.",
-      "sustrato": "ICCC1CCCCC1",
+      "titulo": "Bromuro primario",
+      "enunciado": "**(2-Bromoetil)ciclopentano** + EtO⁻Na⁺ en etanol. Mecanismo y producto mayoritario.",
+      "sustrato": "BrCCC1CCCC1",
       "reactivo": "EtONa",
-      "esperado": "CCOCCC1CCCCC1",
+      "esperado": "CCOCCC1CCCC1",
       "mecanismo": "SN2",
       "exito": "Primario **no impedido** en β: con un alcóxido domina la **SN2** (éter)."
     },
     {
       "id": "m6-14",
       "tipo": "reaccion",
-      "titulo": "PEC-1: en agua",
-      "enunciado": "PEC-1: **1-bromo-1-metilciclohexano** + H₂O. Mecanismo y producto mayoritario.",
-      "sustrato": "CC1(Br)CCCCC1",
+      "titulo": "En agua",
+      "enunciado": "**1-Cloro-1-metilciclopentano** + H₂O. Mecanismo y producto mayoritario.",
+      "sustrato": "CC1(Cl)CCCC1",
       "reactivo": "H2O",
-      "esperado": "CC1(O)CCCCC1",
+      "esperado": "CC1(O)CCCC1",
       "mecanismo": "SN1"
     },
     {
@@ -266,8 +379,13 @@
       "jefe": true,
       "titulo": "Emergencia: la línea de polímeros",
       "dialogo": [
-        { "quien": "sistema", "texto": "⚠ ALERTA · Monómero fuera de especificación en la línea 2 · Producción detenida" },
-        { "texto": "La línea de polímeros está produciendo el alqueno equivocado. Diagnostica y corrige." }
+        {
+          "quien": "sistema",
+          "texto": "⚠ ALERTA · Monómero fuera de especificación en la línea 2 · Producción detenida"
+        },
+        {
+          "texto": "La línea de polímeros está produciendo el alqueno equivocado. Diagnostica y corrige."
+        }
       ],
       "enunciado": "Supera las **tres fases** de la emergencia.",
       "pasos": [
@@ -284,8 +402,15 @@
           "enunciado": "**Fase 2.** Obtén **propeno** a partir de **2-bromopropano** con el mejor reactivo (un solo paso).",
           "partida": "CC(C)Br",
           "objetivo": "C=CC",
-          "reactivos": ["CH3COONa", "EtONa", "H2O", "NaI"],
-          "solucion": ["EtONa"],
+          "reactivos": [
+            "CH3COONa",
+            "EtONa",
+            "H2O",
+            "NaI"
+          ],
+          "solucion": [
+            "EtONa"
+          ],
           "optimo": 1,
           "maxPasos": 2
         },
