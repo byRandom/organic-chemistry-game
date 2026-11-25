@@ -29,13 +29,12 @@ jobs:
       - name: Lista de caché sin conexión al día
         run: node tools/build-precache.mjs --check
 
-  deploy:
+  # Prepara y sube la web (en un trabajo aparte del despliegue, como en la plantilla oficial de GitHub:
+  # si se despliega en el mismo trabajo, a veces el artefacto aún no es visible y el despliegue falla).
+  build:
     needs: test
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
       - name: Preparar los archivos de la web
@@ -47,5 +46,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4

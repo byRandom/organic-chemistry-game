@@ -5,6 +5,7 @@ import { montarTest } from './quiz.js';
 import { montarQuirales, montarRS, montarAFischer } from './estereo.js';
 import { montarNewman, montarSilla } from './conformacion.js';
 import { montarReaccion, montarSintesis, montarEsquema } from './reaccion.js';
+import { referencias } from './referencias.js';
 
 const TIPOS = {
   construir: montarEditor,
@@ -28,6 +29,9 @@ export function montarPuzle(cont, nivel, ctx) {
     cont.appendChild(h('p', `Tipo de puzle desconocido: ${nivel.tipo}`));
     return { destroy() {} };
   }
+  // compuestos del enunciado dibujados (si el nivel los indica)
+  const refs = referencias(nivel.referencias);
+  if (refs) cont.appendChild(refs);
   return fn(cont, nivel, ctx);
 }
 

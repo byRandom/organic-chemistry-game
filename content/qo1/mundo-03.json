@@ -128,10 +128,22 @@
         {
           "texto": "Según la Tabla 3.2 del libro, ¿qué cicloalcano tiene **tensión total nula**?",
           "opciones": [
-            "Ciclohexano",
-            "Ciclopentano",
-            "Ciclobutano",
-            "Ciclopropano"
+            {
+              "smiles": "C1CCCCC1",
+              "texto": "Ciclohexano"
+            },
+            {
+              "smiles": "C1CCCC1",
+              "texto": "Ciclopentano"
+            },
+            {
+              "smiles": "C1CCC1",
+              "texto": "Ciclobutano"
+            },
+            {
+              "smiles": "C1CC1",
+              "texto": "Ciclopropano"
+            }
           ],
           "correcta": 0,
           "explicacion": "El **ciclohexano** (0 kcal/mol) adopta la silla, con ángulos casi tetraédricos y sin enlaces eclipsados."
@@ -226,7 +238,17 @@
       "objetivo": "estable",
       "mostrarEnergia": true,
       "ficha": "silla",
-      "exito": "**Ecuatorial**: en axial, el metilo choca con los H axiales de los carbonos 3 y 5 (interacciones 1,3-diaxiales, 1,70 kcal/mol)."
+      "exito": "**Ecuatorial**: en axial, el metilo choca con los H axiales de los carbonos 3 y 5 (interacciones 1,3-diaxiales, 1,70 kcal/mol).",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "CC1CCCCC1",
+            "nombre": "metilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-06",
@@ -247,7 +269,17 @@
       "objetivo": "inestable",
       "mostrarEnergia": true,
       "ficha": "monosustituidos",
-      "exito": "Con el terc-butilo **axial** la tensión es de unas 5 kcal/mol: a temperatura ambiente casi todas las moléculas tienen el terc-butilo ecuatorial."
+      "exito": "Con el terc-butilo **axial** la tensión es de unas 5 kcal/mol: a temperatura ambiente casi todas las moléculas tienen el terc-butilo ecuatorial.",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "CC(C)(C)C1CCCCC1",
+            "nombre": "terc-butilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-07",
@@ -271,7 +303,17 @@
         "Cis: los dos en la misma cara. Fíjate en si el axial de cada carbono apunta hacia arriba o hacia abajo."
       ],
       "ficha": "disustituidos",
-      "exito": "En el isómero **cis-1,2** siempre hay un metilo axial y otro ecuatorial: las dos sillas tienen la **misma** energía."
+      "exito": "En el isómero **cis-1,2** siempre hay un metilo axial y otro ecuatorial: las dos sillas tienen la **misma** energía.",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "C[C@@H]1CCCC[C@@H]1C",
+            "nombre": "cis-1,2-dimetilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-08",
@@ -290,7 +332,17 @@
       ],
       "relacion": "trans",
       "objetivo": "estable",
-      "exito": "**Diecuatorial**. En la otra silla los dos metilos serían axiales."
+      "exito": "**Diecuatorial**. En la otra silla los dos metilos serían axiales.",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "C[C@H]1CC[C@H](C)CC1",
+            "nombre": "trans-1,4-dimetilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-09",
@@ -314,7 +366,17 @@
       ],
       "relacion": "cis",
       "objetivo": "estable",
-      "exito": "Cis-1,3 → **diecuatorial**. La silla diaxial es muy inestable: además de los H, los dos metilos axiales chocan entre sí."
+      "exito": "Cis-1,3 → **diecuatorial**. La silla diaxial es muy inestable: además de los H, los dos metilos axiales chocan entre sí.",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "C[C@@H]1CCC[C@H](C)C1",
+            "nombre": "cis-1,3-dimetilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-10",
@@ -338,7 +400,17 @@
       ],
       "relacion": "trans",
       "objetivo": "estable",
-      "exito": "Trans-1,4 → **los dos ecuatoriales**, sin interacciones 1,3-diaxiales. El cis siempre tiene uno axial: **el trans es más estable**."
+      "exito": "Trans-1,4 → **los dos ecuatoriales**, sin interacciones 1,3-diaxiales. El cis siempre tiene uno axial: **el trans es más estable**.",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "CC(C)[C@H]1CC[C@H](C)CC1",
+            "nombre": "trans-1-isopropil-4-metilciclohexano"
+          }
+        ]
+      }
     },
     {
       "id": "m3-11",
@@ -360,7 +432,17 @@
       "pistas": [
         "Cis-1,4: uno tiene que ser axial. Valores aproximados: CH₃ 1,7 y COOH 1,4 kcal/mol."
       ],
-      "exito": "Uno axial y otro ecuatorial: queda **ecuatorial el más voluminoso** (CH₃, 1,7 kcal/mol, frente a COOH, ≈1,4)."
+      "exito": "Uno axial y otro ecuatorial: queda **ecuatorial el más voluminoso** (CH₃, 1,7 kcal/mol, frente a COOH, ≈1,4).",
+      "referencias": {
+        "plegada": true,
+        "titulo": "Ver estructura",
+        "items": [
+          {
+            "smiles": "OC(=O)[C@H]1CC[C@@H](C)CC1",
+            "nombre": "ácido cis-4-metilciclohexano-1-carboxílico"
+          }
+        ]
+      }
     },
     {
       "id": "m3-12",
@@ -561,7 +643,17 @@
             }
           ],
           "relacion": "trans",
-          "objetivo": "estable"
+          "objetivo": "estable",
+          "referencias": {
+            "plegada": true,
+            "titulo": "Ver estructura",
+            "items": [
+              {
+                "smiles": "N[C@@H]1CCC[C@@H](C(C)(C)C)C1",
+                "nombre": "trans-1-amino-3-terc-butilciclohexano"
+              }
+            ]
+          }
         },
         {
           "tipo": "test",
@@ -576,7 +668,17 @@
                 "Ninguno, prefieren el bote"
               ],
               "correcta": 0,
-              "explicacion": "**cis-1,3** puede ser diecuatorial; el trans-1,3 siempre tiene un metilo axial."
+              "explicacion": "**cis-1,3** puede ser diecuatorial; el trans-1,3 siempre tiene un metilo axial.",
+              "referencias": [
+                {
+                  "smiles": "C[C@@H]1CCC[C@H](C)C1",
+                  "nombre": "cis"
+                },
+                {
+                  "smiles": "C[C@@H]1CCC[C@@H](C)C1",
+                  "nombre": "trans"
+                }
+              ]
             }
           ]
         }
