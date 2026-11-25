@@ -1,0 +1,13 @@
+{
+  "name": "protocolo-kekule",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Juego de puzles para estudiar Química Orgánica I (UNED). PWA estática para GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "precache": "node tools/build-precache.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "license": "CC-BY-NC-SA-4.0"
+}

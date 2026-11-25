@@ -1,0 +1,31 @@
+// Punto de entrada.
+import { loadRDKit } from '../chem/rdkit.js';
+import { route, startRouter } from './router.js';
+import { initPWA } from './pwa.js';
+import {
+  pantallaInicio, pantallaMapa, pantallaMundo, pantallaNivel,
+  pantallaBitacora, pantallaLaboratorio, pantallaAjustes,
+} from './screens.js';
+
+initPWA();
+
+route('/', pantallaInicio);
+route('/mapa', pantallaMapa);
+route('/mundo/:id', pantallaMundo);
+route('/nivel/:mundo/:nivel', pantallaNivel);
+route('/bitacora', pantallaBitacora);
+route('/laboratorio', pantallaLaboratorio);
+route('/ajustes', pantallaAjustes);
+
+const app = document.getElementById('app');
+const splash = document.getElementById('splash');
+
+loadRDKit()
+  .then(() => {
+    splash?.remove();
+    startRouter(app);
+  })
+  .catch((err) => {
+    console.error(err);
+    if (splash) splash.querySelector('.splash-msg').textContent = 'No se pudo cargar el motor químico. Comprueba la conexión y recarga la página.';
+  });

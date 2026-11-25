@@ -1,0 +1,36 @@
+// Generado por tools/build-precache.mjs. No editar a mano: ejecuta `npm run precache`.
+self.__PRECACHE = {
+  "version": "53698be8656e",
+  "files": [
+    "./",
+    "./index.html",
+    "./manifest.webmanifest",
+    "./css/app.css",
+    "./js/app/content.js",
+    "./js/app/dialog.js",
+    "./js/app/main.js",
+    "./js/app/pwa.js",
+    "./js/app/router.js",
+    "./js/app/screens.js",
+    "./js/app/store.js",
+    "./js/app/ui.js",
+    "./js/chem/mol.js",
+    "./js/chem/rdkit.js",
+    "./js/editor/editor.js",
+    "./js/editor/toolbar.js",
+    "./js/puzzles/build.js",
+    "./js/puzzles/index.js",
+    "./js/puzzles/quiz.js",
+    "./js/puzzles/validate.js",
+    "./js/render/svg.js",
+    "./content/qo1/mundo-01.json",
+    "./content/qo1/mundos.json",
+    "./icons/apple-touch-icon.png",
+    "./icons/icon-192.png",
+    "./icons/icon-512.png",
+    "./icons/icon-maskable-512.png",
+    "./icons/icon.svg",
+    "./vendor/rdkit/RDKit_minimal.js",
+    "./vendor/rdkit/RDKit_minimal.wasm"
+  ]
+};

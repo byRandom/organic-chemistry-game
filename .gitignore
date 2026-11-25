@@ -1,0 +1,6 @@
+node_modules/
+_site/
+.DS_Store
+# Material de la UNED: nunca al repositorio
+material/
+*.pdf

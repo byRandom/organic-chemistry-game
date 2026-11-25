@@ -1,0 +1,17 @@
+{
+  "asignatura": "Química Orgánica I",
+  "mundos": [
+    { "id": "m1", "num": 1, "seccion": "Bahía de criosueño", "tema": "Tema 1 · Introducción a la Química Orgánica", "archivo": "mundo-01.json" },
+    { "id": "m2", "num": 2, "seccion": "Depósitos de combustible", "tema": "Tema 2 · Alcanos", "fase": "Fase 2" },
+    { "id": "m3", "num": 3, "seccion": "Hangar de estructuras", "tema": "Tema 3 · Cicloalcanos", "fase": "Fase 2" },
+    { "id": "m4", "num": 4, "seccion": "Laboratorio de espejos", "tema": "Tema 4 · Estereoisomería", "fase": "Fase 2" },
+    { "id": "m5", "num": 5, "seccion": "Enfermería", "tema": "Tema 5 · Sustitución nucleófila", "fase": "Fase 3" },
+    { "id": "m6", "num": 6, "seccion": "Planta de polímeros", "tema": "Tema 6 · Reacciones de eliminación", "fase": "Fase 3" },
+    { "id": "m7", "num": 7, "seccion": "Destilería", "tema": "Tema 7 · Alcoholes", "fase": "Fase 4" },
+    { "id": "m8", "num": 8, "seccion": "Sala de anestesia", "tema": "Tema 8 · Éteres y epóxidos", "fase": "Fase 4" },
+    { "id": "m9", "num": 9, "seccion": "Invernaderos", "tema": "Tema 9 · Alquenos", "fase": "Fase 5" },
+    { "id": "m10", "num": 10, "seccion": "Fábrica de caucho", "tema": "Tema 10 · Dienos", "fase": "Fase 5" },
+    { "id": "m11", "num": 11, "seccion": "Puente de mando", "tema": "Tema 11 · Alquinos", "fase": "Fase 5" },
+    { "id": "final", "num": "★", "seccion": "Reactor y aproximación al planeta", "tema": "Laboratorio final · Síntesis de moléculas reales", "fase": "Fase 6" }
+  ]
+}

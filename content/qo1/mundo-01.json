@@ -1,0 +1,480 @@
+{
+  "descripcion": "La IA necesita comprobar que recuerdas lo básico: cómo se enlaza el carbono, cómo se representan las moléculas y por qué la misma fórmula puede esconder compuestos distintos.",
+  "intro": [
+    { "texto": "Primera sección: la **bahía de criosueño**. Aquí duermen 4000 colonos. Los sistemas de soporte vital dependen de mi química… que ahora mismo no recuerdo." },
+    { "texto": "Empezaremos por lo más básico. Si no sabes cuántos enlaces forma un carbono, tendré que volver a congelarte. Es broma. Probablemente." }
+  ],
+  "outro": [
+    { "texto": "Bahía de criosueño **estabilizada**. Recuerdo de nuevo la hibridación, las representaciones, la isomería y los efectos electrónicos." },
+    { "texto": "La siguiente sección son los **depósitos de combustible**. Están llenos de alcanos y alguien —no diré quién— ha mezclado los isómeros." },
+    { "quien": "sistema", "texto": "SECCIÓN 2 · DEPÓSITOS DE COMBUSTIBLE — Disponible en la Fase 2 del desarrollo." }
+  ],
+  "fichas": {
+    "carbono": {
+      "titulo": "El átomo de carbono",
+      "libro": "Tema 1, apartado 1.2",
+      "texto": "El carbono (Z = 6) tiene la configuración 1s² 2s² 2p²: **4 electrones de valencia**.\n\nNo los gana ni los pierde con facilidad: los **comparte**, formando enlaces covalentes con otros átomos (H, C, O, N, halógenos…). Por eso existe una química entera, la *Química Orgánica*, dedicada a sus compuestos."
+    },
+    "tetravalencia": {
+      "titulo": "Tetravalencia del carbono",
+      "libro": "Tema 1, apartado 1.3",
+      "texto": "El carbono forma **siempre 4 enlaces** en los compuestos orgánicos neutros: cuatro sencillos, uno doble y dos sencillos, dos dobles, o uno triple y uno sencillo.\n\nPara formarlos, el carbono promociona un electrón 2s a 2p (estado excitado) y **combina sus orbitales** en orbitales híbridos.\n\nValencias que usarás en el juego: **C = 4**, N = 3, O = 2, H y halógenos = 1."
+    },
+    "representacion": {
+      "titulo": "Formas de representar una molécula",
+      "libro": "Tema 1, apartados 1.3.4 y 1.5",
+      "texto": "La misma molécula, por ejemplo el etano {C2H6}, se puede escribir de varias maneras:\n\n- **Molecular:** {C2H6}. Solo dice qué átomos hay.\n- **Desarrollada:** todos los átomos y todos los enlaces dibujados.\n- **Semidesarrollada o condensada:** CH₃–CH₃. Los H se agrupan con su carbono.\n- **Esqueleto:** solo líneas. Cada vértice o extremo es un carbono y los H unidos a carbono se sobreentienden.\n\nEn el juego, los hidrógenos se calculan solos a partir de la valencia de cada átomo."
+    },
+    "sp3": {
+      "titulo": "Hibridación sp³ (enlace sencillo)",
+      "libro": "Tema 1, apartado 1.3.1",
+      "texto": "Un orbital 2s y tres 2p se combinan en **cuatro orbitales híbridos sp³** iguales, dirigidos hacia los vértices de un **tetraedro** (ángulo ≈ **109,5°**).\n\nCada uno forma un enlace **σ** por solapamiento frontal. Ejemplos: metano y etano. En el etano, el enlace C–C es σ (sp³–sp³) y permite el **giro libre**, del que salen las conformaciones del tema 2."
+    },
+    "sp2": {
+      "titulo": "Hibridación sp² (doble enlace)",
+      "libro": "Tema 1, apartado 1.3.2",
+      "texto": "Un orbital 2s y dos 2p forman **tres híbridos sp²**, en un plano a **120°** (geometría trigonal plana). Queda un orbital **p sin hibridar**, perpendicular al plano.\n\nEn el etileno {C2H4}, el doble enlace C=C es **un enlace σ (sp²–sp²) + un enlace π** (solapamiento lateral de los orbitales p). El enlace π impide el giro: de ahí la isomería *cis-trans*."
+    },
+    "sp": {
+      "titulo": "Hibridación sp (triple enlace)",
+      "libro": "Tema 1, apartado 1.3.3",
+      "texto": "Un orbital 2s y uno 2p forman **dos híbridos sp** en línea recta (**180°**, geometría lineal). Quedan **dos orbitales p** perpendiculares entre sí.\n\nEn el acetileno {C2H2}, el triple enlace es **un σ + dos π**. Truco: un carbono con **dos dobles enlaces** (como el central del aleno, C=C=C) también es sp.\n\nResumen: 4 vecinos → sp³ · 3 vecinos → sp² · 2 vecinos → sp."
+    },
+    "isomeria": {
+      "titulo": "Isomería",
+      "libro": "Tema 1, apartado 1.5",
+      "texto": "**Isómeros**: compuestos con la **misma fórmula molecular** pero distinta estructura.\n\n**Isomería constitucional (estructural)**: los átomos están unidos en distinto orden.\n- *De cadena*: butano frente a 2-metilpropano.\n- *De posición*: 1-propanol frente a 2-propanol.\n- *De función*: etanol frente a dimetil éter.\n\n**Estereoisomería**: mismo orden de unión, distinta disposición en el espacio (*cis-trans*, enantiómeros…). Se estudia en los temas 3 y 4."
+    },
+    "grupos-funcionales": {
+      "titulo": "Grupos funcionales",
+      "libro": "Tema 1, apartado 1.6 (Tabla 1.3)",
+      "texto": "Un **grupo funcional** es el átomo o grupo de átomos que define una familia de compuestos y su reactividad.\n\n- Alqueno: C=C · Alquino: C≡C\n- Halogenuro de alquilo: R–X\n- Alcohol: R–OH · Éter: R–O–R'\n- Amina: R–NH₂, R₂NH, R₃N\n- Aldehído: R–CHO · Cetona: R–CO–R'\n- Ácido carboxílico: R–COOH · Éster: R–COO–R'\n\nEn Química Orgánica I estudiarás a fondo alcanos, cicloalcanos, halogenuros, alcoholes, éteres, epóxidos, alquenos, dienos y alquinos."
+    },
+    "efecto-inductivo": {
+      "titulo": "Efecto inductivo (±I)",
+      "libro": "Tema 1, apartado 1.4.1",
+      "texto": "Cuando dos átomos de distinta **electronegatividad** se enlazan, el par del enlace σ se desplaza hacia el más electronegativo: aparecen cargas parciales **δ+** y **δ−**.\n\n- **Efecto −I**: el grupo **atrae** electrones (halógenos, –OH, –NO₂, C=O…).\n- **Efecto +I**: el grupo **cede** electrones (grupos alquilo).\n\nSe transmite por los enlaces σ y **se debilita rápidamente con la distancia**. Ejemplo: el ácido cloroacético es más ácido que el acético, porque el Cl (−I) estabiliza el anión carboxilato."
+    },
+    "efecto-conjugativo": {
+      "titulo": "Efecto conjugativo (±M) y resonancia",
+      "libro": "Tema 1, apartado 1.4.2",
+      "texto": "El **efecto conjugativo** (mesómero o de resonancia) es el desplazamiento de electrones **π o pares libres** a lo largo de un sistema conjugado.\n\n- **+M**: el grupo **cede** un par de electrones al sistema π (–OH, –OR, –NH₂, halógenos).\n- **−M**: el grupo **retira** densidad electrónica del sistema π (C=O, –NO₂, –C≡N).\n\n**Estructuras resonantes**: se diferencian **solo en la posición de los electrones**, nunca en la de los núcleos. Si mueves un átomo (por ejemplo, un H), ya no es resonancia: es otra molécula. La molécula real es un **híbrido de resonancia**, más estable que cualquiera de sus formas."
+    }
+  },
+  "niveles": [
+    {
+      "id": "m1-01",
+      "tipo": "construir",
+      "titulo": "Despertar",
+      "dialogo": [
+        { "texto": "Prueba de reflejos. Si de verdad sabes química, sabrás dibujar la molécula orgánica más pequeña que existe: el **metano**." }
+      ],
+      "enunciado": "Construye el **metano**, {CH4}: un átomo de carbono unido a **cuatro** hidrógenos. Dibuja todos los átomos, también los H.",
+      "editor": { "elementos": ["C", "H"], "anillos": false, "mostrarC": true },
+      "objetivo": { "formula": "CH4", "hExplicitos": 4 },
+      "pistas": [
+        "Elige **C** y toca el lienzo para colocar el carbono.",
+        "Elige **H** y toca el carbono: se le unirá un hidrógeno. Repite hasta tener cuatro."
+      ],
+      "ficha": "carbono",
+      "exito": "Metano completado. El soporte vital de la bahía acaba de reconocer tu firma química."
+    },
+    {
+      "id": "m1-02",
+      "tipo": "descubrir",
+      "titulo": "El quinto enlace",
+      "dialogo": [
+        { "texto": "Mis registros están corruptos. Dicen que el carbono forma «cuatro enlaces», pero también dicen que la nave es un queso. No me fío de ninguno de los dos." },
+        { "texto": "Haz un experimento: intenta unir un **quinto** hidrógeno a ese carbono." }
+      ],
+      "enunciado": "Intenta unir un **quinto hidrógeno** al carbono del metano. Observa qué ocurre.",
+      "inicial": "[H]C([H])([H])[H]",
+      "editor": { "elementos": ["C", "H"], "anillos": false, "mostrarC": true, "inicialConH": true },
+      "objetivo": { "evento": "valence-blocked", "elemento": "C" },
+      "pistas": ["Elige **H** y toca el carbono central."],
+      "ficha": "tetravalencia",
+      "dialogoFinal": [
+        { "texto": "El carbono se niega. Cuatro enlaces y ni uno más. Lo anoto: **tetravalencia**. Y lo de la nave-queso era falso, ya lo he comprobado." }
+      ]
+    },
+    {
+      "id": "m1-03",
+      "tipo": "construir",
+      "titulo": "Hidrógenos invisibles",
+      "dialogo": [
+        { "texto": "Dibujar cada hidrógeno es lento. A partir de ahora **yo los pongo por ti**: cada átomo se completa solo con los H que le faltan para llegar a su valencia." }
+      ],
+      "enunciado": "Construye el **etano**, {C2H6}, sin dibujar hidrógenos: solo los dos carbonos y su enlace. Fíjate en las etiquetas CH₃.",
+      "editor": { "elementos": ["C", "H"], "anillos": false, "mostrarC": true },
+      "objetivo": { "formula": "C2H6", "smiles": ["CC"] },
+      "pistas": ["Coloca un carbono y vuelve a tocarlo: aparecerá un segundo carbono unido al primero."],
+      "ficha": "representacion"
+    },
+    {
+      "id": "m1-04",
+      "tipo": "construir",
+      "titulo": "Fórmula de esqueleto",
+      "dialogo": [
+        { "texto": "Los químicos son vagos, así que ni siquiera escriben los carbonos: cada **vértice** de la línea es un carbono. Se llama **fórmula de esqueleto**. Yo también la usaré." }
+      ],
+      "enunciado": "Construye el **pentano**: una cadena **lineal** de cinco carbonos, {C5H12}. Ahora los carbonos no tienen etiqueta: cada vértice es un C.",
+      "editor": { "elementos": ["C"], "anillos": false },
+      "objetivo": {
+        "formula": "C5H12",
+        "smiles": ["CCCCC"],
+        "errores": {
+          "CCC(C)C": "Eso es una cadena **ramificada** (2-metilbutano). Se pide la cadena lineal, sin ramas.",
+          "CC(C)(C)C": "Eso es una cadena **ramificada** (2,2-dimetilpropano). Se pide la cadena lineal, sin ramas."
+        }
+      },
+      "pistas": ["Toca repetidamente el último carbono de la cadena: cada toque añade un carbono en zigzag."],
+      "ficha": "sp3"
+    },
+    {
+      "id": "m1-05",
+      "tipo": "construir",
+      "titulo": "Faltan hidrógenos",
+      "dialogo": [
+        { "texto": "Alarma en el tanque 4: contiene un gas de fórmula {C2H4}. Dos carbonos y **solo cuatro hidrógenos**. ¿Cómo puede ser, si cada carbono quiere cuatro enlaces?" }
+      ],
+      "enunciado": "Construye una molécula de fórmula {C2H4}. Cada carbono debe seguir teniendo cuatro enlaces.",
+      "editor": { "elementos": ["C", "H"], "anillos": false, "mostrarC": true },
+      "objetivo": { "formula": "C2H4", "smiles": ["C=C"] },
+      "pistas": [
+        "Con dos carbonos y un enlace sencillo salen seis H. Sobran dos.",
+        "¿Y si los dos carbonos comparten **dos** enlaces? Toca el enlace C–C para cambiar su orden."
+      ],
+      "ficha": "sp2",
+      "exito": "Es el **etileno** (eteno). El doble enlace = un enlace σ + un enlace π."
+    },
+    {
+      "id": "m1-06",
+      "tipo": "construir",
+      "titulo": "Todavía menos",
+      "dialogo": [
+        { "texto": "El soldador de la bahía funciona con un gas aún más extraño: {C2H2}. Solo dos hidrógenos." }
+      ],
+      "enunciado": "Construye una molécula de fórmula {C2H2}.",
+      "editor": { "elementos": ["C", "H"], "anillos": false, "mostrarC": true },
+      "objetivo": { "formula": "C2H2", "smiles": ["C#C"] },
+      "pistas": ["Ya sabes hacer un doble enlace. ¿Qué pasa si tocas otra vez el enlace?"],
+      "ficha": "sp",
+      "exito": "Es el **acetileno** (etino): un enlace σ + dos enlaces π. Molécula lineal, 180°."
+    },
+    {
+      "id": "m1-07",
+      "tipo": "test",
+      "titulo": "Diagnóstico de hibridación",
+      "dialogo": [
+        { "texto": "Comprobemos si lo has entendido o solo has tenido suerte. Te mostraré moléculas con un carbono **marcado en morado**." }
+      ],
+      "enunciado": "Indica la **hibridación** del carbono marcado o responde a la pregunta.",
+      "pistas": ["Cuenta los átomos unidos al carbono (incluidos los H): 4 → sp³, 3 → sp², 2 → sp."],
+      "preguntas": [
+        {
+          "texto": "Propeno. ¿Qué hibridación tiene el carbono marcado?",
+          "smiles": "C=CC", "resaltar": [2],
+          "opciones": ["sp³", "sp²", "sp"], "correcta": 0,
+          "explicacion": "Es un CH₃: está unido a 4 átomos con enlaces sencillos, así que es **sp³** (tetraédrico)."
+        },
+        {
+          "texto": "Propeno otra vez. ¿Y este carbono?",
+          "smiles": "C=CC", "resaltar": [1],
+          "opciones": ["sp³", "sp²", "sp"], "correcta": 1,
+          "explicacion": "Forma parte del doble enlace y tiene 3 vecinos: **sp²** (trigonal plano, 120°)."
+        },
+        {
+          "texto": "Acetonitrilo. ¿Qué hibridación tiene el carbono marcado?",
+          "smiles": "CC#N", "resaltar": [1],
+          "opciones": ["sp³", "sp²", "sp"], "correcta": 2,
+          "explicacion": "Tiene un triple enlace con el N y solo 2 vecinos: **sp** (lineal)."
+        },
+        {
+          "texto": "Aleno (propadieno). ¿Qué hibridación tiene el carbono **central**?",
+          "smiles": "C=C=C", "resaltar": [1],
+          "opciones": ["sp³", "sp²", "sp"], "correcta": 2,
+          "explicacion": "Tiene **dos dobles enlaces** y solo 2 vecinos: es **sp**. Sus dos orbitales p forman cada uno un enlace π con un carbono distinto.",
+          "pistaFallo": "Cuenta cuántos átomos tiene unidos el carbono central."
+        },
+        {
+          "texto": "¿Qué ángulo de enlace aproximado tiene un carbono **sp²**?",
+          "opciones": ["109,5°", "120°", "180°"], "correcta": 1,
+          "explicacion": "Los tres orbitales sp² están en un plano y se separan al máximo: **120°**."
+        },
+        {
+          "texto": "¿Cuántos enlaces σ y π tiene el acetileno, H–C≡C–H?",
+          "opciones": ["3 σ y 2 π", "2 σ y 3 π", "5 σ y 0 π", "1 σ y 2 π"], "correcta": 0,
+          "explicacion": "Dos enlaces C–H (σ) + el triple enlace (1 σ + 2 π) = **3 σ y 2 π**.",
+          "pistaFallo": "No olvides los enlaces C–H: también son enlaces σ."
+        }
+      ]
+    },
+    {
+      "id": "m1-08",
+      "tipo": "isomeros",
+      "titulo": "Gemelos sospechosos",
+      "dialogo": [
+        { "texto": "Dos tanques tienen la etiqueta {C4H10}, pero el gas de cada uno hierve a una temperatura distinta. ¿Mi sensor está roto, o la misma fórmula puede ser **dos moléculas distintas**?" }
+      ],
+      "enunciado": "Encuentra **todas** las moléculas distintas con fórmula {C4H10}. Dibuja una, pulsa «Añadir isómero» y busca la siguiente.",
+      "editor": { "elementos": ["C"], "anillos": false },
+      "objetivo": {
+        "formula": "C4H10", "total": 2,
+        "nombres": { "CCCC": "butano", "CC(C)C": "2-metilpropano" }
+      },
+      "pistas": [
+        "Una es la cadena lineal de cuatro carbonos.",
+        "Para la otra, pon una cadena de tres carbonos y une el cuarto al carbono **central**."
+      ],
+      "ficha": "isomeria",
+      "exito": "Butano y 2-metilpropano (isobutano): **isómeros de cadena**. Por eso hierven a temperaturas distintas."
+    },
+    {
+      "id": "m1-09",
+      "tipo": "isomeros",
+      "titulo": "Tres de cinco",
+      "enunciado": "Encuentra los **tres** isómeros de fórmula {C5H12}.",
+      "editor": { "elementos": ["C"], "anillos": false },
+      "objetivo": {
+        "formula": "C5H12", "total": 3,
+        "nombres": { "CCCCC": "pentano", "CCC(C)C": "2-metilbutano", "CC(C)(C)C": "2,2-dimetilpropano" }
+      },
+      "pistas": [
+        "Cadena de 5, cadena de 4 con una rama… y cadena de 3 con dos ramas.",
+        "Ojo: una rama en el **extremo** de la cadena no es una rama, simplemente alarga la cadena."
+      ],
+      "exito": "Pentano, 2-metilbutano y 2,2-dimetilpropano (neopentano). Cuantas más ramas, más «esférica» es la molécula y menor su punto de ebullición."
+    },
+    {
+      "id": "m1-10",
+      "tipo": "isomeros",
+      "titulo": "Misma fórmula, otra función",
+      "dialogo": [
+        { "texto": "El botiquín contiene dos líquidos {C2H6O}. Uno se usa como antiséptico; el otro, que es un gas a temperatura ambiente, como propelente. Encuéntralos." }
+      ],
+      "enunciado": "Encuentra los **dos** isómeros de fórmula {C2H6O}.",
+      "editor": { "elementos": ["C", "O"], "anillos": false },
+      "objetivo": {
+        "formula": "C2H6O", "total": 2,
+        "nombres": { "CCO": "etanol (alcohol)", "COC": "dimetil éter (éter)" }
+      },
+      "pistas": [
+        "El oxígeno forma 2 enlaces. Puede estar en un **extremo** de la cadena… o **en medio**.",
+        "Usa el botón **O** y toca un carbono para unirle un oxígeno."
+      ],
+      "ficha": "grupos-funcionales",
+      "exito": "Etanol (R–OH, un **alcohol**) y dimetil éter (R–O–R, un **éter**): **isómeros de función**."
+    },
+    {
+      "id": "m1-11",
+      "tipo": "test",
+      "titulo": "Inventario de grupos funcionales",
+      "dialogo": [
+        { "texto": "El inventario del almacén está desordenado. Clasifica cada sustancia por su **grupo funcional**." }
+      ],
+      "enunciado": "¿A qué familia pertenece cada molécula?",
+      "pistas": ["Busca los heteroátomos (O, N, halógenos) y fíjate en sus enlaces: ¿doble enlace C=O? ¿–OH? ¿O entre dos carbonos?"],
+      "preguntas": [
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CC(C)=O",
+          "opciones": ["Aldehído", "Cetona", "Éter", "Alcohol"], "correcta": 1,
+          "explicacion": "El C=O está **entre dos carbonos**: es una **cetona** (la acetona o propanona).",
+          "pistaFallo": "En un aldehído el C=O está en el extremo de la cadena (lleva un H)."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CCC=O",
+          "opciones": ["Aldehído", "Cetona", "Ácido carboxílico", "Éster"], "correcta": 0,
+          "explicacion": "C=O en el **extremo** de la cadena (–CHO): **aldehído** (propanal)."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CC(=O)O",
+          "opciones": ["Cetona y alcohol", "Éster", "Ácido carboxílico", "Aldehído"], "correcta": 2,
+          "explicacion": "El grupo –COOH (C=O y –OH en el **mismo** carbono) es un **ácido carboxílico**: ácido acético (etanoico). No se considera cetona + alcohol."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CC(=O)OC",
+          "opciones": ["Éter", "Éster", "Cetona", "Ácido carboxílico"], "correcta": 1,
+          "explicacion": "–COO– unido a otro carbono: **éster** (acetato de metilo)."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CCN",
+          "opciones": ["Amina", "Amida", "Nitrilo", "Alcohol"], "correcta": 0,
+          "explicacion": "Nitrógeno con enlaces sencillos a C e H: **amina** primaria (etanamina o etilamina)."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CCOCC",
+          "opciones": ["Alcohol", "Éster", "Éter", "Cetona"], "correcta": 2,
+          "explicacion": "Oxígeno entre dos carbonos: **éter** (dietil éter, el antiguo anestésico)."
+        },
+        {
+          "texto": "¿Qué tipo de compuesto es?", "smiles": "CC(C)Br",
+          "opciones": ["Halogenuro de alquilo", "Alqueno", "Alcohol", "Amina"], "correcta": 0,
+          "explicacion": "Un halógeno unido a un carbono sp³: **halogenuro de alquilo** (2-bromopropano). Los estudiarás en los temas 5 y 6."
+        }
+      ]
+    },
+    {
+      "id": "m1-12",
+      "tipo": "isomeros",
+      "titulo": "Posición y función",
+      "enunciado": "Encuentra los **tres** isómeros de fórmula {C3H8O}.",
+      "editor": { "elementos": ["C", "O"], "anillos": false },
+      "objetivo": {
+        "formula": "C3H8O", "total": 3,
+        "nombres": { "CCCO": "1-propanol", "CC(C)O": "2-propanol", "CCOC": "etil metil éter" }
+      },
+      "pistas": [
+        "Dos son alcoholes: el –OH puede ir en un carbono del extremo o en el central (**isomería de posición**).",
+        "El tercero es un éter (**isomería de función**)."
+      ],
+      "exito": "1-Propanol y 2-propanol son isómeros de **posición**; los dos son isómeros de **función** del etil metil éter."
+    },
+    {
+      "id": "m1-13",
+      "tipo": "test",
+      "titulo": "Cargas fantasma",
+      "dialogo": [
+        { "texto": "Mis sensores detectan cargas eléctricas «a medias» en moléculas neutras. ¿Cargas fantasma? ¿O hay una explicación química?" }
+      ],
+      "enunciado": "Responde sobre el **efecto inductivo**.",
+      "pistas": ["Electronegatividades: F > O > Cl ≈ N > Br > C ≈ H."],
+      "preguntas": [
+        {
+          "texto": "En el clorometano, ¿qué átomo soporta una carga parcial **positiva** (δ+)?",
+          "smiles": "CCl",
+          "opciones": ["El carbono", "El cloro", "Ninguno: el enlace es apolar"], "correcta": 0,
+          "explicacion": "El Cl es más electronegativo y atrae el par del enlace C–Cl: **Cδ+–Clδ−**. El cloro ejerce efecto **−I**."
+        },
+        {
+          "texto": "¿Cuál de estos grupos ejerce efecto inductivo **+I** (cede electrones)?",
+          "opciones": ["–CH₃ (alquilo)", "–Cl", "–OH", "–NO₂"], "correcta": 0,
+          "explicacion": "Los grupos **alquilo** son dadores (+I). Los otros tres son atractores (−I)."
+        },
+        {
+          "texto": "¿Cuál de estos dos ácidos es **más fuerte**?",
+          "opciones": [
+            { "smiles": "CC(=O)O", "texto": "Ácido acético" },
+            { "smiles": "ClCC(=O)O", "texto": "Ácido cloroacético" }
+          ],
+          "correcta": 1,
+          "explicacion": "El Cl (−I) atrae densidad electrónica y **estabiliza el anión carboxilato**: el ácido cloroacético es unas 100 veces más ácido."
+        },
+        {
+          "texto": "El efecto inductivo…",
+          "opciones": [
+            "se transmite por los enlaces σ y se debilita rápidamente con la distancia",
+            "se transmite por los enlaces π sin perder intensidad",
+            "solo existe en moléculas con carga"
+          ],
+          "correcta": 0,
+          "explicacion": "Se transmite a través de los enlaces **σ** y prácticamente desaparece a partir del tercer o cuarto enlace."
+        }
+      ],
+      "ficha": "efecto-inductivo"
+    },
+    {
+      "id": "m1-14",
+      "tipo": "test",
+      "titulo": "Electrones que viajan",
+      "dialogo": [
+        { "texto": "En algunas moléculas los electrones no se quedan quietos en un enlace: se reparten entre varios átomos. Yo lo llamo «el baile». Los humanos, **resonancia**." }
+      ],
+      "enunciado": "Responde sobre el **efecto conjugativo** y la **resonancia**.",
+      "pistas": ["En la resonancia solo se mueven electrones (pares libres y enlaces π). Los núcleos se quedan donde están."],
+      "preguntas": [
+        {
+          "texto": "Dos estructuras resonantes de una misma especie se diferencian…",
+          "opciones": [
+            "solo en la distribución de los electrones",
+            "en la posición de algún átomo de hidrógeno",
+            "en el número total de electrones"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo cambian los **electrones** (π y pares libres). Si se mueve un núcleo, son moléculas distintas (por ejemplo, tautómeros), no formas resonantes."
+        },
+        {
+          "texto": "En el ion acetato, CH₃–COO⁻, ¿dónde está realmente la carga negativa?",
+          "smiles": "CC(=O)[O-]",
+          "opciones": [
+            "Repartida por igual entre los dos oxígenos",
+            "Siempre en el oxígeno del enlace sencillo",
+            "En el carbono del grupo CH₃"
+          ],
+          "correcta": 0,
+          "explicacion": "Las dos formas resonantes son equivalentes: la carga se **deslocaliza** entre los dos oxígenos y los dos enlaces C–O tienen la misma longitud."
+        },
+        {
+          "texto": "¿Qué grupo tiene efecto conjugativo **+M** (cede un par de electrones al sistema π)?",
+          "opciones": ["–NH₂", "–C=O (carbonilo)", "–NO₂", "–C≡N"], "correcta": 0,
+          "explicacion": "El N del –NH₂ tiene un **par libre** que puede compartir con el sistema π: **+M**. Los otros tres retiran electrones (−M)."
+        },
+        {
+          "texto": "¿Cuál de estos grupos tiene efecto **−M**?",
+          "opciones": ["–OCH₃", "–OH", "–CHO", "–Cl"], "correcta": 2,
+          "explicacion": "El carbonilo del –CHO retira densidad electrónica del sistema π: **−M**. –OCH₃, –OH y –Cl tienen pares libres (+M)."
+        },
+        {
+          "texto": "El anión ciclopentadienilo es un anillo de 5 carbonos con dos dobles enlaces y una carga negativa. ¿Entre cuántos carbonos se reparte la carga por resonancia?",
+          "smiles": "[CH-]1C=CC=C1",
+          "opciones": ["1", "2", "3", "5"], "correcta": 3,
+          "explicacion": "Moviendo el par libre y los enlaces π alrededor del anillo se obtienen **5 formas resonantes equivalentes**: la carga se reparte entre los 5 carbonos."
+        }
+      ],
+      "ficha": "efecto-conjugativo"
+    },
+    {
+      "id": "m1-jefe",
+      "tipo": "secuencia",
+      "jefe": true,
+      "titulo": "Emergencia: fallo de soporte vital",
+      "dialogo": [
+        { "quien": "sistema", "texto": "⚠ ALERTA · Fallo en el sintetizador de la bahía de criosueño · Se requiere verificación manual" },
+        { "texto": "El sintetizador no reconoce sus propias moléculas. Tendrás que **identificarlas tú**, una por una. Sin mi ayuda, a ser posible." }
+      ],
+      "enunciado": "Supera las **tres fases** de la emergencia.",
+      "pistas": ["Repasa la bitácora: hibridación, isomería y grupos funcionales."],
+      "pasos": [
+        {
+          "tipo": "construir",
+          "enunciado": "**Fase 1.** El sintetizador necesita **propeno**, {C3H6}: tres carbonos en cadena con un **doble enlace** en un extremo.",
+          "editor": { "elementos": ["C"] },
+          "objetivo": {
+            "formula": "C3H6", "smiles": ["C=CC"],
+            "errores": { "C1CC1": "Eso es **ciclopropano**: también {C3H6}, pero no tiene doble enlace. Propeno y ciclopropano son isómeros." }
+          }
+        },
+        {
+          "tipo": "test",
+          "enunciado": "**Fase 2.** Análisis del contenido del depósito de reserva.",
+          "preguntas": [
+            {
+              "texto": "En el 1-buten-3-ino, ¿qué hibridación tiene el carbono marcado?",
+              "smiles": "C=CC#C", "resaltar": [2],
+              "opciones": ["sp³", "sp²", "sp"], "correcta": 2,
+              "explicacion": "Pertenece al triple enlace y tiene 2 vecinos: **sp**."
+            },
+            {
+              "texto": "El ácido láctico se acumula en los músculos de los colonos dormidos. ¿Qué grupos funcionales tiene?",
+              "smiles": "CC(O)C(=O)O",
+              "opciones": ["Alcohol y ácido carboxílico", "Cetona y éter", "Aldehído y alcohol", "Éster"], "correcta": 0,
+              "explicacion": "Un –OH en el carbono 2 (**alcohol**) y un –COOH (**ácido carboxílico**): es un hidroxiácido."
+            }
+          ]
+        },
+        {
+          "tipo": "isomeros",
+          "enunciado": "**Fase 3.** Una fuga de {C4H8} contamina la bahía. Identifica los **cinco** isómeros constitucionales posibles (puedes usar anillos).",
+          "editor": { "elementos": ["C"], "anillos": [3, 4, 5, 6] },
+          "objetivo": {
+            "formula": "C4H8", "total": 5,
+            "nombres": {
+              "C=CCC": "1-buteno", "CC=CC": "2-buteno", "C=C(C)C": "2-metilpropeno",
+              "C1CCC1": "ciclobutano", "CC1CC1": "metilciclopropano"
+            }
+          }
+        }
+      ],
+      "exito": "Sintetizador verificado. Los 4000 colonos siguen dormidos y, lo más importante, **vivos**."
+    }
+  ]
+}
