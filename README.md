@@ -1,75 +1,91 @@
 # Protocolo Kekulé · Química Orgánica I
 
-Juego de puzles para estudiar **Química Orgánica I** (Grado en Química, UNED). Despiertas en la nave colonia *Ouroboros*, cuya IA, K.E.K.U.L.É., ha perdido su módulo de química orgánica, y tienes que ayudarla a reaprenderla desde el átomo de carbono. Cada sección de la nave es un tema del programa.
+**Un juego de puzles para aprender química orgánica jugando.** Gratis, en español, en el móvil y sin conexión.
 
-- Se instala en el móvil (PWA) y funciona **sin conexión**.
-- No necesita compilación: HTML, CSS y JavaScript estáticos, publicados en GitHub Pages.
-- La química se valida con [RDKit.js](https://www.rdkit.org/) (WebAssembly).
+▶️ **Jugar:** <https://byrandom.github.io/organic-chemistry-game/>
 
-El diseño completo y las fases de desarrollo están en [`docs/DISENO.md`](docs/DISENO.md).
+Despiertas del criosueño en la nave colonia *Ouroboros*. Su inteligencia artificial, **K.E.K.U.L.É.**, ha perdido el módulo de química orgánica, y sin él la nave no puede fabricar combustible, medicinas ni materiales. Tienes que ayudarla a reaprenderlo todo desde el átomo de carbono, sección a sección, hasta reparar la nave antes de llegar al planeta.
 
-## Estado
+Está pensado para estudiar la asignatura **Química Orgánica I** del Grado en Química de la UNED, pero sirve a cualquiera que esté aprendiendo química orgánica.
 
-| Fase | Contenido | Estado |
+## Cómo se juega
+
+- **Primero el puzle, después la teoría.** Cada concepto se descubre resolviendo un reto. Al superarlo, la explicación se guarda en la **bitácora** para repasarla cuando quieras.
+- **Dibujas moléculas con el dedo** en un editor táctil, y el juego comprueba la química de verdad: valencias, isómeros, configuración R/S, cis/trans y E/Z.
+- **Sin castigos.** Equivocarte no te bloquea. Solo cambia las estrellas que consigues (de una a tres).
+- **Dificultad progresiva.** Se empieza contando enlaces del metano y se acaba planeando síntesis de varios pasos, con un **jefe** al final de cada sección de la nave.
+
+### Tipos de puzle
+
+| | Puzle | Qué practicas |
 |---|---|---|
-| 0 | PWA instalable, sin conexión, despliegue en GitHub Pages | ✅ |
-| 1 | Editor de moléculas táctil, puzles «construir» y «razonar», historia y bitácora | ✅ |
-| 2 | Mundos 1-4 (estructura, conformaciones y estereoquímica) | ✅ |
-| 3 | Mundos 5-6 (SN1/SN2, E1/E2), motor de reacciones y puzles de síntesis · lienzo oscuro | ✅ |
-| 4-7 | Ver el documento de diseño | Pendiente |
+| 🧱 | Construir | Formular a partir del nombre, encontrar todos los isómeros |
+| 🪞 | Estereo | Centros quirales, R/S, proyecciones de Fischer, Newman y caballete |
+| 🪑 | Conformación | Conformaciones de Newman y sillas del ciclohexano |
+| ⚗️ | Reacción | Mecanismo (SN1, SN2, E1, E2) y producto mayoritario con su estereoquímica |
+| 🧩 | Esquema | Completar secuencias de reacciones A → B → C |
+| 🔬 | Síntesis | Elegir los reactivos para llegar de una molécula a otra, al estilo de los juegos de programación |
+| ✅ | Razonar | Preguntas razonadas con explicación |
 
-## Desarrollo
+En la bitácora también hay **simulacros de evaluación**: preguntas como las de examen, con otras moléculas, en orden aleatorio y con nota final por temas.
 
-Requisitos: Node 20+ (solo para los tests) y Python 3 (o cualquier servidor estático).
+## Contenido
+
+Cada sección de la nave es un tema del programa:
+
+| | Sección de la nave | Tema | |
+|---|---|---|---|
+| 1 | Bahía de criosueño | Introducción a la química orgánica | ✅ |
+| 2 | Depósitos de combustible | Alcanos | ✅ |
+| 3 | Hangar de estructuras | Cicloalcanos | ✅ |
+| 4 | Laboratorio de espejos | Estereoisomería | ✅ |
+| 5 | Enfermería | Sustitución nucleófila | ✅ |
+| 6 | Planta de polímeros | Reacciones de eliminación | ✅ |
+| 7 | Destilería | Alcoholes | En desarrollo |
+| 8 | Sala de anestesia | Éteres y epóxidos | En desarrollo |
+| 9 | Invernaderos | Alquenos | Próximamente |
+| 10 | Fábrica de caucho | Dienos | Próximamente |
+| 11 | Puente de mando | Alquinos | Próximamente |
+| ★ | Reactor | Laboratorio final: síntesis de moléculas reales | Próximamente |
+
+## Instalarlo en el móvil
+
+Abre el enlace de **Jugar** en el navegador del móvil y:
+
+- **Android (Chrome):** menú ⋮ → *Instalar aplicación* (o *Añadir a pantalla de inicio*).
+- **iPhone (Safari):** botón *Compartir* → *Añadir a pantalla de inicio*.
+
+Una vez instalado funciona **sin conexión**. Tu progreso se guarda solo en tu dispositivo: no hay cuentas ni se envían datos a ningún sitio.
+
+## Para desarrolladores
+
+Es una web estática (HTML, CSS y JavaScript sin compilación). La química se valida con [RDKit.js](https://www.rdkit.org/) en WebAssembly, y encima hay un motor propio de estereoquímica y de reacciones.
+
+Necesitas Node 20 o superior (solo para los tests) y Python 3, o cualquier otro servidor estático.
 
 ```sh
 npm run serve       # http://localhost:8080
 npm test            # tests del motor químico y del contenido
-npm run precache    # regenera la lista de archivos para el modo sin conexión
+npm run precache    # actualiza la lista de archivos del modo sin conexión
 ```
 
-> Después de modificar cualquier archivo de la app, ejecuta `npm run precache`. El test `precache` falla si se te olvida, y así la versión publicada se actualiza en los móviles.
+Después de cambiar cualquier archivo de la app, ejecuta `npm run precache`. Si se te olvida, el test `precache` falla.
 
-### Estructura
+**Los niveles son datos.** Cada sección de la nave es un archivo `content/qo1/mundo-XX.json`, y en los primeros mundos hay ejemplos de todos los tipos de puzle. Los tests comprueban que cada nivel tiene una solución válida y que las respuestas son químicamente correctas. Por ejemplo, ejecutan las reacciones con el motor y comprueban que sale el producto esperado. Si el ejercicio no evalúa la nomenclatura, usa el campo `referencias` para que los compuestos del enunciado aparezcan dibujados.
+
+El diseño completo del juego (historia, mundos, tipos de puzle y plan de desarrollo) está en [`docs/DISENO.md`](docs/DISENO.md).
 
 ```
-index.html, manifest.webmanifest, sw.js   PWA
-js/chem/       grafo molecular, valencias, SMILES y envoltorio de RDKit
-js/editor/     editor de moléculas táctil y barra de herramientas
-js/chem/stereo.js        R/S, Fischer, Newman y caballete que respetan la configuración real
-js/chem/conformacion.js  energías de Newman y sillas (valores del texto base)
-js/chem/reacciones.js    motor de reacciones SN1/SN2/E1/E2 con estereoquímica (Tabla 6.1)
-js/chem/reactivos.js     catálogo de reactivos (las cartas de la caja de herramientas)
-js/render/     dibujo de moléculas en SVG y proyecciones (Fischer, Newman, caballete, silla)
-js/puzzles/    tipos de puzle y validación de respuestas
-js/app/        pantallas, enrutador, progreso, diálogos, PWA
-content/qo1/   mundos, niveles y fichas (datos JSON)
-tests/         tests con Node (node --test)
-dev/           páginas de prueba visual para desarrollo (no se publican)
+js/chem/      grafo molecular, RDKit, estereoquímica, conformaciones y reacciones
+js/editor/    editor de moléculas táctil
+js/render/    dibujo de moléculas y proyecciones en SVG
+js/puzzles/   tipos de puzle y validación
+js/app/       pantallas, progreso y PWA
+content/qo1/  mundos, niveles y fichas de la bitácora
+tests/        tests (node --test)
 ```
 
-### Añadir niveles
-
-Los niveles son datos en `content/qo1/mundo-XX.json`. Hay ejemplos de todos los tipos en `mundo-01.json`:
-`construir`, `descubrir`, `isomeros`, `test` y `secuencia` (jefes). Los Mundos 2-4 añaden
-`newman`, `silla`, `quirales`, `rs` y `fischer`, y las preguntas `test` admiten ilustraciones
-(`repr`, `par`, `silla`, `newman`). En las preguntas con `par` los tests comprueban
-automáticamente que la relación marcada como correcta (idénticos, enantiómeros o
-diastereoisómeros) es la real. Los Mundos 5-6 añaden `reaccion`, `esquema` y `sintesis`: cada
-nivel indica el producto esperado (o la solución de referencia) y los tests comprueban que el
-motor de reacciones lo reproduce.
-
-Cualquier nivel, fase de jefe o pregunta `test` admite `referencias`: los compuestos que nombra
-el enunciado, dibujados con su nombre (`{ smiles, nombre }`, `{ texto, nombre }` para fórmulas
-como R₂CuLi, `{ incognita: true }`, `{ flecha: '…' }` y `'+'`). Con
-`{ plegada: true, items: [...] }` quedan ocultas tras «Ver estructura». Úsalas siempre que el
-ejercicio no evalúe la nomenclatura. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
-
-## Publicar en GitHub Pages
-
-1. El repositorio tiene que ser **público** (o tu cuenta, GitHub Pro).
-2. En GitHub: *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
-3. Cada push a `main` ejecuta los tests y publica en `https://<usuario>.github.io/organic-chemistry-game/`.
+¿Has encontrado un error químico o un fallo? Abre una *issue*.
 
 ## Licencia
 
@@ -83,4 +99,4 @@ Excepción: RDKit (`vendor/rdkit/`) mantiene su licencia BSD de 3 cláusulas.
 
 ## Aviso
 
-Proyecto de estudio no oficial. Los textos y puzles son originales. El material de la UNED (libro, guía, PEC y exámenes) **no** se incluye en este repositorio ni está cubierto por la licencia.
+Proyecto personal de estudio, **no oficial** y sin relación con la UNED. Los textos, la historia y los puzles son originales. Este repositorio **no** incluye material de la UNED (libro, guía, pruebas de evaluación ni exámenes), y ese material no está cubierto por la licencia.
