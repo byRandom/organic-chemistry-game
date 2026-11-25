@@ -87,6 +87,7 @@ export function comprobarIsomero(mol, objetivo, encontrados) {
   const r = comprobarConstruccion(mol, { formula: objetivo.formula, permitirFragmentos: false });
   if (!r.ok) return r;
   if (encontrados.includes(r.canon)) return { ok: false, repetido: true, canon: r.canon, msg: 'Ese isómero ya lo tienes. ¡Busca otro diferente!' };
+  if (objetivo.soloCiclos && !/\d/.test(r.canon)) return { ok: false, canon: r.canon, msg: 'Ese compuesto no tiene anillo. En este reto solo valen **cicloalcanos**.' };
   if (objetivo.excluir?.includes(r.canon)) return { ok: false, canon: r.canon, msg: objetivo.mensajeExcluir || 'Ese no vale en este reto.' };
   return r;
 }

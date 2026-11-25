@@ -275,6 +275,7 @@ export function fromRDKitJSON(json) {
   }
   const ext = (mol.extensions || []).find((e) => e.name === 'rdkitRepresentation');
   if (ext?.cipCodes) m.cip = Object.fromEntries(ext.cipCodes);
+  if (ext?.cipRanks) m.ranks = ext.cipRanks;
   return m;
 }
 
