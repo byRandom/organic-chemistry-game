@@ -2,6 +2,8 @@
 import { h, rich } from '../app/ui.js';
 import { montarEditor } from './build.js';
 import { montarTest } from './quiz.js';
+import { montarQuirales, montarRS, montarAFischer } from './estereo.js';
+import { montarNewman, montarSilla } from './conformacion.js';
 
 const TIPOS = {
   construir: montarEditor,
@@ -9,6 +11,11 @@ const TIPOS = {
   isomeros: montarEditor,
   test: montarTest,
   secuencia: montarSecuencia,
+  quirales: montarQuirales,
+  rs: montarRS,
+  fischer: montarAFischer,
+  newman: montarNewman,
+  silla: montarSilla,
 };
 
 export function montarPuzle(cont, nivel, ctx) {

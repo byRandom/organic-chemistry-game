@@ -2,6 +2,25 @@
 import { h, rich } from '../app/ui.js';
 import { molFromSmiles } from '../chem/rdkit.js';
 import { molSVG } from '../render/svg.js';
+import { representar, NOMBRE_REPR } from '../render/depict.js';
+import { sillaSVG, newmanSVG } from '../render/proyecciones.js';
+import { disposicionNewman } from '../chem/conformacion.js';
+
+/** Ilustración de una pregunta: molécula, representación estereoquímica, pareja, silla o Newman. */
+export function ilustracion(p) {
+  if (p.par) {
+    return h('div.repr-pair', p.par.map((spec, k) => h('figure',
+      h('div.proj-box', representar(spec).svg),
+      h('figcaption', (k === 0 ? 'A · ' : 'B · ') + NOMBRE_REPR[spec.repr || 'cuña']))));
+  }
+  if (p.repr) return h('div.proj-box', representar(p.repr).svg);
+  if (p.silla) {
+    const mapa = Object.fromEntries(p.silla.sustituyentes.map((s) => [s.carbono, { texto: s.texto, pos: s.pos }]));
+    return h('div.proj-box', sillaSVG(mapa, { pliegue: p.silla.pliegue ?? 1, numeros: true }));
+  }
+  if (p.newman) return h('div.proj-box', newmanSVG(disposicionNewman(p.newman.delante, p.newman.detras, p.newman.giro ?? 60)));
+  return null;
+}
 
 function mol(smiles, resaltar, opts = {}) {
   const m = molFromSmiles(smiles);
@@ -23,6 +42,8 @@ export function montarTest(cont, nivel, ctx) {
     progreso.textContent = preguntas.length > 1 ? `Pregunta ${i + 1} de ${preguntas.length}` : '';
     box.appendChild(h('div.q-text', { html: rich(p.texto) }));
     if (p.smiles) box.appendChild(h('div.q-mol', mol(p.smiles, p.resaltar)));
+    const ilu = ilustracion(p);
+    if (ilu) box.appendChild(ilu);
     const opts = h('div.q-opts' + (p.opciones.some((o) => o.smiles) ? '.q-opts-mol' : ''));
     const expl = h('div.q-expl', { hidden: true, 'aria-live': 'polite' });
     let resuelta = false;

@@ -1,0 +1,701 @@
+{
+  "descripcion": "Los depósitos están llenos de alcanos… mezclados. Para recuperar el combustible tendrás que **nombrarlos**, distinguir sus **isómeros**, entender cómo **giran** sus enlaces y cómo reaccionan con los halógenos.",
+  "intro": [
+    {
+      "texto": "Depósitos de combustible. Aquí guardamos los **alcanos**: hidrocarburos saturados, {CnH2n+2}, todo enlaces σ. Aburridos, estables… y la base de cualquier combustible."
+    },
+    {
+      "texto": "Problema: las etiquetas de los tanques se han borrado. Necesito que me digas el **nombre IUPAC** de cada uno. Y que no explote nada, a ser posible."
+    }
+  ],
+  "outro": [
+    {
+      "texto": "Depósitos **recuperados**. Ya recuerdo la nomenclatura, las conformaciones y por qué el bromo es tan selectivo."
+    },
+    {
+      "texto": "Siguiente parada: el **hangar de estructuras**. Allí todo son anillos. Prepárate para sentarte en muchas **sillas**."
+    }
+  ],
+  "fichas": {
+    "nomenclatura-alcanos": {
+      "titulo": "Nomenclatura de alcanos (IUPAC)",
+      "libro": "Tema 2, apartado 2.2",
+      "texto": "1. **Cadena principal**: la más larga. Si hay dos igual de largas, la que tenga **más sustituyentes**.\n2. **Numerar** desde el extremo que dé los **localizadores más bajos** a los sustituyentes (en el primer punto de diferencia).\n3. Nombrar los sustituyentes (metil, etil, propil, isopropil, terc-butil…) en **orden alfabético**. Los prefijos multiplicativos (di-, tri-, tetra-) y *sec-*, *terc-* **no cuentan** para el orden; *iso* sí.\n4. Los halógenos se nombran como sustituyentes más: fluoro, cloro, bromo, yodo.\n\nEjemplo: CH₃CH₂CH(CH₃)C(Cl)(CH₂CH₃)CH₂CH₃ → **3-cloro-3-etil-4-metilhexano**."
+    },
+    "propiedades-alcanos": {
+      "titulo": "Propiedades físicas de los alcanos",
+      "libro": "Tema 2, apartado 2.3",
+      "texto": "Son **apolares**: solo hay fuerzas de **van der Waals** entre sus moléculas.\n\n- El punto de ebullición **aumenta con la masa** (cadena más larga).\n- Para la misma fórmula, cuanto **más ramificado**, más «esférico» es, tiene menos superficie de contacto y **menor punto de ebullición**.\n- Son **insolubles en agua** y menos densos que ella: flotan."
+    },
+    "conformaciones": {
+      "titulo": "Conformaciones y proyección de Newman",
+      "libro": "Tema 2, apartado 2.4",
+      "texto": "Las **conformaciones** son disposiciones que se interconvierten por **giro alrededor de un enlace σ**. No son isómeros aislables.\n\nEn la **proyección de Newman** se mira el enlace C–C de frente: el carbono delantero es un punto y el trasero, un círculo.\n\n- **Alternada**: los enlaces del carbono trasero quedan entre los del delantero. Es la **más estable**.\n- **Eclipsada**: quedan superpuestos. Hay repulsión entre los pares de enlace (**tensión torsional**).\n\nEn el etano la diferencia es de unas **3 kcal/mol**, tan poca que se habla de «rotación libre»."
+    },
+    "butano": {
+      "titulo": "Análisis conformacional del butano",
+      "libro": "Tema 2, apartado 2.4 (Figuras 2.4 y 2.5)",
+      "texto": "Girando alrededor del enlace C2–C3:\n\n- **Anti** (antiperiplanar, CH₃ a 180°): la **más estable** (0 kcal/mol).\n- **Gauche** (sesgada, CH₃ a 60°): +0,9 kcal/mol, por repulsión estérica entre los metilos.\n- **Eclipsada anticlinal** (CH₃ eclipsado con H): ≈ 3,8 kcal/mol.\n- **Totalmente eclipsada** (sinperiplanar, CH₃ sobre CH₃): la **más inestable**.\n\nEn general: la conformación más estable de cualquier alcano es la que pone los grupos voluminosos en **anti**."
+    },
+    "radicales": {
+      "titulo": "Estabilidad de radicales y selectividad",
+      "libro": "Tema 2, apartado 2.5.2",
+      "texto": "Estabilidad de los radicales alquilo: **terciario > secundario > primario > metilo**. Se explica por **hiperconjugación**: el orbital p semiocupado se solapa con enlaces σ C–H vecinos. Para el radical etilo pueden escribirse 4 formas, 7 para el isopropilo y 10 para el terc-butilo.\n\nLos radicales **alilo** y **bencilo** son aún más estables, por **resonancia**.\n\nPor eso los H terciarios son los que antes se sustituyen."
+    },
+    "halogenacion": {
+      "titulo": "Halogenación radicalaria de alcanos",
+      "libro": "Tema 2, apartado 2.5.2",
+      "texto": "R–H + X₂ → R–X + HX, con luz (hν) o calor. Mecanismo **radicalario** en tres etapas: **iniciación** (X₂ → 2 X·), **propagación** y **terminación**.\n\n- **Reactividad**: F₂ > Cl₂ > Br₂ (el I₂ no reacciona).\n- **Selectividad**: al revés. El **cloro** es poco selectivo y da **mezclas** (propano → 1-cloro y 2-cloropropano, 43:57). El **bromo** es muy selectivo y da casi solo el producto del radical más estable (propano → casi exclusivamente 2-bromopropano)."
+    },
+    "obtencion-alcanos": {
+      "titulo": "Métodos de obtención de alcanos",
+      "libro": "Tema 2, apartado 2.6",
+      "texto": "- **Hidrogenación** de alquenos y alquinos (H₂, Pt/Pd/Ni): el más importante.\n- **Reducción de halogenuros**: R–X + Zn/HCl (o LiAlH₄) → R–H.\n- **Hidrólisis de Grignard**: R–X + Mg → R–MgX; con H₂O → R–H.\n- **Wurtz**: 2 R–X + 2 Na → R–R. Solo útil para alcanos **simétricos**: con dos halogenuros distintos se obtiene una mezcla.\n- **Corey-House**: R₂CuLi + R'–X → R–R'. Permite alcanos asimétricos; **R'–X debe ser primario** (R puede ser 1°, 2° o 3°)."
+    }
+  },
+  "niveles": [
+    {
+      "id": "m2-01",
+      "tipo": "construir",
+      "titulo": "La etiqueta del tanque 1",
+      "dialogo": [
+        {
+          "texto": "La etiqueta del tanque 1 dice **3-metilhexano**. Constrúyelo y lo comparo con el contenido."
+        }
+      ],
+      "enunciado": "Construye el **3-metilhexano**: una cadena principal de **6** carbonos con un **metilo** en el carbono **3**.",
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "formula": "C7H16",
+        "smiles": [
+          "CCC(C)CCC"
+        ],
+        "errores": {
+          "CC(C)CCCC": "Eso es el **2**-metilhexano: el metilo está en el carbono 2.",
+          "CCCCCCC": "Eso es el heptano, sin ramificar. Falta el metilo."
+        }
+      },
+      "pistas": [
+        "Dibuja una cadena de 6 carbonos y añade un carbono más al tercero."
+      ],
+      "ficha": "nomenclatura-alcanos"
+    },
+    {
+      "id": "m2-02",
+      "tipo": "construir",
+      "titulo": "El combustible de referencia",
+      "dialogo": [
+        {
+          "texto": "El tanque 2 contiene **isooctano**, el patrón de «índice de octano 100» de las gasolinas. Su nombre IUPAC es **2,2,4-trimetilpentano**."
+        }
+      ],
+      "enunciado": "Construye el **2,2,4-trimetilpentano**.",
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "formula": "C8H18",
+        "smiles": [
+          "CC(C)CC(C)(C)C"
+        ]
+      },
+      "pistas": [
+        "Cadena de 5 carbonos: dos metilos en el C2 y uno en el C4."
+      ]
+    },
+    {
+      "id": "m2-03",
+      "tipo": "test",
+      "titulo": "Reetiquetado",
+      "enunciado": "Elige el **nombre IUPAC** correcto de cada molécula.",
+      "pistas": [
+        "Busca la cadena más larga aunque esté «doblada» en el dibujo y numera para que los localizadores sean lo más bajos posible."
+      ],
+      "preguntas": [
+        {
+          "texto": "¿Cómo se llama?",
+          "smiles": "CCC(C)CC(C)C",
+          "opciones": [
+            "2,4-Dimetilhexano",
+            "3,5-Dimetilhexano",
+            "2-Metil-4-etilpentano",
+            "1,3-Dimetil-hexano"
+          ],
+          "correcta": 0,
+          "explicacion": "Cadena de 6 carbonos numerada desde el extremo más cercano a una rama: metilos en **2 y 4**."
+        },
+        {
+          "texto": "¿Cómo se llama?",
+          "smiles": "CCC(CC)C(C)C",
+          "opciones": [
+            "2-Metil-3-etilpentano",
+            "3-Etil-2-metilpentano",
+            "3-Isopropilpentano",
+            "2-Etil-3-metilpentano"
+          ],
+          "correcta": 1,
+          "explicacion": "Cadena principal de 5 C, con etilo en C3 y metilo en C2. Orden alfabético: **e**til antes que **m**etil → **3-etil-2-metilpentano**.",
+          "pistaFallo": "Los sustituyentes se citan por orden alfabético, no por su número."
+        },
+        {
+          "texto": "Este compuesto aparece en la PEC-1. ¿Cómo se llama?",
+          "smiles": "CCC(C)C(Cl)(CC)CC",
+          "opciones": [
+            "4-Cloro-4-etil-3-metilhexano",
+            "3-Cloro-3-etil-4-metilhexano",
+            "3-Etil-3-cloro-4-metilhexano",
+            "2-Etil-2-cloro-3-metilpentano"
+          ],
+          "correcta": 1,
+          "explicacion": "Cadena de 6 C. Desde un extremo los localizadores son {3,4,4}; desde el otro, **{3,3,4}**, que son más bajos. Orden alfabético: cloro, etil, metil → **3-cloro-3-etil-4-metilhexano**."
+        },
+        {
+          "texto": "¿Cómo se llama?",
+          "smiles": "CC(C)(C)CC(C)(C)C",
+          "opciones": [
+            "2,2,4,4-Tetrametilpentano",
+            "2,4-Di-terc-butilmetano",
+            "2,2,4,4-Tetrametilhexano",
+            "1,1,3,3-Tetrametilpentano"
+          ],
+          "correcta": 0,
+          "explicacion": "Cadena de 5 C con dos metilos en C2 y dos en C4: **2,2,4,4-tetrametilpentano**."
+        }
+      ]
+    },
+    {
+      "id": "m2-04",
+      "tipo": "isomeros",
+      "titulo": "Cinco hexanos",
+      "dialogo": [
+        {
+          "texto": "El tanque 3 es una mezcla de todos los isómeros de {C6H14}. Necesito saber cuántos hay y cuáles son."
+        }
+      ],
+      "enunciado": "Encuentra los **cinco** isómeros de {C6H14}.",
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "formula": "C6H14",
+        "total": 5,
+        "nombres": {
+          "CCCCCC": "hexano",
+          "CC(C)CCC": "2-metilpentano",
+          "CCC(C)CC": "3-metilpentano",
+          "CC(C)(C)CC": "2,2-dimetilbutano",
+          "CC(C)C(C)C": "2,3-dimetilbutano"
+        }
+      },
+      "pistas": [
+        "Cadena de 6 (1), de 5 con un metilo (2), de 4 con dos metilos (2)."
+      ],
+      "ficha": "propiedades-alcanos",
+      "exito": "Hexano (p. eb. 69 °C) frente a 2,2-dimetilbutano (50 °C): cuanto más ramificado, menor punto de ebullición."
+    },
+    {
+      "id": "m2-05",
+      "tipo": "isomeros",
+      "titulo": "Ocho bromuros (PEC-1)",
+      "dialogo": [
+        {
+          "texto": "Esto sale tal cual en la PEC-1: dibujar **todos** los isómeros constitucionales de {C5H11Br}. Yo cuento ocho. A ver si tú también."
+        }
+      ],
+      "enunciado": "Encuentra los **ocho** isómeros constitucionales de {C5H11Br}.",
+      "editor": {
+        "elementos": [
+          "C",
+          "Br"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "formula": "C5H11Br",
+        "total": 8,
+        "nombres": {
+          "BrCCCCC": "1-bromopentano",
+          "CC(Br)CCC": "2-bromopentano",
+          "CCC(Br)CC": "3-bromopentano",
+          "BrCC(C)CC": "1-bromo-2-metilbutano",
+          "CC(C)(Br)CC": "2-bromo-2-metilbutano",
+          "CC(Br)C(C)C": "2-bromo-3-metilbutano",
+          "BrCCC(C)C": "1-bromo-3-metilbutano",
+          "BrCC(C)(C)C": "1-bromo-2,2-dimetilpropano"
+        }
+      },
+      "pistas": [
+        "Parte de los tres esqueletos de {C5H12} (pentano, 2-metilbutano, 2,2-dimetilpropano) y coloca el Br en cada posición **distinta**.",
+        "Pentano: 3 posiciones distintas. 2-Metilbutano: 4. 2,2-Dimetilpropano: 1."
+      ]
+    },
+    {
+      "id": "m2-06",
+      "tipo": "newman",
+      "titulo": "El giro libre",
+      "dialogo": [
+        {
+          "texto": "Mira el enlace C–C del **etano** de frente: el carbono delantero es el punto y el trasero, el círculo. Es la **proyección de Newman**."
+        },
+        {
+          "texto": "Gira el carbono trasero y observa el diagrama de energía. Quiero que encuentres la conformación **más inestable**."
+        }
+      ],
+      "enunciado": "Etano. Gira el carbono trasero hasta la conformación de **máxima energía**.",
+      "delante": [
+        "H",
+        "H",
+        "H"
+      ],
+      "detras": [
+        "H",
+        "H",
+        "H"
+      ],
+      "giroInicial": 60,
+      "objetivo": {
+        "tipo": "max"
+      },
+      "ficha": "conformaciones",
+      "exito": "Es la **eclipsada**: los enlaces C–H se superponen y se repelen. Solo cuesta ~3 kcal/mol girar, por eso se habla de rotación libre."
+    },
+    {
+      "id": "m2-07",
+      "tipo": "newman",
+      "titulo": "Butano: dónde ponerse cómodo",
+      "enunciado": "Butano, enlace C2–C3. Encuentra la conformación **más estable**.",
+      "delante": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "detras": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "giroInicial": 0,
+      "objetivo": {
+        "tipo": "min"
+      },
+      "ficha": "butano",
+      "exito": "La conformación **anti**: los metilos a 180°."
+    },
+    {
+      "id": "m2-08",
+      "tipo": "newman",
+      "titulo": "Butano gauche",
+      "enunciado": "Butano. Coloca los dos metilos en disposición **gauche** (sesgada). Esta vez no te enseño la energía.",
+      "delante": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "detras": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "giroInicial": 180,
+      "mostrarEnergia": false,
+      "objetivo": {
+        "tipo": "angulo",
+        "grupos": [
+          "CH₃",
+          "CH₃"
+        ],
+        "angulo": 60
+      },
+      "pistas": [
+        "Gauche = ángulo diedro de 60° entre los dos metilos."
+      ]
+    },
+    {
+      "id": "m2-09",
+      "tipo": "newman",
+      "titulo": "1-Bromopropano (PEC-1)",
+      "dialogo": [
+        {
+          "texto": "Pregunta de la PEC-1: Newman de **mayor energía** del 1-bromopropano sobre el enlace C1–C2. Sin diagrama: razónalo."
+        }
+      ],
+      "enunciado": "1-Bromopropano visto sobre el enlace C1–C2 (delante C1, detrás C2). Busca la conformación de **mayor energía**.",
+      "delante": [
+        "Br",
+        "H",
+        "H"
+      ],
+      "detras": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "giroInicial": 180,
+      "mostrarEnergia": false,
+      "mostrarDiagrama": false,
+      "objetivo": {
+        "tipo": "max"
+      },
+      "pistas": [
+        "La peor situación: los dos grupos más grandes, uno encima del otro."
+      ],
+      "exito": "Br eclipsado con CH₃: la conformación sinperiplanar. La de menor energía es la **anti** (Br y CH₃ a 180°)."
+    },
+    {
+      "id": "m2-10",
+      "tipo": "newman",
+      "titulo": "3-Metilpentano (PEC-1)",
+      "enunciado": "3-Metilpentano sobre el enlace C3–C4 (delante C3, detrás C4). Busca la conformación de **menor energía**.",
+      "delante": [
+        "CH₂CH₃",
+        "CH₃",
+        "H"
+      ],
+      "detras": [
+        "CH₃",
+        "H",
+        "H"
+      ],
+      "giroInicial": 0,
+      "mostrarEnergia": false,
+      "mostrarDiagrama": false,
+      "objetivo": {
+        "tipo": "min"
+      },
+      "pistas": [
+        "El CH₃ trasero siempre quedará gauche a dos grupos y anti al tercero. ¿A cuál te conviene que sea anti?"
+      ],
+      "exito": "El CH₃ trasero **anti al etilo** (el grupo más voluminoso) y gauche al metilo y al H."
+    },
+    {
+      "id": "m2-11",
+      "tipo": "test",
+      "titulo": "Radicales libres",
+      "dialogo": [
+        {
+          "texto": "Para limpiar los depósitos usaré halogenación radicalaria. Antes, comprobemos que entiendes a los **radicales**."
+        }
+      ],
+      "enunciado": "Responde sobre la estabilidad de radicales y la selectividad de los halógenos.",
+      "pistas": [
+        "Más sustituido = más hiperconjugación = más estable."
+      ],
+      "preguntas": [
+        {
+          "texto": "Ordena los radicales de **más** a **menos** estable:",
+          "opciones": [
+            "terc-butilo > isopropilo > etilo > metilo",
+            "metilo > etilo > isopropilo > terc-butilo",
+            "isopropilo > terc-butilo > etilo > metilo",
+            "Todos son igual de estables"
+          ],
+          "correcta": 0,
+          "explicacion": "Terciario > secundario > primario > metilo, por **hiperconjugación**: 10, 7, 4 y 0 formas hiperconjugadas, respectivamente."
+        },
+        {
+          "texto": "¿Qué radical es **más estable** que cualquier radical alquilo terciario?",
+          "opciones": [
+            "El radical alilo (CH₂=CH–CH₂·)",
+            "El radical metilo",
+            "El radical etilo",
+            "El radical vinilo"
+          ],
+          "correcta": 0,
+          "explicacion": "El **alilo** (y el bencilo) se estabilizan por **resonancia**: el electrón desapareado se reparte entre dos carbonos."
+        },
+        {
+          "texto": "En la **cloración** del propano se obtienen 1-cloropropano y 2-cloropropano en proporción 43:57. ¿Por qué no 75:25, si hay 6 H primarios y 2 secundarios?",
+          "opciones": [
+            "Porque los H secundarios son más reactivos: forman un radical más estable",
+            "Porque el cloro solo ataca a carbonos secundarios",
+            "Porque el 1-cloropropano se descompone",
+            "Es una coincidencia estadística"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada H secundario reacciona varias veces más rápido que uno primario, lo que compensa en parte que haya menos."
+        },
+        {
+          "texto": "¿Qué halógeno es más **selectivo** en la halogenación radicalaria?",
+          "opciones": [
+            "Bromo",
+            "Cloro",
+            "Flúor",
+            "Todos igual"
+          ],
+          "correcta": 0,
+          "explicacion": "El **bromo**, al ser menos reactivo, «distingue» mucho más entre H primarios, secundarios y terciarios. Con el propano da casi solo 2-bromopropano."
+        },
+        {
+          "texto": "En el mecanismo radicalario, ¿qué etapa genera los primeros radicales?",
+          "opciones": [
+            "Iniciación",
+            "Propagación",
+            "Terminación"
+          ],
+          "correcta": 0,
+          "explicacion": "**Iniciación**: X₂ → 2 X· (con luz o calor). La propagación mantiene la cadena y la terminación consume los radicales."
+        }
+      ],
+      "ficha": "radicales"
+    },
+    {
+      "id": "m2-12",
+      "tipo": "construir",
+      "titulo": "Bromación selectiva",
+      "dialogo": [
+        {
+          "texto": "Voy a tratar el **2-metilbutano** con **Br₂ y luz**. Antes de abrir la válvula, dime qué producto **mayoritario** saldrá."
+        }
+      ],
+      "enunciado": "Dibuja el producto **mayoritario** de: 2-metilbutano + Br₂, hν.",
+      "inicial": "CC(C)CC",
+      "editor": {
+        "elementos": [
+          "C",
+          "Br"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "smiles": [
+          "CC(C)(Br)CC"
+        ],
+        "errores": {
+          "BrCC(C)CC": "Ese sale del radical **primario**: es minoritario. El bromo es muy selectivo.",
+          "BrCCC(C)C": "Ese sale de un radical **primario**: minoritario.",
+          "CC(Br)C(C)C": "Ese sale del radical **secundario**. Hay un H todavía más reactivo."
+        }
+      },
+      "pistas": [
+        "El bromo sustituye el H que da el radical **más estable**: ¿hay algún H terciario?"
+      ],
+      "ficha": "halogenacion",
+      "exito": "**2-Bromo-2-metilbutano**: el H terciario da el radical más estable."
+    },
+    {
+      "id": "m2-13",
+      "tipo": "construir",
+      "titulo": "PEC-1: el 3-etilhexano",
+      "enunciado": "Dibuja el producto mayoritario de la reacción de la PEC-1: **3-etilhexano** + Br₂, hν.",
+      "inicial": "CCCC(CC)CC",
+      "editor": {
+        "elementos": [
+          "C",
+          "Br"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "smiles": [
+          "CCCC(Br)(CC)CC"
+        ]
+      },
+      "pistas": [
+        "Busca el único H terciario."
+      ],
+      "exito": "**3-Bromo-3-etilhexano**."
+    },
+    {
+      "id": "m2-14",
+      "tipo": "construir",
+      "titulo": "Corey-House (PEC-1)",
+      "dialogo": [
+        {
+          "texto": "Necesito **2,2-dimetilpentano** para un aditivo. Tengo **2-cloro-2-metilpropano**, que con Li y CuI se convierte en el cuprato **[(CH₃)₃C]₂CuLi**."
+        },
+        {
+          "texto": "¿Qué **halogenuro de alquilo** debo añadir al cuprato para obtener el 2,2-dimetilpentano?"
+        }
+      ],
+      "enunciado": "Dibuja el halogenuro de alquilo que, con di-terc-butilcuprato de litio, da **2,2-dimetilpentano**.",
+      "editor": {
+        "elementos": [
+          "C",
+          "Cl",
+          "Br",
+          "I"
+        ],
+        "anillos": false
+      },
+      "objetivo": {
+        "smiles": [
+          "BrCCC",
+          "ClCCC",
+          "ICCC"
+        ],
+        "errores": {
+          "CC(C)Br": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**.",
+          "CC(C)Cl": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**.",
+          "CC(C)I": "Ese da un esqueleto ramificado (2,2,3-trimetilbutano), y además en Corey-House el halogenuro debe ser **primario**."
+        }
+      },
+      "pistas": [
+        "2,2-Dimetilpentano = (CH₃)₃C– unido a una cadena de 3 carbonos.",
+        "El halogenuro (R'–X) tiene que ser **primario**."
+      ],
+      "ficha": "obtencion-alcanos",
+      "exito": "Un **halogenuro de propilo** (1-bromopropano, por ejemplo): (CH₃)₃C–CH₂CH₂CH₃."
+    },
+    {
+      "id": "m2-15",
+      "tipo": "test",
+      "titulo": "Fábrica de alcanos",
+      "enunciado": "Métodos de obtención de alcanos.",
+      "preguntas": [
+        {
+          "texto": "1-Cloro-2-metilpropano + Na (síntesis de Wurtz, PEC-1). ¿Qué se obtiene?",
+          "smiles": "ClCC(C)C",
+          "opciones": [
+            "2,5-Dimetilhexano",
+            "2-Metilpropano",
+            "2,2-Dimetiloctano",
+            "Octano"
+          ],
+          "correcta": 0,
+          "explicacion": "Wurtz une **dos** restos iguales: (CH₃)₂CHCH₂–CH₂CH(CH₃)₂ = **2,5-dimetilhexano**."
+        },
+        {
+          "texto": "¿Por qué no se debe usar Wurtz con dos halogenuros **distintos**?",
+          "opciones": [
+            "Se obtiene una mezcla de tres alcanos",
+            "El sodio no reacciona",
+            "Se forma un alqueno",
+            "Se obtiene un alcohol"
+          ],
+          "correcta": 0,
+          "explicacion": "R–X + R'–X + Na da R–R, R'–R' y R–R': una **mezcla** difícil de separar."
+        },
+        {
+          "texto": "2-Cloro-3-metilbutano + Zn/HCl (PEC-1). ¿Qué se obtiene?",
+          "smiles": "CC(Cl)C(C)C",
+          "opciones": [
+            "2-Metilbutano",
+            "2-Metilbut-2-eno",
+            "3-Metilbutan-2-ol",
+            "2,3-Dimetilbutano"
+          ],
+          "correcta": 0,
+          "explicacion": "Zn/HCl **reduce** el halogenuro: el Cl se sustituye por H → **2-metilbutano**."
+        },
+        {
+          "texto": "Isobutano a partir de bromuro de terc-butilo (PEC-1). ¿Qué secuencia funciona?",
+          "opciones": [
+            "1) Mg, éter; 2) H₂O",
+            "1) Na; 2) H₂O",
+            "H₂, Pt",
+            "Br₂, hν"
+          ],
+          "correcta": 0,
+          "explicacion": "Se forma el **reactivo de Grignard** (CH₃)₃C–MgBr y el agua lo protona: **(CH₃)₃C–H**."
+        }
+      ]
+    },
+    {
+      "id": "m2-jefe",
+      "tipo": "secuencia",
+      "jefe": true,
+      "titulo": "Emergencia: fuga en el depósito",
+      "dialogo": [
+        {
+          "quien": "sistema",
+          "texto": "⚠ ALERTA · Fuga de hidrocarburos en el depósito 7 · Identificación necesaria antes de purgar"
+        },
+        {
+          "texto": "Hay una fuga. Identifica lo que se escapa, cómo se comporta y cómo neutralizarlo. Rápido, pero sin errores."
+        }
+      ],
+      "enunciado": "Supera las **cuatro fases** de la emergencia.",
+      "pistas": [
+        "Repasa la bitácora de la sección: nomenclatura, conformaciones y halogenación."
+      ],
+      "pasos": [
+        {
+          "tipo": "construir",
+          "enunciado": "**Fase 1.** El sensor detecta **3-etil-2,2-dimetilhexano**. Constrúyelo para calibrar el detector.",
+          "editor": {
+            "elementos": [
+              "C"
+            ],
+            "anillos": false
+          },
+          "objetivo": {
+            "formula": "C10H22",
+            "smiles": [
+              "CCCC(CC)C(C)(C)C"
+            ]
+          }
+        },
+        {
+          "tipo": "newman",
+          "enunciado": "**Fase 2.** El 2,3-dimetilbutano gira dentro de la tubería. Encuentra su conformación **más estable** sobre el enlace C2–C3.",
+          "delante": [
+            "CH₃",
+            "CH₃",
+            "H"
+          ],
+          "detras": [
+            "CH₃",
+            "CH₃",
+            "H"
+          ],
+          "giroInicial": 0,
+          "mostrarEnergia": false,
+          "mostrarDiagrama": false,
+          "objetivo": {
+            "tipo": "min"
+          }
+        },
+        {
+          "tipo": "construir",
+          "enunciado": "**Fase 3.** Para neutralizar la fuga de **2,3-dimetilbutano** uso Br₂ y luz. Dibuja el producto mayoritario.",
+          "inicial": "CC(C)C(C)C",
+          "editor": {
+            "elementos": [
+              "C",
+              "Br"
+            ],
+            "anillos": false
+          },
+          "objetivo": {
+            "smiles": [
+              "CC(C)C(C)(C)Br"
+            ]
+          }
+        },
+        {
+          "tipo": "test",
+          "enunciado": "**Fase 4.** Último control.",
+          "preguntas": [
+            {
+              "texto": "¿Cuál tiene **mayor** punto de ebullición?",
+              "opciones": [
+                {
+                  "smiles": "CCCCC",
+                  "texto": "Pentano"
+                },
+                {
+                  "smiles": "CC(C)(C)C",
+                  "texto": "2,2-Dimetilpropano"
+                }
+              ],
+              "correcta": 0,
+              "explicacion": "El **pentano**: cadena lineal, más superficie de contacto y más fuerzas de van der Waals (36 °C frente a 10 °C)."
+            }
+          ]
+        }
+      ],
+      "exito": "Fuga contenida. Los depósitos vuelven a estar operativos."
+    }
+  ]
+}

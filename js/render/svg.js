@@ -87,7 +87,22 @@ export function drawMol(g, m, opts = {}) {
         x1: x1 + ox + dx * shrink, y1: y1 + oy + dy * shrink,
         x2: x2 + ox - dx * shrink, y2: y2 + oy - dy * shrink,
       }, grp);
-    if (b.o === 1) line(0, 0);
+    if (b.o === 1 && b.w) {
+      // cuña (hacia el observador) o raya (hacia atrás), estrecha en el estereocentro
+      const fromA = b.desde === b.a;
+      const [sx, sy, ex, ey] = fromA ? [x1, y1, x2, y2] : [x2, y2, x1, y1];
+      const W = 4.2;
+      if (b.w === 'cuña') {
+        el('polygon', { class: 'wedge', points: `${sx},${sy} ${ex + nx * W},${ey + ny * W} ${ex - nx * W},${ey - ny * W}` }, grp);
+      } else {
+        const n = 6;
+        for (let k = 1; k <= n; k++) {
+          const t = k / n, w = W * t;
+          const px = sx + (ex - sx) * t, py = sy + (ey - sy) * t;
+          el('line', { class: 'hash', x1: px + nx * w, y1: py + ny * w, x2: px - nx * w, y2: py - ny * w }, grp);
+        }
+      }
+    } else if (b.o === 1) line(0, 0);
     else if (b.o === 2) {
       const deg = (k) => neighbors(m, k).length;
       const offset = !labelled[b.a] && !labelled[b.b] && (rings.has(idx) || ((deg(b.a) === 1) !== (deg(b.b) === 1)));
@@ -116,6 +131,11 @@ export function drawMol(g, m, opts = {}) {
     }, ga);
     el('circle', { r: 14, class: 'hit' }, grp);
     if (bad.has(i) || hl.has(i)) el('circle', { r: 13, class: 'ring' }, grp);
+    if (opts.numeros?.[i] != null) {
+      const t = el('text', { class: 'lbl num-atom', x: 12, y: -12, 'text-anchor': 'middle', 'dominant-baseline': 'central' }, grp);
+      t.textContent = opts.numeros[i];
+    }
+    if (opts.marcados?.includes(i)) el('circle', { r: 11, class: 'mark' }, grp);
     if (labelled[i]) {
       const p = labelParts(m, i, opts);
       el('circle', { r: 9.5, class: 'bg' }, grp);

@@ -74,6 +74,22 @@ export function molFromSmiles(smiles, { bondLength = 40, keepH = false } = {}) {
       mol.atoms[i].x = parseFloat(l.slice(0, 10)) * scale;
       mol.atoms[i].y = -parseFloat(l.slice(10, 20)) * scale;
     }
+    // cuñas (1) y rayas (6): el primer átomo de la línea es el extremo estrecho (el estereocentro)
+    const nb = parseInt(lines[3].slice(3, 6), 10);
+    for (let k = 0; k < nb; k++) {
+      const l = lines[4 + n + k];
+      const a = parseInt(l.slice(0, 3), 10) - 1, b = parseInt(l.slice(3, 6), 10) - 1;
+      const st = parseInt(l.slice(9, 12), 10);
+      if (st === 1 || st === 6) {
+        const bd = mol.bonds.find((x) => (x.a === a && x.b === b) || (x.a === b && x.b === a));
+        if (bd) { bd.w = st === 1 ? 'cuña' : 'raya'; bd.desde = a; }
+      }
+    }
+    // centros estereogénicos (también los que no tienen configuración asignada)
+    try {
+      const tags = JSON.parse(m.get_stereo_tags());
+      mol.centros = (tags.CIP_atoms || []).map(([i]) => i);
+    } catch { mol.centros = []; }
     return mol;
   }, keepH ? { removeHs: false } : null);
 }

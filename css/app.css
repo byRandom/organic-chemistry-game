@@ -174,6 +174,8 @@ a.lvl:hover { background: var(--card2); }
 /* dibujo de moléculas (sobre fondo claro, como en el libro) */
 .editor-svg .bond line, .mol-view .bond line { stroke: #0f172a; stroke-width: 2; stroke-linecap: round; }
 .editor-svg .bond line.hit, .mol-view .bond line.hit { stroke: transparent; stroke-width: 16; }
+.bond .wedge { fill: #0f172a; }
+.editor-svg .bond line.hash, .mol-view .bond line.hash { stroke-width: 1.6; stroke-linecap: butt; }
 .editor-svg .atom .hit, .mol-view .atom .hit { fill: transparent; }
 .editor-svg .atom .bg, .mol-view .atom .bg { fill: #f8fafc; }
 .editor-svg .atom .dot { fill: #0f172a33; }
@@ -307,3 +309,46 @@ a.lvl:hover { background: var(--card2); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- proyecciones (Fischer, Newman, caballete, silla) ---------- */
+.proj { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.proj .pline { stroke: #0f172a; stroke-width: 2; stroke-linecap: round; }
+.proj .pline.h { stroke: #94a3b8; stroke-width: 1.4; }
+.proj .pcircle { fill: #f8fafc; stroke: #0f172a; stroke-width: 2; }
+.proj .pdot { fill: #0f172a; }
+.proj .plbl { font: 600 13px var(--font); fill: #0f172a; }
+.proj .plbl.marca { fill: #7c3aed; font-weight: 800; }
+.proj .plbl.hsmall { font-size: 10px; fill: #64748b; }
+.proj .plbl.num { font-size: 9px; fill: #7c3aed; }
+.proj .detras { fill: #334155; }
+.proj .pcenter { fill: #7c3aed33; stroke: #7c3aed; stroke-width: 2; }
+.proj .frow.hl .pline { stroke: #7c3aed; }
+.proj .tappable { cursor: pointer; }
+.proj text.tappable:hover { fill: #7c3aed; }
+.proj .slot .hit { stroke: transparent; stroke-width: 18; }
+.proj .slot-dot { fill: #fff; stroke: #7c3aed; stroke-width: 2; }
+.proj .slot.tappable:hover .slot-dot { fill: #7c3aed; }
+.proj .slot.lleno .pline { stroke: #7c3aed; stroke-width: 2.4; }
+.proj-box { background: #f8fafc; border-radius: var(--radius); padding: .6rem; display: flex; justify-content: center; }
+.lbl.num-atom { font-size: 11px; fill: #7c3aed; font-weight: 800; }
+.mol-view .atom .mark, .editor-svg .atom .mark { fill: #f59e0b44; stroke: #d97706; stroke-width: 2.5; }
+.mol-view.tap .atom { cursor: pointer; }
+.mol-view.tap .atom:hover .hit { fill: #7c3aed22; }
+.repr-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; }
+.repr-pair figure { margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+.repr-pair figcaption { font-size: .8rem; color: var(--muted); text-align: center; }
+.repr-pair .proj-box { flex: 1; align-items: center; }
+.rs-rows { display: flex; flex-direction: column; gap: .4rem; }
+.rs-row { display: flex; justify-content: space-between; align-items: center; gap: .6rem; padding: .5rem .8rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.rs-btns { display: flex; gap: .4rem; }
+.rs-btn { width: var(--tap); height: var(--tap); border-radius: 50%; border: 1px solid var(--line); background: var(--bg2); color: var(--text); font: 800 1.1rem var(--font); cursor: pointer; }
+.rs-btn[aria-pressed='true'] { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #06101f; border-color: transparent; }
+.rot-ctrl { display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
+.rot-label { color: var(--muted); font-size: .85rem; }
+.diag-box { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: .4rem; }
+.ediag { width: 100%; height: auto; display: block; }
+.ediag .axis { stroke: var(--muted); stroke-width: 1; }
+.ediag .curve { fill: none; stroke: var(--accent); stroke-width: 2.2; }
+.ediag .marker { fill: var(--warn); stroke: #0b1020; stroke-width: 1.5; }
+.ediag .tick { fill: var(--muted); font: 9px var(--font); }
+.tapbox .mol-view { max-height: 320px; }

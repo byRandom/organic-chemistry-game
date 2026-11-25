@@ -1,0 +1,25 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../css/app.css">
+<style>body{padding:1rem} .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem} .proj-box{flex-direction:column;align-items:center;color:#0f172a}</style></head>
+<body><div class="grid" id="g"></div>
+<script type="module">
+import { loadRDKit, molFromSmiles } from '../js/chem/rdkit.js';
+import { fischer, newman } from '../js/chem/stereo.js';
+import { fischerSVG, newmanSVG, caballeteSVG, sillaSVG } from '../js/render/proyecciones.js';
+import { molSVG } from '../js/render/svg.js';
+await loadRDKit('../vendor/rdkit/');
+const g = document.getElementById('g');
+const box = (t, n) => { const d = document.createElement('div'); d.className='proj-box'; d.append(n); const p=document.createElement('small'); p.textContent=t; d.append(p); g.append(d); };
+const ga = 'O=C[C@H](O)CO';
+box('cuñas: ' + ga + ' ' + JSON.stringify(molFromSmiles(ga).cip), molSVG(molFromSmiles(ga), { scale: 2 }));
+box('Fischer gliceraldehído', fischerSVG(fischer(ga), { marcas: { 0: 'R?' } }));
+const bb = 'C[C@@H](Br)[C@H](O)C';
+box('cuñas ' + bb + ' ' + JSON.stringify(molFromSmiles(bb).cip), molSVG(molFromSmiles(bb), { scale: 2 }));
+box('Fischer 2 centros', fischerSVG(fischer(bb), { resaltar: [0] }));
+box('Newman', newmanSVG(newman(bb)));
+box('Caballete', caballeteSVG(newman(bb)));
+box('Silla pliegue +1 (Me ax en C1, Me eq en C4)', sillaSVG({ 0: { texto: 'CH₃', pos: 'ax' }, 3: { texto: 'CH₃', pos: 'eq' } }, { numeros: true, mostrarH: true }));
+box('Silla pliegue -1 editable', sillaSVG({ 0: { texto: 'C(CH₃)₃', pos: 'eq' } }, { pliegue: -1, numeros: true, editables: [0, 2] }));
+box('Mentol', molSVG(molFromSmiles('CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O'), { scale: 2 }));
+box('Fischer tartárico', fischerSVG(fischer('O[C@H]([C@@H](O)C(=O)O)C(=O)O')));
+document.body.dataset.ready = '1';
+</script></body></html>
