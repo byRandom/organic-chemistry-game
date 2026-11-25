@@ -55,7 +55,7 @@ Los niveles son datos en `content/qo1/mundo-XX.json`. Hay ejemplos de todos los 
 
 ## Licencia
 
-© 2026 byRandom. Código y contenido bajo licencia **[Creative Commons Atribución-NoComercial-CompartirIgual 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)** (CC BY-NC-SA 4.0). Ver [`LICENSE`](LICENSE).
+© 2026 Tomás Pérez Villares. Código y contenido bajo licencia **[Creative Commons Atribución-NoComercial-CompartirIgual 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)** (CC BY-NC-SA 4.0). Ver [`LICENSE`](LICENSE).
 
 - **Atribución:** cita al autor e indica si has hecho cambios.
 - **NoComercial:** no se puede usar con fines comerciales. Para cualquier uso comercial, pide permiso.

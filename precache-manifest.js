@@ -1,6 +1,6 @@
 // Generado por tools/build-precache.mjs. No editar a mano: ejecuta `npm run precache`.
 self.__PRECACHE = {
-  "version": "190785d7a19c",
+  "version": "53698be8656e",
   "files": [
     "./",
     "./index.html",
