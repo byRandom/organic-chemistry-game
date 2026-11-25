@@ -112,6 +112,8 @@ export async function pantallaMundo(root, id) {
 const TIPO_NOMBRE = {
   construir: '🧱 Construir', descubrir: '🔍 Descubrir', isomeros: '🧩 Caza de isómeros',
   test: '✅ Razonar', secuencia: '☠ Jefe',
+  newman: '🔄 Newman', silla: '🪑 Silla', quirales: '🪞 Quiralidad', rs: '🪞 R/S', fischer: '✚ Fischer',
+  reaccion: '⚗️ Reacción', sintesis: '🔬 Síntesis', esquema: '🧩 Esquema',
 };
 
 // ---------- Nivel ----------
@@ -223,6 +225,7 @@ export async function pantallaAjustes(root) {
   root.append(topbar('Ajustes', '#/'), h('main.page',
     toggle('historia', 'Mostrar la historia', 'Diálogos de K.E.K.U.L.É. al entrar en secciones y niveles.'),
     toggle('modoEstudio', 'Modo estudio', 'Desbloquea todos los niveles y toda la bitácora para repasar libremente.'),
+    toggle('lienzoClaro', 'Lienzo claro para las moléculas', 'Dibuja moléculas, proyecciones y esquemas sobre fondo blanco, como en el libro. Desactivado: fondo oscuro, más cómodo de noche.'),
     h('h2', 'Progreso'),
     h('div.row',
       h('button.btn', {

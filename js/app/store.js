@@ -5,7 +5,7 @@ const DEFAULT = {
   niveles: {}, // id -> { estrellas, completado: fecha }
   fichas: {}, // id -> fecha de desbloqueo
   vistos: {}, // diálogos ya vistos
-  ajustes: { historia: true, modoEstudio: false, sonido: false },
+  ajustes: { historia: true, modoEstudio: false, sonido: false, lienzoClaro: false },
 };
 
 let state = load();

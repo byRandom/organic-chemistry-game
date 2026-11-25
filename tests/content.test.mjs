@@ -9,6 +9,9 @@ import { comprobarConstruccion, comprobarIsomero } from '../js/puzzles/validate.
 import { fischer, newman, relacion, esMeso } from '../js/chem/stereo.js';
 import { perfilNewman, analizarSilla, girarSilla } from '../js/chem/conformacion.js';
 import { geometriaSilla } from '../js/render/proyecciones.js';
+import { reaccionar } from '../js/chem/reacciones.js';
+import { REACTIVOS } from '../js/chem/reactivos.js';
+import { ejecutarPrograma, coincide } from '../js/puzzles/reaccion.js';
 
 function revisarRepr(spec, donde) {
   if (!spec) return;
@@ -135,6 +138,50 @@ function revisarNivel(n, mundo, ruta) {
       assert.ok(n.pasos?.length, `${donde}: sin pasos`);
       n.pasos.forEach((p, k) => revisarNivel(p, mundo, `${ruta}/paso${k + 1}`));
       break;
+    case 'reaccion': {
+      assert.ok(REACTIVOS[n.reactivo], `${donde}: reactivo desconocido ${n.reactivo}`);
+      const r = reaccionar(n.sustrato, n.reactivo);
+      if (n.noReacciona) { assert.equal(r.ok, false, `${donde}: debería no reaccionar`); break; }
+      assert.ok(r.ok, `${donde}: no reacciona: ${r.mensaje}`);
+      const mayor = r.productos.find((p) => p.papel !== 'minoritario');
+      if (n.esperado) assert.ok(coincide(mayor.smiles, n.esperado), `${donde}: el motor da ${mayor.smiles} y se esperaba ${n.esperado}`);
+      if (n.mecanismo) assert.equal(r.mecanismo, n.mecanismo, `${donde}: mecanismo`);
+      if (n.racemico != null) assert.equal(!!mayor.racemico, n.racemico, `${donde}: racémico`);
+      if (n.transposicion != null) assert.equal(r.transposicion, n.transposicion, `${donde}: transposición`);
+      break;
+    }
+    case 'sintesis': {
+      n.reactivos.forEach((id) => assert.ok(REACTIVOS[id], `${donde}: reactivo ${id}`));
+      assert.ok(n.solucion?.length, `${donde}: falta la solución de referencia`);
+      const { final } = ejecutarPrograma(n.partida, n.solucion);
+      assert.ok(coincide(final, n.objetivo), `${donde}: la solución da ${final} y no ${n.objetivo}`);
+      if (n.optimo) assert.ok(n.solucion.length <= n.optimo, `${donde}: la solución es más larga que el óptimo`);
+      break;
+    }
+    case 'esquema': {
+      let prev = n.cadena[0].smiles;
+      n.flechas.forEach((f, k) => {
+        const sig = n.cadena[k + 1];
+        if (f.reactivo) {
+          const r = reaccionar(prev, f.reactivo);
+          assert.ok(r.ok, `${donde}: paso ${k + 1} no reacciona`);
+          const p = r.productos.find((x) => x.papel !== 'minoritario').smiles;
+          if (sig.smiles) assert.ok(coincide(p, sig.smiles), `${donde}: paso ${k + 1} da ${p}`);
+          if (sig.esperado) assert.ok(coincide(p, sig.esperado), `${donde}: ${sig.letra} es ${p}, no ${sig.esperado}`);
+          prev = sig.smiles || p;
+        } else {
+          assert.ok(sig.smiles, `${donde}: tras un reactivo incógnita la molécula debe ser conocida`);
+          const vale = n.reactivos.filter((id) => {
+            const r = reaccionar(prev, id);
+            return r.ok && coincide(r.productos.find((x) => x.papel !== 'minoritario').smiles, sig.smiles);
+          });
+          assert.ok(vale.length, `${donde}: ningún reactivo disponible lleva al paso ${k + 1}`);
+          if (f.esperado) assert.ok(vale.includes(f.esperado), `${donde}: ${f.letra} debería ser ${f.esperado}`);
+          prev = sig.smiles;
+        }
+      });
+      break;
+    }
     default:
       assert.fail(`${donde}: tipo desconocido`);
   }

@@ -175,10 +175,10 @@ export function fragments(m) {
 
 const BOND_SYM = { 1: '', 2: '=', 3: '#' };
 
-function atomToken(m, i) {
+function atomToken(m, i, chir) {
   const a = m.atoms[i];
   const h = implicitH(m, i);
-  let s = '[' + a.el;
+  let s = '[' + a.el + (chir?.[i] || '');
   if (h) s += 'H' + (h > 1 ? h : '');
   if (a.chg) s += (a.chg > 0 ? '+' : '-') + (Math.abs(a.chg) > 1 ? Math.abs(a.chg) : '');
   return s + ']';
@@ -188,9 +188,12 @@ function atomToken(m, i) {
  * SMILES (no canónico) con todos los átomos entre corchetes y su número de H explícito,
  * para que RDKit lo interprete exactamente igual que nuestro grafo.
  */
-export function toSmiles(m) {
+export function toSmiles(m, opts = {}) {
   const n = m.atoms.length;
-  if (!n) return '';
+  if (!n) return opts.conOrden ? { smiles: '', orden: [] } : '';
+  const { chir = null, dir = null } = opts;
+  const sym = (idx) => (m.bonds[idx].o === 1 && dir?.[idx]) || BOND_SYM[m.bonds[idx].o];
+  const salida = [];
   const adj = Array.from({ length: n }, () => []);
   m.bonds.forEach((b, idx) => {
     adj[b.a].push({ to: b.b, idx });
@@ -230,10 +233,11 @@ export function toSmiles(m) {
   }
 
   function dfs2(u, parentBond) {
-    let s = atomToken(m, u);
+    salida.push(u);
+    let s = atomToken(m, u, chir);
     for (const idx of ringClose[u]) {
       const d = ringDigit.get(idx);
-      s += BOND_SYM[m.bonds[idx].o] + digitStr(d);
+      s += sym(idx) + digitStr(d);
       freeDigits.push(d);
     }
     for (const idx of ringOpen[u]) {
@@ -243,7 +247,7 @@ export function toSmiles(m) {
     }
     const children = adj[u].filter(({ idx }) => treeBond.has(idx) && idx !== parentBond);
     children.forEach(({ to, idx }, k) => {
-      const branch = BOND_SYM[m.bonds[idx].o] + dfs2(to, idx);
+      const branch = sym(idx) + dfs2(to, idx);
       s += k < children.length - 1 ? '(' + branch + ')' : branch;
     });
     return s;
@@ -255,7 +259,8 @@ export function toSmiles(m) {
     dfs1(s, -1);
     parts.push(dfs2(s, -1));
   }
-  return parts.join('.');
+  const smiles = parts.join('.');
+  return opts.conOrden ? { smiles, orden: salida } : smiles;
 }
 
 /** Construye nuestro grafo a partir del JSON de RDKit (forma de Kekulé). */

@@ -15,7 +15,8 @@ El diseño completo y las fases de desarrollo están en [`docs/DISENO.md`](docs/
 | 0 | PWA instalable, sin conexión, despliegue en GitHub Pages | ✅ |
 | 1 | Editor de moléculas táctil, puzles «construir» y «razonar», historia y bitácora | ✅ |
 | 2 | Mundos 1-4 (estructura, conformaciones y estereoquímica) | ✅ |
-| 3-7 | Ver el documento de diseño | Pendiente |
+| 3 | Mundos 5-6 (SN1/SN2, E1/E2), motor de reacciones y puzles de síntesis · lienzo oscuro | ✅ |
+| 4-7 | Ver el documento de diseño | Pendiente |
 
 ## Desarrollo
 
@@ -37,6 +38,8 @@ js/chem/       grafo molecular, valencias, SMILES y envoltorio de RDKit
 js/editor/     editor de moléculas táctil y barra de herramientas
 js/chem/stereo.js        R/S, Fischer, Newman y caballete que respetan la configuración real
 js/chem/conformacion.js  energías de Newman y sillas (valores del texto base)
+js/chem/reacciones.js    motor de reacciones SN1/SN2/E1/E2 con estereoquímica (Tabla 6.1)
+js/chem/reactivos.js     catálogo de reactivos (las cartas de la caja de herramientas)
 js/render/     dibujo de moléculas en SVG y proyecciones (Fischer, Newman, caballete, silla)
 js/puzzles/    tipos de puzle y validación de respuestas
 js/app/        pantallas, enrutador, progreso, diálogos, PWA
@@ -52,7 +55,9 @@ Los niveles son datos en `content/qo1/mundo-XX.json`. Hay ejemplos de todos los 
 `newman`, `silla`, `quirales`, `rs` y `fischer`, y las preguntas `test` admiten ilustraciones
 (`repr`, `par`, `silla`, `newman`). En las preguntas con `par` los tests comprueban
 automáticamente que la relación marcada como correcta (idénticos, enantiómeros o
-diastereoisómeros) es la real. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
+diastereoisómeros) es la real. Los Mundos 5-6 añaden `reaccion`, `esquema` y `sintesis`: cada
+nivel indica el producto esperado (o la solución de referencia) y los tests comprueban que el
+motor de reacciones lo reproduce. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
 
 ## Publicar en GitHub Pages
 

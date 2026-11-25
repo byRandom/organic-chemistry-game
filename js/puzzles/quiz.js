@@ -1,5 +1,5 @@
 // Puzles de razonar: preguntas de elección con explicación.
-import { h, rich } from '../app/ui.js';
+import { h, rich, ocultarToast } from '../app/ui.js';
 import { molFromSmiles } from '../chem/rdkit.js';
 import { molSVG } from '../render/svg.js';
 import { representar, NOMBRE_REPR } from '../render/depict.js';
@@ -55,6 +55,7 @@ export function montarTest(cont, nivel, ctx) {
         if (resuelta || b.disabled) return;
         if (k === p.correcta) {
           resuelta = true;
+          ocultarToast();
           b.classList.add('ok');
           opts.querySelectorAll('button').forEach((x) => { x.disabled = true; });
           expl.hidden = false;

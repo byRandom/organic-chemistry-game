@@ -1,6 +1,6 @@
 // Generado por tools/build-precache.mjs. No editar a mano: ejecuta `npm run precache`.
 self.__PRECACHE = {
-  "version": "6ac0e5c5025f",
+  "version": "321418248b34",
   "files": [
     "./",
     "./index.html",
@@ -17,6 +17,8 @@ self.__PRECACHE = {
     "./js/chem/conformacion.js",
     "./js/chem/mol.js",
     "./js/chem/rdkit.js",
+    "./js/chem/reacciones.js",
+    "./js/chem/reactivos.js",
     "./js/chem/stereo.js",
     "./js/editor/editor.js",
     "./js/editor/toolbar.js",
@@ -25,6 +27,7 @@ self.__PRECACHE = {
     "./js/puzzles/estereo.js",
     "./js/puzzles/index.js",
     "./js/puzzles/quiz.js",
+    "./js/puzzles/reaccion.js",
     "./js/puzzles/validate.js",
     "./js/render/depict.js",
     "./js/render/proyecciones.js",
@@ -33,6 +36,8 @@ self.__PRECACHE = {
     "./content/qo1/mundo-02.json",
     "./content/qo1/mundo-03.json",
     "./content/qo1/mundo-04.json",
+    "./content/qo1/mundo-05.json",
+    "./content/qo1/mundo-06.json",
     "./content/qo1/mundos.json",
     "./icons/apple-touch-icon.png",
     "./icons/icon-192.png",

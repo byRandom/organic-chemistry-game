@@ -245,6 +245,7 @@ Además hay **jefes de construcción**: moléculas grandes que se dibujan y anal
   - Deshacer y rehacer. Fórmula molecular en directo y aviso de valencias imposibles (átomo en rojo).
   - Atajos de teclado en el ordenador.
 - **Pantallas:** Inicio → Mapa de la nave (mundos) → Mundo (lista de niveles) → Nivel → Resultado. A esto se suman el Reactivario, el Repaso diario, el modo Examen y los Ajustes.
+- **Lienzo de moléculas con paleta oscura** (predeterminada): moléculas, proyecciones, sillas y esquemas se dibujan sobre fondo oscuro, con trazos claros y colores de elementos más vivos, para no deslumbrar. En *Ajustes* se puede elegir el **lienzo claro** (como el libro), útil para capturas o para estudiar con luz de día.
 - **Estilo visual:** tema oscuro con tema claro opcional. El código de colores es el del libro: **nucleófilos en rojo, electrófilos en azul, radicales y grupos salientes en verde**, que la guía pide memorizar.
 - **Accesibilidad:** contraste AA, sin depender solo del color (iconos y texto) y tamaños táctiles ≥ 44 px.
 
@@ -354,7 +355,8 @@ Cada fase termina con algo **jugable y publicado** en GitHub Pages. Así puedes 
 ### Fase 3 · Mundos 5-6 (SN y eliminación · completa la PEC-1)
 - Motor con **estereoquímica dinámica**: SN2 con inversión, SN1 con racemización, E2 antiperiplanar y **transposiciones**.
 - Nuevos tipos de puzle: **Reacción**, **Esquema** y **Síntesis**, con su mecánica de programa paso a paso.
-- Simulacro de la **PEC-1**.
+- **Paleta oscura** para el lienzo de moléculas (petición durante la Fase 3) y opción de lienzo claro en Ajustes.
+- El simulacro de la **PEC-1** pasa a la Fase 6, junto con el modo Examen, que comparte su mecánica.
 - ✅ **Terminada cuando:** los casos de la PEC-1 y de los exámenes de los temas 5-6 se resuelven correctamente en el motor.
 
 ### Fase 4 · Mundos 7-8 (alcoholes, éteres y epóxidos)
@@ -423,3 +425,4 @@ Cada fase termina con algo **jugable y publicado** en GitHub Pages. Así puedes 
 | 25/11/2026 | 1 | Núcleo químico (grafo, valencias, fórmula, SMILES, RDKit), editor táctil (átomos, enlaces, anillos, fusión, cargas, deshacer, pellizcar para hacer zoom), puzles *construir / descubrir / isómeros / test / secuencia*, historia (prólogo y diálogos), bitácora, laboratorio libre, ajustes y exportar/importar el progreso |
 | 25/11/2026 | 2 (inicio) | **Mundo 1 completo**: 14 niveles y un jefe de 3 fases, con 9 fichas de bitácora |
 | 25/11/2026 | 2 | **Mundos 2, 3 y 4 completos** (alcanos, cicloalcanos, estereoisomería): 47 niveles nuevos (3 de ellos jefes) y 20 fichas. Motor de estereoquímica (R/S verificado con RDKit y con casos de libro: D-gliceraldehído y L-alanina), proyecciones de **Fischer, Newman, caballete y silla**, y 5 tipos de puzle nuevos: *newman*, *silla*, *quirales*, *rs* y *fischer*. Energías conformacionales con los valores del texto base (etano 3; butano gauche 0,9 y anticlinal 3,8; Tabla 3.3) |
+| 25/11/2026 | 3 | **Mundos 5 y 6 completos** (sustitución y eliminación): 31 niveles (2 de ellos jefes) y 12 fichas. **Motor de reacciones** con la Tabla 6.1 del libro: SN2 con inversión, SN1 con racemización y transposiciones de hidruro y de metilo, E2 antiperiplanar (E/Z estereoespecífico y trans-diaxial en ciclohexanos), E1, Saytzeff y Hofmann; verificado con los ejemplos del texto base, la PEC-1 y los exámenes. Puzles **reacción**, **esquema** y **síntesis** (programa de reactivos ejecutado paso a paso). **Lienzo de moléculas oscuro** |

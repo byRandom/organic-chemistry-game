@@ -27,31 +27,41 @@ function sustituyentes(mol, c) {
   return out;
 }
 
-/** R/S de un centro deducida del dibujo 2D con cuñas y rayas (para comprobar el convenio de signos). */
-export function etiquetaDesdeDibujo(mol, c) {
+/**
+ * Geometría 3D aproximada de un centro a partir del dibujo 2D con cuñas y rayas:
+ * {clave: [x,y,z]}, donde la clave es el índice del átomo vecino o 'H' (hidrógeno implícito).
+ */
+export function geometriaDesdeDibujo(mol, c) {
   const C = mol.atoms[c];
-  const subs = sustituyentes(mol, c);
+  const geo = {};
   const pos = [];
-  for (const s of subs) {
-    if (s.atom == null) continue;
-    const A = mol.atoms[s.atom];
-    const bd = mol.bonds.find((b) => (b.a === c && b.b === s.atom) || (b.b === c && b.a === s.atom));
+  for (const { atom } of neighbors(mol, c)) {
+    const A = mol.atoms[atom];
+    const bd = mol.bonds.find((b) => (b.a === c && b.b === atom) || (b.b === c && b.a === atom));
     let z = 0;
     if (bd?.w && bd.desde === c) z = bd.w === 'cuña' ? 1 : -1;
     const v = [A.x - C.x, -(A.y - C.y), 0];
     const l = Math.hypot(v[0], v[1]) || 1;
-    s.pos = [v[0] / l, v[1] / l, z];
-    pos.push(s.pos);
+    geo[atom] = [v[0] / l, v[1] / l, z];
+    pos.push(geo[atom]);
   }
-  const hs = subs.filter((s) => s.atom == null);
-  if (hs.length === 1) {
-    // el H implícito apunta al lado contrario de la suma de los demás
+  if (implicitH(mol, c) === 1) {
     const sum = pos.reduce((p, q) => [p[0] + q[0], p[1] + q[1], p[2] + q[2]], [0, 0, 0]);
-    let h = [-sum[0], -sum[1], -sum[2]];
+    const h = [-sum[0], -sum[1], -sum[2]];
     if (Math.abs(h[2]) < 0.05) h[2] = pos.some((p) => p[2] > 0) ? -1 : 1;
-    hs[0].pos = h;
+    geo.H = h;
   }
-  return etiquetaDesdePosiciones(subs);
+  return geo;
+}
+
+/** R/S a partir de una geometría {clave: pos} y las prioridades (rangos) de los vecinos. */
+export function etiquetaDesdeGeometria(geo, rango) {
+  return etiquetaDesdePosiciones(Object.entries(geo).map(([k, pos]) => ({ rank: k === 'H' ? -1 : rango(+k), pos })));
+}
+
+/** R/S de un centro deducida del dibujo 2D con cuñas y rayas (para comprobar el convenio de signos). */
+export function etiquetaDesdeDibujo(mol, c) {
+  return etiquetaDesdeGeometria(geometriaDesdeDibujo(mol, c), (a) => mol.ranks?.[a] ?? 0);
 }
 
 // ---------- etiquetas de grupos (fórmula condensada) ----------
