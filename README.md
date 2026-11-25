@@ -53,8 +53,16 @@ Los niveles son datos en `content/qo1/mundo-XX.json`. Hay ejemplos de todos los 
 2. En GitHub: *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
 3. Cada push a `main` ejecuta los tests y publica en `https://<usuario>.github.io/organic-chemistry-game/`.
 
+## Licencia
+
+© 2026 byRandom. Código y contenido bajo licencia **[Creative Commons Atribución-NoComercial-CompartirIgual 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)** (CC BY-NC-SA 4.0). Ver [`LICENSE`](LICENSE).
+
+- **Atribución:** cita al autor e indica si has hecho cambios.
+- **NoComercial:** no se puede usar con fines comerciales. Para cualquier uso comercial, pide permiso.
+- **CompartirIgual:** las versiones modificadas deben distribuirse con la misma licencia.
+
+Excepción: RDKit (`vendor/rdkit/`) mantiene su licencia BSD de 3 cláusulas.
+
 ## Aviso
 
-Proyecto de estudio no oficial. Los textos y puzles son originales. El material de la UNED (libro, guía, PEC y exámenes) **no** se incluye en este repositorio.
-
-RDKit se distribuye bajo licencia BSD (ver `vendor/rdkit/README.md`).
+Proyecto de estudio no oficial. Los textos y puzles son originales. El material de la UNED (libro, guía, PEC y exámenes) **no** se incluye en este repositorio ni está cubierto por la licencia.

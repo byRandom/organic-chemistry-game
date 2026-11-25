@@ -245,5 +245,5 @@ export async function pantallaAjustes(root) {
         onclick: () => { if (confirm('¿Borrar todo tu progreso? No se puede deshacer.')) { store.reiniciar(); toast('Progreso borrado'); } },
       }, 'Reiniciar')),
     h('h2', 'Acerca de'),
-    h('p.small', { html: rich('Proyecto de estudio no oficial basado en el programa de **Química Orgánica I** del Grado en Química de la UNED. Los textos y puzles son originales.\n\nMotor químico: RDKit (rdkit.org, licencia BSD).') })));
+    h('p.small', { html: rich('Proyecto de estudio no oficial basado en el programa de **Química Orgánica I** del Grado en Química de la UNED. Los textos y puzles son originales.\n\n© 2026 byRandom · Licencia **CC BY-NC-SA 4.0**: puedes compartirlo y modificarlo citando al autor, sin uso comercial y con la misma licencia.\n\nMotor químico: RDKit (rdkit.org, licencia BSD).') })));
 }
