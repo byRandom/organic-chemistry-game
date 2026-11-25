@@ -342,7 +342,8 @@
             "Verdadero: el bromo es buen grupo saliente"
           ],
           "correcta": 0,
-          "explicacion": "Los halogenuros **primarios no dan SN1**: el carbocatión etilo es muy inestable."
+          "explicacion": "Los halogenuros **primarios no dan SN1**: el carbocatión etilo es muy inestable.",
+          "smiles": "CCBr"
         }
       ],
       "ficha": "carbocationes"

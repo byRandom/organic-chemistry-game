@@ -104,7 +104,7 @@
         },
         {
           "texto": "¿El 2-metilheptano es quiral?",
-          "smiles": "CC(C)CCCCC",
+          "smiles": "CCCCCC(C)C",
           "opciones": [
             "No: el C2 tiene dos metilos iguales",
             "Sí: el C2 es un centro quiral",
@@ -409,7 +409,7 @@
         },
         {
           "texto": "¿Cuántos estereoisómeros tiene el ácido tartárico (dos centros quirales iguales)?",
-          "smiles": "OC(C(O)C(=O)O)C(=O)O",
+          "smiles": "OC(=O)C(O)C(O)C(=O)O",
           "opciones": [
             "3: (R,R), (S,S) y meso",
             "4",

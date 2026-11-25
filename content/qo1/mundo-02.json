@@ -402,7 +402,25 @@
             "Todos son igual de estables"
           ],
           "correcta": 0,
-          "explicacion": "Terciario > secundario > primario > metilo, por **hiperconjugación**: 10, 7, 4 y 0 formas hiperconjugadas, respectivamente."
+          "explicacion": "Terciario > secundario > primario > metilo, por **hiperconjugación**: 10, 7, 4 y 0 formas hiperconjugadas, respectivamente.",
+          "referencias": [
+            {
+              "texto": "(CH₃)₃C·",
+              "nombre": "terc-butilo (3°)"
+            },
+            {
+              "texto": "(CH₃)₂CH·",
+              "nombre": "isopropilo (2°)"
+            },
+            {
+              "texto": "CH₃CH₂·",
+              "nombre": "etilo (1°)"
+            },
+            {
+              "texto": "CH₃·",
+              "nombre": "metilo"
+            }
+          ]
         },
         {
           "texto": "¿Qué radical es **más estable** que cualquier radical alquilo terciario?",
@@ -424,7 +442,25 @@
             "Es una coincidencia estadística"
           ],
           "correcta": 0,
-          "explicacion": "Cada H secundario reacciona varias veces más rápido que uno primario, lo que compensa en parte que haya menos."
+          "explicacion": "Cada H secundario reacciona varias veces más rápido que uno primario, lo que compensa en parte que haya menos.",
+          "referencias": [
+            {
+              "smiles": "CCC",
+              "nombre": "propano"
+            },
+            {
+              "flecha": "Cl₂, hν"
+            },
+            {
+              "smiles": "ClCCC",
+              "nombre": "1-cloropropano (43 %)"
+            },
+            "+",
+            {
+              "smiles": "CC(C)Cl",
+              "nombre": "2-cloropropano (57 %)"
+            }
+          ]
         },
         {
           "texto": "¿Qué halógeno es más **selectivo** en la halogenación radicalaria?",
@@ -545,7 +581,25 @@
         "El halogenuro (R'–X) tiene que ser **primario**."
       ],
       "ficha": "obtencion-alcanos",
-      "exito": "Un **halogenuro de butilo** (1-bromobutano, por ejemplo): (CH₃)₃C–CH₂CH₂CH₂CH₃."
+      "exito": "Un **halogenuro de butilo** (1-bromobutano, por ejemplo): (CH₃)₃C–CH₂CH₂CH₂CH₃.",
+      "referencias": [
+        {
+          "texto": "[(CH₃)₃C]₂CuLi",
+          "nombre": "di-terc-butilcuprato de litio"
+        },
+        "+",
+        {
+          "incognita": true,
+          "nombre": "R′–X"
+        },
+        {
+          "flecha": ""
+        },
+        {
+          "smiles": "CC(C)(C)CCCC",
+          "nombre": "2,2-dimetilhexano"
+        }
+      ]
     },
     {
       "id": "m2-15",
@@ -557,10 +611,22 @@
           "texto": "1-Bromo-3-metilbutano + Na (síntesis de Wurtz). ¿Qué se obtiene?",
           "smiles": "BrCCC(C)C",
           "opciones": [
-            "2,7-Dimetiloctano",
-            "3-Metilbutano",
-            "2,2-Dimetilhexano",
-            "Decano"
+            {
+              "smiles": "CC(C)CCCCC(C)C",
+              "texto": "2,7-Dimetiloctano"
+            },
+            {
+              "smiles": "CCC(C)C",
+              "texto": "2-Metilbutano"
+            },
+            {
+              "smiles": "CC(C)(C)CCCC",
+              "texto": "2,2-Dimetilhexano"
+            },
+            {
+              "smiles": "CCCCCCCCCC",
+              "texto": "Decano"
+            }
           ],
           "correcta": 0,
           "explicacion": "Wurtz une **dos** restos iguales: (CH₃)₂CHCH₂CH₂–CH₂CH₂CH(CH₃)₂ = **2,7-dimetiloctano**."
@@ -580,10 +646,22 @@
           "texto": "2-Cloro-2-metilpentano + Zn/HCl. ¿Qué se obtiene?",
           "smiles": "CCCC(C)(C)Cl",
           "opciones": [
-            "2-Metilpentano",
-            "2-Metil-2-penteno",
-            "2-Metil-2-pentanol",
-            "2,2-Dimetilpentano"
+            {
+              "smiles": "CCCC(C)C",
+              "texto": "2-Metilpentano"
+            },
+            {
+              "smiles": "CCC=C(C)C",
+              "texto": "2-Metil-2-penteno"
+            },
+            {
+              "smiles": "CCCC(C)(C)O",
+              "texto": "2-Metil-2-pentanol"
+            },
+            {
+              "smiles": "CCCC(C)(C)C",
+              "texto": "2,2-Dimetilpentano"
+            }
           ],
           "correcta": 0,
           "explicacion": "Zn/HCl **reduce** el halogenuro: el Cl se sustituye por H → **2-metilpentano**."
@@ -597,7 +675,20 @@
             "Br₂, hν"
           ],
           "correcta": 0,
-          "explicacion": "Se forma el **reactivo de Grignard** CH₃CH₂CH(MgBr)CH₃ y el agua lo protona: **butano**."
+          "explicacion": "Se forma el **reactivo de Grignard** CH₃CH₂CH(MgBr)CH₃ y el agua lo protona: **butano**.",
+          "referencias": [
+            {
+              "smiles": "CCC(C)Br",
+              "nombre": "2-bromobutano"
+            },
+            {
+              "flecha": "?"
+            },
+            {
+              "smiles": "CCCC",
+              "nombre": "butano"
+            }
+          ]
         }
       ]
     },

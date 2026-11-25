@@ -5,6 +5,7 @@ import { molSVG } from '../render/svg.js';
 import { representar, NOMBRE_REPR } from '../render/depict.js';
 import { sillaSVG, newmanSVG } from '../render/proyecciones.js';
 import { disposicionNewman } from '../chem/conformacion.js';
+import { referencias } from './referencias.js';
 
 /** Ilustración de una pregunta: molécula, representación estereoquímica, pareja, silla o Newman. */
 export function ilustracion(p) {
@@ -58,6 +59,8 @@ export function montarTest(cont, nivel, ctx) {
     if (p.smiles) box.appendChild(h('div.q-mol', mol(p.smiles, p.resaltar)));
     const ilu = ilustracion(p);
     if (ilu) box.appendChild(ilu);
+    const refs = referencias(p.referencias);
+    if (refs) box.appendChild(refs);
     const opts = h('div.q-opts' + (p.opciones.some((o) => o.smiles) ? '.q-opts-mol' : ''));
     const expl = h('div.q-expl', { hidden: true, 'aria-live': 'polite' });
     let resuelta = false;

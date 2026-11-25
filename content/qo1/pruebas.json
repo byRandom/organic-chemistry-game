@@ -139,18 +139,21 @@
               "tipo": "silla",
               "enunciado": "Dibuja la silla **más estable** del **trans-1-terc-butil-3-metilciclohexano**.",
               "sustituyentes": [{ "carbono": 0, "texto": "C(CH₃)₃" }, { "carbono": 2, "texto": "CH₃" }],
+              "referencias": { "plegada": true, "titulo": "Ver estructura", "items": [{ "smiles": "CC(C)(C)[C@@H]1CCC[C@@H](C)C1", "nombre": "trans-1-terc-butil-3-metilciclohexano" }] },
               "relacion": "trans", "objetivo": "estable"
             },
             {
               "tipo": "silla",
               "enunciado": "Dibuja la silla **más estable** del **cis-1-isopropil-4-metilciclohexano**.",
               "sustituyentes": [{ "carbono": 0, "texto": "CH(CH₃)₂" }, { "carbono": 3, "texto": "CH₃" }],
+              "referencias": { "plegada": true, "titulo": "Ver estructura", "items": [{ "smiles": "CC(C)[C@H]1CC[C@@H](C)CC1", "nombre": "cis-1-isopropil-4-metilciclohexano" }] },
               "relacion": "cis", "objetivo": "estable"
             },
             {
               "tipo": "silla",
               "enunciado": "Dibuja la silla **más estable** del **trans-1-etil-2-metilciclohexano**.",
               "sustituyentes": [{ "carbono": 0, "texto": "CH₂CH₃" }, { "carbono": 1, "texto": "CH₃" }],
+              "referencias": { "plegada": true, "titulo": "Ver estructura", "items": [{ "smiles": "CC[C@@H]1CCCC[C@H]1C", "nombre": "trans-1-etil-2-metilciclohexano" }] },
               "relacion": "trans", "objetivo": "estable"
             }
           ]
@@ -225,6 +228,11 @@
             {
               "tipo": "construir",
               "enunciado": "Corey-House: ¿qué halogenuro de alquilo hay que añadir al **diisopropilcuprato de litio**, [(CH₃)₂CH]₂CuLi, para obtener **2-metilhexano**? Dibújalo.",
+              "referencias": [
+                { "texto": "[(CH₃)₂CH]₂CuLi", "nombre": "diisopropilcuprato de litio" }, "+",
+                { "incognita": true, "nombre": "R′–X" }, { "flecha": "" },
+                { "smiles": "CC(C)CCCC", "nombre": "2-metilhexano" }
+              ],
               "editor": { "elementos": ["C", "Cl", "Br", "I"], "anillos": false },
               "objetivo": { "smiles": ["BrCCCC", "ClCCCC", "ICCCC"] }
             }

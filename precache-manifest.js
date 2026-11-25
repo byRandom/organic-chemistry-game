@@ -1,6 +1,6 @@
 // Generado por tools/build-precache.mjs. No editar a mano: ejecuta `npm run precache`.
 self.__PRECACHE = {
-  "version": "5b1560a50f81",
+  "version": "fd33897097de",
   "files": [
     "./",
     "./index.html",
@@ -31,6 +31,7 @@ self.__PRECACHE = {
     "./js/puzzles/index.js",
     "./js/puzzles/quiz.js",
     "./js/puzzles/reaccion.js",
+    "./js/puzzles/referencias.js",
     "./js/puzzles/validate.js",
     "./js/render/depict.js",
     "./js/render/proyecciones.js",

@@ -57,7 +57,13 @@ Los niveles son datos en `content/qo1/mundo-XX.json`. Hay ejemplos de todos los 
 automáticamente que la relación marcada como correcta (idénticos, enantiómeros o
 diastereoisómeros) es la real. Los Mundos 5-6 añaden `reaccion`, `esquema` y `sintesis`: cada
 nivel indica el producto esperado (o la solución de referencia) y los tests comprueban que el
-motor de reacciones lo reproduce. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
+motor de reacciones lo reproduce.
+
+Cualquier nivel, fase de jefe o pregunta `test` admite `referencias`: los compuestos que nombra
+el enunciado, dibujados con su nombre (`{ smiles, nombre }`, `{ texto, nombre }` para fórmulas
+como R₂CuLi, `{ incognita: true }`, `{ flecha: '…' }` y `'+'`). Con
+`{ plegada: true, items: [...] }` quedan ocultas tras «Ver estructura». Úsalas siempre que el
+ejercicio no evalúe la nomenclatura. Los tests comprueban automáticamente que cada nivel tiene una solución válida.
 
 ### Contenido privado cifrado
 
