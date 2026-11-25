@@ -408,7 +408,17 @@ Cada fase termina con algo **jugable y publicado** en GitHub Pages. Así puedes 
 | RDKit pesa unos 7,5 MB | Se descarga una vez y queda en caché; mientras tanto se muestra una pantalla de carga |
 | Las reglas de la química tienen excepciones | Los niveles usan sustratos donde la regla del libro es clara; los casos ambiguos se tratan como «mezcla» y se explican |
 
-**Decisiones pendientes tuyas:**
-1. **Título del juego.** *Protocolo Kekulé* es provisional, igual que la historia (§1.1); otras ideas son *Ouroboros* o *Enlace*.
-2. ¿Hacemos **público** el repositorio, que es lo necesario para GitHub Pages gratis?
-3. ¿Quieres un **sistema de vidas o tiempo**, o prefieres juego libre sin penalizaciones, salvo en el modo Examen?
+**Decisiones tomadas (25/11/2026):**
+1. **Título e historia:** *Protocolo Kekulé*, con la nave *Ouroboros* y la IA K.E.K.U.L.É. (§1.1).
+2. **Repositorio público** para publicar gratis en GitHub Pages.
+3. **Sin penalizaciones** en los niveles normales: intentos ilimitados, que solo afectan a las estrellas. La presión queda para el modo Examen.
+
+---
+
+## 11. Registro de avance
+
+| Fecha | Fase | Hecho |
+|---|---|---|
+| 25/11/2026 | 0 | PWA (manifest, iconos, *service worker* con caché sin conexión y aviso de actualización), flujo de GitHub Actions (tests y publicación) |
+| 25/11/2026 | 1 | Núcleo químico (grafo, valencias, fórmula, SMILES, RDKit), editor táctil (átomos, enlaces, anillos, fusión, cargas, deshacer, pellizcar para hacer zoom), puzles *construir / descubrir / isómeros / test / secuencia*, historia (prólogo y diálogos), bitácora, laboratorio libre, ajustes y exportar/importar el progreso |
+| 25/11/2026 | 2 (inicio) | **Mundo 1 completo**: 14 niveles y un jefe de 3 fases, con 9 fichas de bitácora |
