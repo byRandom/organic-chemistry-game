@@ -461,3 +461,6 @@ main.page > .sec { margin-bottom: .6rem; }
 .exam-table td:nth-child(2), .exam-table td:nth-child(3), .exam-table th:nth-child(2), .exam-table th:nth-child(3) { text-align: center; white-space: nowrap; }
 .exam-repaso { text-align: left; }
 .exam-repaso h3 { margin: .6rem 0 .3rem; }
+.code-form { display: flex; gap: .5rem; margin: .8rem 0 .4rem; }
+.code-input { flex: 1; min-height: var(--tap); padding: 0 .8rem; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; }
+.sec.privada { border-color: #fbbf2488; }

@@ -13,7 +13,7 @@ function barajar(lista, semilla) {
   const out = [...lista];
   for (let i = out.length - 1; i > 0; i--) {
     s = (s * 1103515245 + 12345) >>> 0;
-    const j = s % (i + 1);
+    const j = Math.floor((s / 4294967296) * (i + 1)); // bits altos: los bajos de un LCG apenas varían
     [out[i], out[j]] = [out[j], out[i]];
   }
   return out;

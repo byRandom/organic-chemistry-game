@@ -4,3 +4,8 @@ _site/
 # Material de la UNED: nunca al repositorio
 material/
 *.pdf
+
+# Contenido privado en claro: nunca al repositorio
+content/qo1/privado/*.json
+!content/qo1/privado/*.enc.json
+!content/qo1/privado/indice.json

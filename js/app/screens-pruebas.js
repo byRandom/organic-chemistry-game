@@ -25,8 +25,8 @@ export async function pantallaPruebas(root) {
   for (const p of pruebas) {
     const prog = store.prueba(p.id);
     const disp = p.disponible !== false;
-    main.appendChild(h(disp ? 'a.sec' : 'div.sec', { href: disp ? `#/prueba/${p.id}` : null, class: disp ? '' : 'locked' },
-      h('div.sec-num', '📝'),
+    main.appendChild(h(disp ? 'a.sec' : 'div.sec', { href: disp ? `#/prueba/${p.id}` : null, class: (disp ? '' : 'locked') + (p.privada ? ' privada' : '') },
+      h('div.sec-num', p.privada ? '🔓' : '📝'),
       h('div.sec-body',
         h('div.sec-name', p.titulo),
         h('div.sec-tema', p.subtitulo),
@@ -51,7 +51,8 @@ export async function pantallaPrueba(root, id) {
     main.replaceChildren(h('section.brief',
       h('h2', prueba.titulo + ' · ' + prueba.subtitulo),
       h('div', { html: rich(prueba.descripcion) }),
-      h('ul.exam-list', prueba.preguntas.map((q) => h('li', `${q.titulo} (Tema ${q.tema})`))),
+      prueba.ordenFijo ? null : h('ul.exam-list', prueba.preguntas.map((q) => h('li', `${q.titulo} (Tema ${q.tema})`))),
+      prueba.ordenFijo ? h('p.small', `${prueba.preguntas.length} apartados, en el orden del enunciado.`) : null,
       prog ? h('p', { html: rich(`Mejor nota: **${fmtNota(prog.mejor)}** · última: ${fmtNota(prog.ultima)}`) }) : null,
       h('div.result-actions', h('button.btn.primary.big', { type: 'button', onclick: empezar }, prog ? 'Nuevo intento' : 'Empezar'))));
   };

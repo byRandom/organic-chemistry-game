@@ -17,6 +17,7 @@ export function aleatorio(semilla) {
  * Devuelve [{pregunta, variante, indiceVariante}].
  */
 export function prepararIntento(prueba, semilla = Date.now()) {
+  if (prueba.ordenFijo) return prueba.preguntas.map((p) => ({ pregunta: p, variante: p.variantes[0], indiceVariante: 0 }));
   const rnd = aleatorio(semilla);
   const items = prueba.preguntas.map((p) => {
     const k = Math.floor(rnd() * p.variantes.length);

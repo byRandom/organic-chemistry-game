@@ -27,6 +27,20 @@ function mol(smiles, resaltar, opts = {}) {
   return m ? molSVG(m, { highlight: resaltar || [], minSize: 80, scale: 2.2, ...opts }) : h('code', smiles);
 }
 
+function barajarIndices(opciones, semilla) {
+  const n = opciones.length;
+  let s = [...String(semilla)].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 17);
+  const idx = [...Array(n).keys()];
+  // las parejas cis/trans conservan su orden natural
+  if (opciones.every((o) => typeof o === 'string' && /^(cis|trans)$/i.test(o))) return idx;
+  for (let i = n - 1; i > 0; i--) {
+    s = (s * 1103515245 + 12345) >>> 0;
+    const j = Math.floor((s / 4294967296) * (i + 1)); // bits altos: los bajos de un LCG apenas varían
+    [idx[i], idx[j]] = [idx[j], idx[i]];
+  }
+  return idx;
+}
+
 export function montarTest(cont, nivel, ctx) {
   const preguntas = nivel.preguntas || [];
   let i = 0;
@@ -47,7 +61,10 @@ export function montarTest(cont, nivel, ctx) {
     const opts = h('div.q-opts' + (p.opciones.some((o) => o.smiles) ? '.q-opts-mol' : ''));
     const expl = h('div.q-expl', { hidden: true, 'aria-live': 'polite' });
     let resuelta = false;
-    p.opciones.forEach((o, k) => {
+    // las opciones se barajan (de forma estable) para que la correcta no esté siempre en el mismo sitio
+    const orden = barajarIndices(p.opciones, (nivel.id || '') + i + p.texto);
+    orden.forEach((k) => {
+      const o = p.opciones[k];
       const contenido = typeof o === 'string' ? h('span', { html: rich(o) }) : o.smiles ? mol(o.smiles, o.resaltar) : h('span', { html: rich(o.texto) });
       const b = h('button.q-opt', { type: 'button' }, contenido);
       if (o.texto && o.smiles) b.appendChild(h('span.q-opt-cap', { html: rich(o.texto) }));

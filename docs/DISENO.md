@@ -233,6 +233,7 @@ Además hay **jefes de construcción**: moléculas grandes que se dibujan y anal
 - Sin pistas; nota sobre 10 (pregunta completa a la primera, la mitad con un fallo), desglose por tema y enlaces a las secciones que conviene repasar. Se guarda la mejor nota.
 - Por la misma razón, los niveles de la historia usan **moléculas análogas** a las de las PEC del curso en vigor: el repositorio es público y no debe contener las PEC resueltas.
 - *Simulacro PEC-1*: disponible (Fase 3). *Simulacro PEC-2*: cuando estén los Mundos 7-11.
+- **Ventana de códigos** (*Ajustes → Códigos*): las PEC reales del curso, **ya entregadas**, se guardan en el repositorio **cifradas** (AES-256-GCM, clave derivada del código con PBKDF2-SHA256, 600 000 iteraciones). Sin el código son ilegibles; el código no está en ningún archivo. Al canjearlo, la PEC se descifra y queda guardada solo en ese dispositivo, en *Bitácora → Pruebas de evaluación*, con sus apartados **en el orden original**. La PEC-2 se añadirá cuando esté entregada.
 
 ### Modo Examen
 - Genera **5 preguntas** al azar (una por cada tipo de pregunta de examen), ponderadas según las horas de la guía.
