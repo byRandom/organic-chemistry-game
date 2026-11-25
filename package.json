@@ -9,5 +9,5 @@
     "precache": "node tools/build-precache.mjs",
     "serve": "python3 -m http.server 8080"
   },
-  "license": "UNLICENSED"
+  "license": "CC-BY-NC-SA-4.0"
 }
