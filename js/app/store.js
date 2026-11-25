@@ -5,7 +5,8 @@ const DEFAULT = {
   niveles: {}, // id -> { estrellas, completado: fecha }
   fichas: {}, // id -> fecha de desbloqueo
   vistos: {}, // diálogos ya vistos
-  ajustes: { historia: true, modoEstudio: false, sonido: false },
+  pruebas: {}, // id -> { mejor, ultima, intentos }
+  ajustes: { historia: true, modoEstudio: false, sonido: false, lienzoClaro: false },
 };
 
 let state = load();
@@ -47,6 +48,14 @@ export const store = {
     state.fichas[id] = new Date().toISOString();
     save();
     return true;
+  },
+
+  prueba(id) { return state.pruebas?.[id]; },
+  registrarPrueba(id, nota) {
+    state.pruebas = state.pruebas || {};
+    const prev = state.pruebas[id] || { mejor: 0, intentos: 0 };
+    state.pruebas[id] = { mejor: Math.max(prev.mejor, nota), ultima: nota, intentos: prev.intentos + 1, fecha: new Date().toISOString() };
+    save();
   },
 
   visto(id) { return !!state.vistos[id]; },

@@ -34,14 +34,14 @@
       "num": 5,
       "seccion": "Enfermería",
       "tema": "Tema 5 · Sustitución nucleófila",
-      "fase": "Fase 3"
+      "archivo": "mundo-05.json"
     },
     {
       "id": "m6",
       "num": 6,
       "seccion": "Planta de polímeros",
       "tema": "Tema 6 · Reacciones de eliminación",
-      "fase": "Fase 3"
+      "archivo": "mundo-06.json"
     },
     {
       "id": "m7",

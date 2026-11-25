@@ -66,6 +66,11 @@ export function toast(text, kind = 'info', ms = 2600) {
   toastTimer = setTimeout(() => { box.className = ''; }, ms);
 }
 
+export function ocultarToast() {
+  clearTimeout(toastTimer);
+  document.getElementById('toast')?.classList.remove('show');
+}
+
 export function clear(e) {
   while (e.firstChild) e.removeChild(e.firstChild);
   return e;

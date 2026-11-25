@@ -1,13 +1,24 @@
 {
   "descripcion": "En el laboratorio de espejos cada molécula quiral tiene una **imagen especular** que no es ella misma. Aprenderás a detectar centros quirales, a asignar **R/S** y a moverte entre proyecciones de **Fischer**, **Newman** y **caballete**: lo más preguntado del examen.",
   "intro": [
-    { "texto": "El **laboratorio de espejos**. Aquí fabricábamos medicamentos. Problema: muchas moléculas tienen un «gemelo especular» que **no** es idéntico a ellas." },
-    { "texto": "Una de las dos versiones cura; la otra, a veces, no hace nada… o hace daño. Necesito que distingas cuál es cuál. Sin presión." }
+    {
+      "texto": "El **laboratorio de espejos**. Aquí fabricábamos medicamentos. Problema: muchas moléculas tienen un «gemelo especular» que **no** es idéntico a ellas."
+    },
+    {
+      "texto": "Una de las dos versiones cura; la otra, a veces, no hace nada… o hace daño. Necesito que distingas cuál es cuál. Sin presión."
+    }
   ],
   "outro": [
-    { "texto": "Laboratorio de espejos **operativo**. Mi módulo de estereoquímica está completo: quiralidad, R/S, Fischer, diastereoisómeros, formas meso." },
-    { "texto": "Con esto termina el primer bloque de mi reconstrucción: estructura y estereoquímica. Lo siguiente será la **enfermería**: allí empiezan las **reacciones** de verdad." },
-    { "quien": "sistema", "texto": "SECCIÓN 5 · ENFERMERÍA — Disponible en la Fase 3 del desarrollo." }
+    {
+      "texto": "Laboratorio de espejos **operativo**. Mi módulo de estereoquímica está completo: quiralidad, R/S, Fischer, diastereoisómeros, formas meso."
+    },
+    {
+      "texto": "Con esto termina el primer bloque de mi reconstrucción: estructura y estereoquímica. Lo siguiente será la **enfermería**: allí empiezan las **reacciones** de verdad."
+    },
+    {
+      "quien": "sistema",
+      "texto": "SECCIÓN 5 · ENFERMERÍA — Disponible en la Fase 3 del desarrollo."
+    }
   ],
   "fichas": {
     "quiralidad": {
@@ -51,23 +62,55 @@
       "id": "m4-01",
       "tipo": "test",
       "titulo": "El gemelo malvado",
-      "dialogo": [{ "texto": "Mira tus manos. Son imágenes especulares, pero no puedes superponer la izquierda sobre la derecha. Las moléculas que se comportan así son **quirales**." }],
+      "dialogo": [
+        {
+          "texto": "Mira tus manos. Son imágenes especulares, pero no puedes superponer la izquierda sobre la derecha. Las moléculas que se comportan así son **quirales**."
+        }
+      ],
       "enunciado": "¿Cuáles de estas moléculas son **quirales**? (ejercicio 1 del Tema 4)",
-      "pistas": ["Busca un carbono con **cuatro** sustituyentes **diferentes**."],
+      "pistas": [
+        "Busca un carbono con **cuatro** sustituyentes **diferentes**."
+      ],
       "preguntas": [
         {
           "texto": "¿Cuál de las dos es quiral?",
-          "opciones": [{ "smiles": "BrCCCC", "texto": "1-Bromobutano" }, { "smiles": "CC(Br)CC", "texto": "2-Bromobutano" }], "correcta": 1,
+          "opciones": [
+            {
+              "smiles": "BrCCCC",
+              "texto": "1-Bromobutano"
+            },
+            {
+              "smiles": "CC(Br)CC",
+              "texto": "2-Bromobutano"
+            }
+          ],
+          "correcta": 1,
           "explicacion": "En el 2-bromobutano, el C2 lleva **H, Br, CH₃ y CH₂CH₃**: cuatro grupos distintos."
         },
         {
           "texto": "¿Cuál de las dos es quiral?",
-          "opciones": [{ "smiles": "ClCCCCl", "texto": "1,3-Dicloropropano" }, { "smiles": "CC(Cl)CCl", "texto": "1,2-Dicloropropano" }], "correcta": 1,
+          "opciones": [
+            {
+              "smiles": "ClCCCCl",
+              "texto": "1,3-Dicloropropano"
+            },
+            {
+              "smiles": "CC(Cl)CCl",
+              "texto": "1,2-Dicloropropano"
+            }
+          ],
+          "correcta": 1,
           "explicacion": "En el 1,2-dicloropropano, el C2 tiene H, Cl, CH₃ y CH₂Cl: **centro quiral**."
         },
         {
-          "texto": "¿El 2-metilheptano es quiral?", "smiles": "CC(C)CCCCC",
-          "opciones": ["No: el C2 tiene dos metilos iguales", "Sí: el C2 es un centro quiral", "Sí: el C4 es un centro quiral"], "correcta": 0,
+          "texto": "¿El 2-metilheptano es quiral?",
+          "smiles": "CC(C)CCCCC",
+          "opciones": [
+            "No: el C2 tiene dos metilos iguales",
+            "Sí: el C2 es un centro quiral",
+            "Sí: el C4 es un centro quiral"
+          ],
+          "correcta": 0,
           "explicacion": "El C2 lleva **dos CH₃**: no es centro quiral. No hay ninguno en la molécula."
         }
       ],
@@ -77,21 +120,33 @@
       "id": "m4-02",
       "tipo": "quirales",
       "titulo": "Detector de asimetría",
-      "dialogo": [{ "texto": "He conectado el detector. **Toca** los carbonos que sean centros quirales y pulsa Comprobar." }],
+      "dialogo": [
+        {
+          "texto": "He conectado el detector. **Toca** los carbonos que sean centros quirales y pulsa Comprobar."
+        }
+      ],
       "enunciado": "Marca el **centro quiral** del **3-bromo-2-metilpentano**.",
       "smiles": "CC(C)C(Br)CC",
       "mostrarTotal": true,
-      "pistas": ["El C2 tiene dos metilos: no cuenta."]
+      "pistas": [
+        "El C2 tiene dos metilos: no cuenta."
+      ]
     },
     {
       "id": "m4-03",
       "tipo": "quirales",
       "titulo": "Mentol",
-      "dialogo": [{ "texto": "El **mentol** da sensación de frío porque encaja en un receptor de tu piel. Solo encaja **uno** de sus estereoisómeros. ¿Cuántos centros quirales tiene?" }],
+      "dialogo": [
+        {
+          "texto": "El **mentol** da sensación de frío porque encaja en un receptor de tu piel. Solo encaja **uno** de sus estereoisómeros. ¿Cuántos centros quirales tiene?"
+        }
+      ],
       "enunciado": "Marca **todos** los centros quirales del **mentol**.",
       "smiles": "CC(C)C1CCC(C)CC1O",
       "centrosEsperados": 3,
-      "pistas": ["En los anillos, un carbono es centro quiral si los **dos caminos** del anillo a su alrededor son distintos."],
+      "pistas": [
+        "En los anillos, un carbono es centro quiral si los **dos caminos** del anillo a su alrededor son distintos."
+      ],
       "exito": "Tres centros → hasta 2³ = 8 estereoisómeros. Solo el (−)-mentol es el «fresco»."
     },
     {
@@ -99,27 +154,49 @@
       "tipo": "test",
       "titulo": "Prioridades",
       "enunciado": "Ordena por **prioridad CIP decreciente** (ejercicio 2 del Tema 4).",
-      "pistas": ["Primero el número atómico del átomo unido; si empatan, mira los átomos siguientes y busca la primera diferencia."],
+      "pistas": [
+        "Primero el número atómico del átomo unido; si empatan, mira los átomos siguientes y busca la primera diferencia."
+      ],
       "preguntas": [
         {
           "texto": "–CH₃, –C₂H₅, –C(CH₃)₃, –CH(CH₃)₂",
-          "opciones": ["C(CH₃)₃ > CH(CH₃)₂ > C₂H₅ > CH₃", "CH₃ > C₂H₅ > CH(CH₃)₂ > C(CH₃)₃", "C₂H₅ > CH(CH₃)₂ > C(CH₃)₃ > CH₃"], "correcta": 0,
+          "opciones": [
+            "C(CH₃)₃ > CH(CH₃)₂ > C₂H₅ > CH₃",
+            "CH₃ > C₂H₅ > CH(CH₃)₂ > C(CH₃)₃",
+            "C₂H₅ > CH(CH₃)₂ > C(CH₃)₃ > CH₃"
+          ],
+          "correcta": 0,
           "explicacion": "Todos empiezan por C. Se miran sus sustituyentes: C(C,C,C) > C(C,C,H) > C(C,H,H) > C(H,H,H)."
         },
         {
           "texto": "–COOH, –CH₃, –NH₂, –H",
-          "opciones": ["NH₂ > COOH > CH₃ > H", "COOH > NH₂ > CH₃ > H", "COOH > CH₃ > NH₂ > H"], "correcta": 0,
+          "opciones": [
+            "NH₂ > COOH > CH₃ > H",
+            "COOH > NH₂ > CH₃ > H",
+            "COOH > CH₃ > NH₂ > H"
+          ],
+          "correcta": 0,
           "explicacion": "N (Z = 7) gana a C (Z = 6). Entre los carbonos, COOH es C(O,O,O) frente a CH₃, que es C(H,H,H)."
         },
         {
           "texto": "–CCl₃, –CH₂Br, –F, –CH₃",
-          "opciones": ["F > CH₂Br > CCl₃ > CH₃", "F > CCl₃ > CH₂Br > CH₃", "CCl₃ > CH₂Br > F > CH₃"], "correcta": 0,
+          "opciones": [
+            "F > CH₂Br > CCl₃ > CH₃",
+            "F > CCl₃ > CH₂Br > CH₃",
+            "CCl₃ > CH₂Br > F > CH₃"
+          ],
+          "correcta": 0,
           "explicacion": "¡Trampa clásica! Se compara el **primer punto de diferencia**: CH₂Br es C(**Br**,H,H) y CCl₃ es C(**Cl**,Cl,Cl). Br > Cl gana, aunque haya tres Cl.",
           "pistaFallo": "No se suman los átomos: se compara el de mayor número atómico de cada grupo."
         },
         {
           "texto": "–D (deuterio), –CH₃, –Br, –H",
-          "opciones": ["Br > CH₃ > D > H", "Br > D > CH₃ > H", "CH₃ > Br > D > H"], "correcta": 0,
+          "opciones": [
+            "Br > CH₃ > D > H",
+            "Br > D > CH₃ > H",
+            "CH₃ > Br > D > H"
+          ],
+          "correcta": 0,
           "explicacion": "Br (35) > C (6) > D (masa 2) > H (masa 1). Con isótopos, decide la **masa**."
         }
       ],
@@ -129,30 +206,48 @@
       "id": "m4-05",
       "tipo": "rs",
       "titulo": "R o S",
-      "dialogo": [{ "texto": "Cuña = hacia ti. Raya = hacia atrás. Asigna prioridades, pon la más baja atrás y sigue 1 → 2 → 3." }],
+      "dialogo": [
+        {
+          "texto": "Cuña = hacia ti. Raya = hacia atrás. Asigna prioridades, pon la más baja atrás y sigue 1 → 2 → 3."
+        }
+      ],
       "enunciado": "Asigna la configuración del **2-bromobutano** representado.",
       "smiles": "CC[C@@H](C)Br",
-      "pistas": ["Br > CH₂CH₃ > CH₃ > H. El H no está dibujado: está en el lado contrario a la cuña."]
+      "pistas": [
+        "Br > CH₂CH₃ > CH₃ > H. El H no está dibujado: está en el lado contrario a la cuña."
+      ]
     },
     {
       "id": "m4-06",
       "tipo": "rs",
       "titulo": "Ibuprofeno",
-      "dialogo": [{ "texto": "El **ibuprofeno** se vende como racémico, pero solo uno de sus enantiómeros calma el dolor. En el cuerpo, una enzima convierte el inactivo en el activo. Este es el activo: ¿R o S?" }],
+      "dialogo": [
+        {
+          "texto": "El **ibuprofeno** se vende como racémico, pero solo uno de sus enantiómeros calma el dolor. En el cuerpo, una enzima convierte el inactivo en el activo. Este es el activo: ¿R o S?"
+        }
+      ],
       "enunciado": "Asigna la configuración del centro quiral del **ibuprofeno**.",
       "smiles": "CC(C)CC1=CC=C(C=C1)[C@H](C)C(=O)O",
-      "pistas": ["COOH > anillo aromático > CH₃ > H. El anillo es C(C,C,C) y el COOH, C(O,O,O)."],
+      "pistas": [
+        "COOH > anillo aromático > CH₃ > H. El anillo es C(C,C,C) y el COOH, C(O,O,O)."
+      ],
       "exito": "Es el **(S)-ibuprofeno**, el enantiómero activo."
     },
     {
       "id": "m4-07",
       "tipo": "rs",
       "titulo": "En cruz",
-      "dialogo": [{ "texto": "La **proyección de Fischer**: horizontales hacia ti, verticales hacia atrás. Así se dibujan los azúcares y los aminoácidos." }],
+      "dialogo": [
+        {
+          "texto": "La **proyección de Fischer**: horizontales hacia ti, verticales hacia atrás. Así se dibujan los azúcares y los aminoácidos."
+        }
+      ],
       "enunciado": "Asigna la configuración del **gliceraldehído** en proyección de Fischer.",
       "smiles": "O=C[C@H](O)CO",
       "repr": "fischer",
-      "pistas": ["OH > CHO > CH₂OH > H. El H está en horizontal (hacia ti): invierte el resultado."],
+      "pistas": [
+        "OH > CHO > CH₂OH > H. El H está en horizontal (hacia ti): invierte el resultado."
+      ],
       "ficha": "fischer",
       "exito": "Es el **(R)-gliceraldehído**, que también se llama **D**-gliceraldehído: el OH queda a la derecha en Fischer."
     },
@@ -163,17 +258,25 @@
       "enunciado": "Asigna la configuración de los **dos** centros del **3-bromo-2-butanol** en Fischer.",
       "smiles": "C[C@@H](Br)[C@H](O)C",
       "repr": "fischer",
-      "pistas": ["Trata cada fila como un centro independiente. El otro centro cuenta como un grupo más (por ejemplo, CH(OH)CH₃)."]
+      "pistas": [
+        "Trata cada fila como un centro independiente. El otro centro cuenta como un grupo más (por ejemplo, CH(OH)CH₃)."
+      ]
     },
     {
       "id": "m4-09",
       "tipo": "fischer",
       "titulo": "De cuñas a Fischer",
-      "dialogo": [{ "texto": "Ahora tú dibujas la Fischer. Te doy la cruz con la cadena en vertical: **toca** los grupos horizontales que estén al revés para intercambiarlos." }],
+      "dialogo": [
+        {
+          "texto": "Ahora tú dibujas la Fischer. Te doy la cruz con la cadena en vertical: **toca** los grupos horizontales que estén al revés para intercambiarlos."
+        }
+      ],
       "enunciado": "Pasa la **alanina** a proyección de Fischer (COOH arriba).",
       "smiles": "C[C@@H](C(=O)O)N",
       "desde": "cuña",
-      "pistas": ["Asigna R/S en las cuñas y construye la Fischer que dé la misma configuración."],
+      "pistas": [
+        "Asigna R/S en las cuñas y construye la Fischer que dé la misma configuración."
+      ],
       "ficha": "proyecciones",
       "exito": "Es la **L-alanina** (S): el NH₂ a la izquierda, como todos los aminoácidos de las proteínas."
     },
@@ -184,16 +287,20 @@
       "enunciado": "Pasa a proyección de Fischer el **3-bromo-2-butanol** representado en Newman.",
       "smiles": "C[C@@H](Br)[C@@H](O)C",
       "desde": "newman",
-      "pistas": ["Asigna R/S a cada carbono en la Newman (delante y detrás) y busca la Fischer con las mismas etiquetas."]
+      "pistas": [
+        "Asigna R/S a cada carbono en la Newman (delante y detrás) y busca la Fischer con las mismas etiquetas."
+      ]
     },
     {
       "id": "m4-11",
       "tipo": "fischer",
-      "titulo": "De caballete a Fischer (PEC-1)",
+      "titulo": "De caballete a Fischer",
       "enunciado": "Pasa a proyección de Fischer el **2,3-dibromobutano** representado en caballete.",
       "smiles": "C[C@@H](Br)[C@H](Br)C",
       "desde": "caballete",
-      "pistas": ["En caballete, el carbono de abajo a la izquierda es el delantero."]
+      "pistas": [
+        "En caballete, el carbono de abajo a la izquierda es el delantero."
+      ]
     },
     {
       "id": "m4-12",
@@ -202,31 +309,78 @@
       "enunciado": "Asigna la configuración del carbono **delantero** y del **trasero** en esta proyección de Newman.",
       "smiles": "C[C@@H](Br)[C@H](O)C",
       "repr": "newman",
-      "pistas": ["Para el carbono delantero, el trasero es un sustituyente más (y está hacia atrás). Para el trasero, el delantero está hacia ti."]
+      "pistas": [
+        "Para el carbono delantero, el trasero es un sustituyente más (y está hacia atrás). Para el trasero, el delantero está hacia ti."
+      ]
     },
     {
       "id": "m4-13",
       "tipo": "test",
       "titulo": "¿Hermanos o gemelos?",
       "enunciado": "Indica la relación entre cada pareja: **idénticos**, **enantiómeros** o **diastereoisómeros** (examen 2022 y 2023).",
-      "pistas": ["Asigna R/S a todos los centros de A y de B. Todos invertidos → enantiómeros; solo algunos → diastereoisómeros; ninguno → idénticos."],
+      "pistas": [
+        "Asigna R/S a todos los centros de A y de B. Todos invertidos → enantiómeros; solo algunos → diastereoisómeros; ninguno → idénticos."
+      ],
       "preguntas": [
         {
           "texto": "¿Qué relación hay entre A y B?",
-          "par": [{ "smiles": "C[C@@H](Br)[C@H](O)C", "repr": "fischer" }, { "smiles": "C[C@H](Br)[C@@H](O)C", "repr": "cuña" }],
-          "opciones": ["Idénticos", "Enantiómeros", "Diastereoisómeros"], "correcta": 1,
+          "par": [
+            {
+              "smiles": "C[C@@H](Br)[C@H](O)C",
+              "repr": "fischer"
+            },
+            {
+              "smiles": "C[C@H](Br)[C@@H](O)C",
+              "repr": "cuña"
+            }
+          ],
+          "opciones": [
+            "Idénticos",
+            "Enantiómeros",
+            "Diastereoisómeros"
+          ],
+          "correcta": 1,
           "explicacion": "Los **dos** centros están invertidos: (2R,3R) frente a (2S,3S). Son **enantiómeros**."
         },
         {
           "texto": "¿Qué relación hay entre A y B?",
-          "par": [{ "smiles": "C[C@@H](Br)[C@H](O)C", "repr": "newman" }, { "smiles": "C[C@@H](Br)[C@@H](O)C", "repr": "fischer" }],
-          "opciones": ["Idénticos", "Enantiómeros", "Diastereoisómeros"], "correcta": 2,
+          "par": [
+            {
+              "smiles": "C[C@@H](Br)[C@H](O)C",
+              "repr": "newman"
+            },
+            {
+              "smiles": "C[C@@H](Br)[C@@H](O)C",
+              "repr": "fischer"
+            }
+          ],
+          "opciones": [
+            "Idénticos",
+            "Enantiómeros",
+            "Diastereoisómeros"
+          ],
+          "correcta": 2,
           "explicacion": "Solo cambia **uno** de los dos centros: son **diastereoisómeros**."
         },
         {
           "texto": "¿Qué relación hay entre A y B?",
-          "par": [{ "smiles": "C[C@@H](Br)[C@H](O)C", "repr": "caballete" }, { "smiles": "C[C@@H](Br)[C@H](O)C", "repr": "fischer", "invertir": true }],
-          "opciones": ["Idénticos", "Enantiómeros", "Diastereoisómeros"], "correcta": 0,
+          "par": [
+            {
+              "smiles": "C[C@@H](Br)[C@H](O)C",
+              "repr": "caballete"
+            },
+            {
+              "smiles": "C[C@@H](Br)[C@H](O)C",
+              "repr": "fischer",
+              "invertir": true
+            }
+          ],
+          "opciones": [
+            "Idénticos",
+            "Enantiómeros",
+            "Diastereoisómeros"
+          ],
+          "correcta": 0,
           "explicacion": "Mismas configuraciones en los dos centros: es **la misma molécula** dibujada de dos formas."
         }
       ],
@@ -240,34 +394,73 @@
       "preguntas": [
         {
           "texto": "Esta forma del 2,3-dibromobutano, ¿es quiral?",
-          "repr": { "smiles": "C[C@@H](Br)[C@@H](Br)C", "repr": "fischer" }, "esMeso": true,
-          "opciones": ["No: es una forma meso, con un plano de simetría", "Sí: tiene dos centros quirales", "Sí: es (R,R)"], "correcta": 0,
+          "repr": {
+            "smiles": "C[C@@H](Br)[C@@H](Br)C",
+            "repr": "fischer"
+          },
+          "esMeso": true,
+          "opciones": [
+            "No: es una forma meso, con un plano de simetría",
+            "Sí: tiene dos centros quirales",
+            "Sí: es (R,R)"
+          ],
+          "correcta": 0,
           "explicacion": "Es (2R,3S): la mitad de arriba es la imagen especular de la de abajo. Tiene **plano de simetría**: forma **meso**, aquiral."
         },
         {
           "texto": "¿Cuántos estereoisómeros tiene el ácido tartárico (dos centros quirales iguales)?",
           "smiles": "OC(C(O)C(=O)O)C(=O)O",
-          "opciones": ["3: (R,R), (S,S) y meso", "4", "2", "1"], "correcta": 0,
+          "opciones": [
+            "3: (R,R), (S,S) y meso",
+            "4",
+            "2",
+            "1"
+          ],
+          "correcta": 0,
           "explicacion": "2² = 4 como máximo, pero (R,S) y (S,R) son la **misma** molécula (meso): quedan **3**."
         },
         {
           "texto": "Un compuesto con 3 centros quirales distintos (y sin formas meso), ¿cuántos estereoisómeros tiene?",
-          "opciones": ["8", "6", "3", "9"], "correcta": 0,
+          "opciones": [
+            "8",
+            "6",
+            "3",
+            "9"
+          ],
+          "correcta": 0,
           "explicacion": "2³ = **8** (4 parejas de enantiómeros)."
         },
         {
           "texto": "Ejercicio 3 del libro: α = +7,42°, tubo de 2 dm, 2-bromobutano puro (densidad 0,80 g/mL). ¿Cuánto vale [α]?",
-          "opciones": ["+4,64°", "+9,28°", "+3,71°", "+5,94°"], "correcta": 0,
+          "opciones": [
+            "+4,64°",
+            "+9,28°",
+            "+3,71°",
+            "+5,94°"
+          ],
+          "correcta": 0,
           "explicacion": "[α] = α / (l · c) = 7,42 / (2 × 0,80) = **+4,64°**."
         },
         {
           "texto": "¿Qué rotación óptica tiene una mezcla racémica?",
-          "opciones": ["0°: los dos enantiómeros se compensan", "El doble que cada enantiómero", "La misma que el enantiómero (+)", "Depende de si es R o S"], "correcta": 0,
+          "opciones": [
+            "0°: los dos enantiómeros se compensan",
+            "El doble que cada enantiómero",
+            "La misma que el enantiómero (+)",
+            "Depende de si es R o S"
+          ],
+          "correcta": 0,
           "explicacion": "50 % de (+) y 50 % de (−): la rotación neta es **cero**."
         },
         {
           "texto": "Una reacción crea un centro quiral a partir de un intermedio **plano** (sin otros centros quirales). ¿Qué se obtiene?",
-          "opciones": ["Mezcla racémica", "Solo el enantiómero R", "Solo el enantiómero S", "Una forma meso"], "correcta": 0,
+          "opciones": [
+            "Mezcla racémica",
+            "Solo el enantiómero R",
+            "Solo el enantiómero S",
+            "Una forma meso"
+          ],
+          "correcta": 0,
           "explicacion": "El reactivo ataca por las dos caras con igual probabilidad: **50:50**, mezcla racémica."
         }
       ],
@@ -277,7 +470,11 @@
       "id": "m4-15",
       "tipo": "quirales",
       "titulo": "El colesterol",
-      "dialogo": [{ "texto": "Reto opcional para presumir: el **colesterol**. Tiene **ocho** centros quirales; de sus 256 estereoisómeros posibles, la naturaleza solo fabrica uno." }],
+      "dialogo": [
+        {
+          "texto": "Reto opcional para presumir: el **colesterol**. Tiene **ocho** centros quirales; de sus 256 estereoisómeros posibles, la naturaleza solo fabrica uno."
+        }
+      ],
       "enunciado": "Marca los **ocho** centros quirales del **colesterol**.",
       "smiles": "CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C",
       "centrosEsperados": 8,
@@ -295,8 +492,13 @@
       "jefe": true,
       "titulo": "Emergencia: el lote equivocado",
       "dialogo": [
-        { "quien": "sistema", "texto": "⚠ ALERTA · Lote de fármaco con configuración no verificada · Bloqueo de la enfermería" },
-        { "texto": "Ha salido un lote del sintetizador y no sé si es el enantiómero correcto. Verifícalo antes de que alguien se lo tome." }
+        {
+          "quien": "sistema",
+          "texto": "⚠ ALERTA · Lote de fármaco con configuración no verificada · Bloqueo de la enfermería"
+        },
+        {
+          "texto": "Ha salido un lote del sintetizador y no sé si es el enantiómero correcto. Verifícalo antes de que alguien se lo tome."
+        }
       ],
       "enunciado": "Supera las **cuatro fases** de la emergencia.",
       "pasos": [
@@ -324,8 +526,22 @@
           "preguntas": [
             {
               "texto": "¿Qué relación hay entre A y B?",
-              "par": [{ "smiles": "O[C@H]([C@@H](O)C(=O)O)C(=O)O", "repr": "fischer" }, { "smiles": "O[C@H]([C@H](O)C(=O)O)C(=O)O", "repr": "fischer" }],
-              "opciones": ["Idénticos", "Enantiómeros", "Diastereoisómeros"], "correcta": 2,
+              "par": [
+                {
+                  "smiles": "O[C@H]([C@@H](O)C(=O)O)C(=O)O",
+                  "repr": "fischer"
+                },
+                {
+                  "smiles": "O[C@H]([C@H](O)C(=O)O)C(=O)O",
+                  "repr": "fischer"
+                }
+              ],
+              "opciones": [
+                "Idénticos",
+                "Enantiómeros",
+                "Diastereoisómeros"
+              ],
+              "correcta": 2,
               "explicacion": "A es (R,R) y B es la forma **meso** (R,S): **diastereoisómeros**. La forma meso no tiene enantiómero."
             }
           ]

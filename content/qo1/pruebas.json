@@ -1,0 +1,243 @@
+{
+  "pruebas": [
+    {
+      "id": "pec1",
+      "titulo": "Simulacro PEC-1",
+      "subtitulo": "Temas 1-6 del programa",
+      "descripcion": "Las mismas **clases de preguntas** que la primera prueba de evaluación continua (nomenclatura, isómeros, resonancia, Newman, sillas, Fischer, SN/E, mecanismos con transposición y síntesis), pero con **otras moléculas**. Cada intento elige versiones al azar y las baraja.\n\nSin pistas. Cada pregunta vale lo mismo: completa si la aciertas a la primera, la mitad con un fallo y nada con más.",
+      "preguntas": [
+        {
+          "id": "nombrar",
+          "titulo": "Formular y nombrar",
+          "tema": 2,
+          "variantes": [
+            {
+              "tipo": "construir",
+              "enunciado": "Formula el **4-etil-2,3-dimetilheptano**.",
+              "editor": { "elementos": ["C"], "anillos": false },
+              "objetivo": { "formula": "C11H24", "smiles": ["CCCC(CC)C(C)C(C)C"] }
+            },
+            {
+              "tipo": "construir",
+              "enunciado": "Formula el **2-cloro-7,7-dimetilbiciclo[2.2.1]heptano**.",
+              "editor": { "elementos": ["C", "Cl"], "anillos": [5, 6] },
+              "objetivo": { "formula": "C9H15Cl", "smiles": ["ClC1CC2CCC1C2(C)C"] }
+            },
+            {
+              "tipo": "test",
+              "enunciado": "Nombra según la IUPAC.",
+              "preguntas": [{
+                "texto": "¿Cómo se llama?", "smiles": "CC1(C)C2CCC1(C)CC2",
+                "opciones": ["1,7,7-Trimetilbiciclo[2.2.1]heptano", "2,2,3-Trimetilbiciclo[2.2.1]heptano", "1,7,7-Trimetilbiciclo[2.2.2]octano", "Trimetilnorbornano"], "correcta": 0,
+                "explicacion": "Biciclo de 7 C con puentes de 2, 2 y 1 carbonos. Un metilo en la cabeza de puente (C1) y dos en el puente de un carbono (C7)."
+              }]
+            },
+            {
+              "tipo": "test",
+              "enunciado": "Nombra según la IUPAC.",
+              "preguntas": [{
+                "texto": "¿Cómo se llama?", "smiles": "CC(C)C(Cl)(CC)CC",
+                "opciones": ["3-Cloro-3-etil-2-metilpentano", "3-Cloro-2-metil-3-etilpentano", "3-Etil-3-cloro-4-metilpentano", "2-Metil-3-cloro-3-etilpentano"], "correcta": 0,
+                "explicacion": "Cadena de 5 C. Los localizadores más bajos son {2,3,3} y se citan por orden alfabético: cloro, etil, metil."
+              }]
+            }
+          ]
+        },
+        {
+          "id": "isomeros",
+          "titulo": "Isómeros constitucionales",
+          "tema": 1,
+          "variantes": [
+            {
+              "tipo": "isomeros",
+              "enunciado": "Dibuja **todos** los isómeros constitucionales de {C3H6Cl2}.",
+              "editor": { "elementos": ["C", "Cl"], "anillos": false },
+              "objetivo": { "formula": "C3H6Cl2", "total": 4, "nombres": { "CCC(Cl)Cl": "1,1-dicloropropano", "CC(Cl)CCl": "1,2-dicloropropano", "ClCCCCl": "1,3-dicloropropano", "CC(C)(Cl)Cl": "2,2-dicloropropano" } }
+            },
+            {
+              "tipo": "isomeros",
+              "enunciado": "Dibuja **todos** los isómeros constitucionales de {C4H8Cl2}.",
+              "editor": { "elementos": ["C", "Cl"], "anillos": false },
+              "objetivo": {
+                "formula": "C4H8Cl2", "total": 9,
+                "nombres": {
+                  "CCCC(Cl)Cl": "1,1-diclorobutano", "CCC(Cl)CCl": "1,2-diclorobutano", "CC(Cl)CCCl": "1,3-diclorobutano", "ClCCCCCl": "1,4-diclorobutano",
+                  "CCC(C)(Cl)Cl": "2,2-diclorobutano", "CC(Cl)C(C)Cl": "2,3-diclorobutano",
+                  "CC(C)C(Cl)Cl": "1,1-dicloro-2-metilpropano", "CC(C)(Cl)CCl": "1,2-dicloro-2-metilpropano", "CC(CCl)CCl": "1,3-dicloro-2-metilpropano"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "resonancia",
+          "titulo": "Resonancia y efectos electrónicos",
+          "tema": 1,
+          "variantes": [
+            {
+              "tipo": "test",
+              "enunciado": "Estructuras resonantes.",
+              "preguntas": [{
+                "texto": "En el **anión alilo**, CH₂=CH–CH₂⁻, ¿sobre qué átomos se reparte la carga negativa?",
+                "smiles": "C=C[CH2-]",
+                "opciones": ["Sobre los dos carbonos de los extremos", "Solo sobre el carbono central", "Sobre los tres carbonos por igual", "No hay resonancia"], "correcta": 0,
+                "explicacion": "Moviendo el par libre hacia el enlace π y el π hacia el otro extremo, la carga pasa de C1 a C3. El carbono central nunca la lleva."
+              }]
+            },
+            {
+              "tipo": "test",
+              "enunciado": "Estructuras resonantes.",
+              "preguntas": [{
+                "texto": "En el **ion carboxilato** del ácido propanoico, ¿cómo son los dos enlaces C–O?",
+                "smiles": "CCC(=O)[O-]",
+                "opciones": ["Iguales: la carga se reparte entre los dos oxígenos", "Uno doble y otro sencillo, fijos", "Los dos dobles", "Los dos sencillos"], "correcta": 0,
+                "explicacion": "Dos formas resonantes equivalentes: los dos C–O tienen la misma longitud, intermedia entre sencillo y doble."
+              }]
+            },
+            {
+              "tipo": "test",
+              "enunciado": "Estructuras resonantes.",
+              "preguntas": [{
+                "texto": "¿Cuál de estos pares **no** son formas resonantes de la misma especie?",
+                "opciones": ["Dos estructuras que se diferencian en la posición de un átomo de H", "Dos estructuras que solo se diferencian en la posición de los electrones π", "Dos estructuras con la carga en distintos átomos y los mismos núcleos"], "correcta": 0,
+                "explicacion": "Si se mueve un **núcleo** (como un H) son moléculas distintas (tautómeros), no formas resonantes."
+              }]
+            }
+          ]
+        },
+        {
+          "id": "newman",
+          "titulo": "Proyección de Newman",
+          "tema": 2,
+          "variantes": [
+            {
+              "tipo": "newman",
+              "enunciado": "**2-Metilbutano**, enlace C2–C3 (delante C2). Dibuja la conformación de **menor energía**.",
+              "delante": ["CH₃", "CH₃", "H"], "detras": ["CH₃", "H", "H"],
+              "giroInicial": 0, "mostrarEnergia": false, "mostrarDiagrama": false, "objetivo": { "tipo": "min" }
+            },
+            {
+              "tipo": "newman",
+              "enunciado": "**1,2-Dicloroetano**, enlace C1–C2. Dibuja la conformación de **mayor energía**.",
+              "delante": ["Cl", "H", "H"], "detras": ["Cl", "H", "H"],
+              "giroInicial": 180, "mostrarEnergia": false, "mostrarDiagrama": false, "objetivo": { "tipo": "max" }
+            },
+            {
+              "tipo": "newman",
+              "enunciado": "**1-Cloropropano**, enlace C1–C2 (delante C1). Dibuja la conformación de **menor energía**.",
+              "delante": ["Cl", "H", "H"], "detras": ["CH₃", "H", "H"],
+              "giroInicial": 0, "mostrarEnergia": false, "mostrarDiagrama": false, "objetivo": { "tipo": "min" }
+            }
+          ]
+        },
+        {
+          "id": "silla",
+          "titulo": "Análisis conformacional de ciclohexanos",
+          "tema": 3,
+          "variantes": [
+            {
+              "tipo": "silla",
+              "enunciado": "Dibuja la silla **más estable** del **trans-1-terc-butil-3-metilciclohexano**.",
+              "sustituyentes": [{ "carbono": 0, "texto": "C(CH₃)₃" }, { "carbono": 2, "texto": "CH₃" }],
+              "relacion": "trans", "objetivo": "estable"
+            },
+            {
+              "tipo": "silla",
+              "enunciado": "Dibuja la silla **más estable** del **cis-1-isopropil-4-metilciclohexano**.",
+              "sustituyentes": [{ "carbono": 0, "texto": "CH(CH₃)₂" }, { "carbono": 3, "texto": "CH₃" }],
+              "relacion": "cis", "objetivo": "estable"
+            },
+            {
+              "tipo": "silla",
+              "enunciado": "Dibuja la silla **más estable** del **trans-1-etil-2-metilciclohexano**.",
+              "sustituyentes": [{ "carbono": 0, "texto": "CH₂CH₃" }, { "carbono": 1, "texto": "CH₃" }],
+              "relacion": "trans", "objetivo": "estable"
+            }
+          ]
+        },
+        {
+          "id": "fischer",
+          "titulo": "Proyección de Fischer y configuración",
+          "tema": 4,
+          "variantes": [
+            {
+              "tipo": "fischer",
+              "enunciado": "Pasa a proyección de **Fischer** la molécula dibujada en **Newman**.",
+              "smiles": "C[C@@H](Cl)[C@H](O)CC", "desde": "newman"
+            },
+            {
+              "tipo": "fischer",
+              "enunciado": "Pasa a proyección de **Fischer** la molécula dibujada en **caballete**.",
+              "smiles": "C[C@@H](N)[C@@H](O)C", "desde": "caballete"
+            },
+            {
+              "tipo": "rs",
+              "enunciado": "Asigna la configuración absoluta de cada centro en esta proyección de **Fischer**.",
+              "smiles": "O=C[C@@H](O)[C@H](O)CO", "repr": "fischer"
+            },
+            {
+              "tipo": "rs",
+              "enunciado": "Asigna la configuración de los dos centros en esta **caballete**.",
+              "smiles": "C[C@@H](Cl)[C@H](O)CC", "repr": "caballete"
+            }
+          ]
+        },
+        {
+          "id": "reaccion",
+          "titulo": "Producto mayoritario y mecanismo",
+          "tema": 6,
+          "variantes": [
+            { "tipo": "reaccion", "enunciado": "**1-Bromo-1-metilciclopentano** + EtO⁻Na⁺ en etanol.", "sustrato": "CC1(Br)CCCC1", "reactivo": "EtONa", "esperado": "CC1=CCCC1", "mecanismo": "E2" },
+            { "tipo": "reaccion", "enunciado": "**(S)-2-Yodobutano** + NaCN en DMSO.", "sustrato": "CC[C@H](C)I", "reactivo": "NaCN", "esperado": "CC[C@@H](C)C#N", "mecanismo": "SN2" },
+            { "tipo": "reaccion", "enunciado": "**2-Cloro-2-metilbutano** + metanol.", "sustrato": "CCC(C)(C)Cl", "reactivo": "CH3OH", "esperado": "CCC(C)(C)OC", "mecanismo": "SN1" },
+            { "tipo": "reaccion", "enunciado": "**Bromociclohexano** + (CH₃)₃CO⁻K⁺.", "sustrato": "BrC1CCCCC1", "reactivo": "tBuOK", "esperado": "C1=CCCCC1", "mecanismo": "E2" },
+            { "tipo": "reaccion", "enunciado": "**(2-Bromoetil)ciclopentano** + EtO⁻Na⁺ en etanol.", "sustrato": "BrCCC1CCCC1", "reactivo": "EtONa", "esperado": "CCOCCC1CCCC1", "mecanismo": "SN2" }
+          ]
+        },
+        {
+          "id": "transposicion",
+          "titulo": "Mecanismo con carbocatión",
+          "tema": 5,
+          "variantes": [
+            { "tipo": "reaccion", "enunciado": "**2-Bromo-3-metilpentano** + etanol. Mecanismo y producto mayoritario.", "sustrato": "CCC(C)C(C)Br", "reactivo": "EtOH", "esperado": "CCOC(C)(CC)CC", "mecanismo": "SN1", "transposicion": "hidruro" },
+            { "tipo": "reaccion", "enunciado": "**1-Bromo-2,2-dimetilpropano** + etanol. Mecanismo y producto mayoritario.", "sustrato": "CC(C)(C)CBr", "reactivo": "EtOH", "esperado": "CCOC(C)(C)CC", "mecanismo": "SN1", "transposicion": "metilo" },
+            { "tipo": "reaccion", "enunciado": "**2-Bromo-1,1-dimetilciclopentano** + metanol. Mecanismo y producto mayoritario.", "sustrato": "CC1(C)CCCC1Br", "reactivo": "CH3OH", "esperado": "COC1(C)CCCC1C", "mecanismo": "SN1", "transposicion": "metilo" },
+            { "tipo": "reaccion", "enunciado": "**(R)-2-Bromopentano** + metanol. Mecanismo y producto mayoritario.", "sustrato": "CCC[C@@H](C)Br", "reactivo": "CH3OH", "esperado": "CCCC(C)OC", "mecanismo": "SN1", "racemico": true }
+          ]
+        },
+        {
+          "id": "sintesis",
+          "titulo": "Síntesis",
+          "tema": 6,
+          "variantes": [
+            {
+              "tipo": "sintesis",
+              "enunciado": "Obtén **2-metil-1-penteno** a partir de **2-bromo-2-metilpentano**.",
+              "partida": "CCCC(C)(C)Br", "objetivo": "C=C(C)CCC",
+              "reactivos": ["EtONa", "tBuOK", "H2O", "NaCN"], "solucion": ["tBuOK"], "optimo": 1, "maxPasos": 2
+            },
+            {
+              "tipo": "sintesis",
+              "enunciado": "Obtén **(S)-2-(metiltio)hexano** a partir de **(S)-2-bromohexano**, conservando la configuración espacial.",
+              "partida": "CCCC[C@H](C)Br", "objetivo": "CCCC[C@H](C)SC",
+              "reactivos": ["CH3SNa", "NaI", "CH3OH", "EtONa"], "solucion": ["NaI", "CH3SNa"], "optimo": 2, "maxPasos": 3
+            },
+            {
+              "tipo": "construir",
+              "enunciado": "Corey-House: ¿qué halogenuro de alquilo hay que añadir al **diisopropilcuprato de litio**, [(CH₃)₂CH]₂CuLi, para obtener **2-metilhexano**? Dibújalo.",
+              "editor": { "elementos": ["C", "Cl", "Br", "I"], "anillos": false },
+              "objetivo": { "smiles": ["BrCCCC", "ClCCCC", "ICCCC"] }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pec2",
+      "titulo": "Simulacro PEC-2",
+      "subtitulo": "Temas 7-11 del programa",
+      "disponible": false,
+      "fase": "cuando estén los Mundos 7-11 (Fases 4 y 5)"
+    }
+  ]
+}

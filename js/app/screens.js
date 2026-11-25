@@ -4,7 +4,7 @@ import { store } from './store.js';
 import { dialogo, AVATAR_SVG } from './dialog.js';
 import {
   cargarIndice, cargarMundo, nivelDisponible, nivelCompletado, mundoDisponible,
-  mundoCompletado, estrellasMundo, todasLasFichas,
+  mundoCompletado, estrellasMundo, todasLasFichas, canjearCodigo, pruebasPrivadas, borrarPrivadas,
 } from './content.js';
 import { montarPuzle } from '../puzzles/index.js';
 import { calcularEstrellas } from '../puzzles/validate.js';
@@ -14,6 +14,7 @@ import { formula, prettyFormula, toSmiles } from '../chem/mol.js';
 import { canonical } from '../chem/rdkit.js';
 import { go } from './router.js';
 import { installState, promptInstall } from './pwa.js';
+import { pestanasBitacora } from './screens-pruebas.js';
 
 const estrellas = (n, total = 3) => '★'.repeat(n) + '☆'.repeat(Math.max(0, total - n));
 
@@ -112,6 +113,8 @@ export async function pantallaMundo(root, id) {
 const TIPO_NOMBRE = {
   construir: '🧱 Construir', descubrir: '🔍 Descubrir', isomeros: '🧩 Caza de isómeros',
   test: '✅ Razonar', secuencia: '☠ Jefe',
+  newman: '🔄 Newman', silla: '🪑 Silla', quirales: '🪞 Quiralidad', rs: '🪞 R/S', fischer: '✚ Fischer',
+  reaccion: '⚗️ Reacción', sintesis: '🔬 Síntesis', esquema: '🧩 Esquema',
 };
 
 // ---------- Nivel ----------
@@ -181,6 +184,7 @@ export async function pantallaBitacora(root) {
   const fichas = await todasLasFichas();
   const main = h('main.page');
   root.append(topbar('Bitácora', '#/'), main);
+  main.appendChild(pestanasBitacora('fichas'));
   main.appendChild(h('p.lead', 'Todo lo que K.E.K.U.L.É. ha recordado gracias a ti. Es tu resumen de estudio.'));
   let mundoActual = null;
   for (const f of fichas) {
@@ -215,6 +219,31 @@ export async function pantallaLaboratorio(root) {
   return () => editor.destroy();
 }
 
+// ---------- Ventana de códigos ----------
+function ventanaCodigos() {
+  const campo = h('input.code-input', { type: 'password', autocomplete: 'off', autocapitalize: 'none', spellcheck: 'false', placeholder: 'Escribe el código', 'aria-label': 'Código' });
+  const estado = h('p.small', { 'aria-live': 'polite' });
+  const boton = h('button.btn.primary', { type: 'submit' }, 'Canjear');
+  const form = h('form.code-form', campo, boton);
+  const close = modal(h('div.result',
+    h('div.result-stars', '🔑'),
+    h('h2', 'Códigos'),
+    h('p.small', 'Si tienes un código, escríbelo aquí. El contenido se descifra y se guarda solo en este dispositivo.'),
+    form, estado));
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!campo.value.trim()) return;
+    boton.disabled = true;
+    estado.textContent = 'Comprobando…';
+    const abiertas = await canjearCodigo(campo.value);
+    boton.disabled = false;
+    if (!abiertas.length) { estado.textContent = 'Código no válido.'; campo.select(); return; }
+    close();
+    toast(`🔓 Desbloqueado: **${abiertas.map((p) => p.titulo).join(', ')}**. Lo tienes en Bitácora → Pruebas de evaluación.`, 'ok', 5000);
+  });
+  setTimeout(() => campo.focus(), 50);
+}
+
 // ---------- Ajustes ----------
 export async function pantallaAjustes(root) {
   const toggle = (k, label, desc) => h('label.setting',
@@ -223,6 +252,14 @@ export async function pantallaAjustes(root) {
   root.append(topbar('Ajustes', '#/'), h('main.page',
     toggle('historia', 'Mostrar la historia', 'Diálogos de K.E.K.U.L.É. al entrar en secciones y niveles.'),
     toggle('modoEstudio', 'Modo estudio', 'Desbloquea todos los niveles y toda la bitácora para repasar libremente.'),
+    toggle('lienzoClaro', 'Lienzo claro para las moléculas', 'Dibuja moléculas, proyecciones y esquemas sobre fondo blanco, como en el libro. Desactivado: fondo oscuro, más cómodo de noche.'),
+    h('h2', 'Códigos'),
+    h('div.row',
+      h('button.btn', { type: 'button', onclick: ventanaCodigos }, '🔑 Introducir un código'),
+      pruebasPrivadas().length ? h('button.btn.ghost', {
+        type: 'button',
+        onclick: () => { if (confirm('¿Quitar de este dispositivo el contenido desbloqueado con códigos?')) { borrarPrivadas(); toast('Contenido desbloqueado eliminado'); go('#/ajustes'); } },
+      }, 'Olvidar lo desbloqueado') : null),
     h('h2', 'Progreso'),
     h('div.row',
       h('button.btn', {

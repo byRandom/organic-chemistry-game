@@ -4,6 +4,7 @@ import { montarEditor } from './build.js';
 import { montarTest } from './quiz.js';
 import { montarQuirales, montarRS, montarAFischer } from './estereo.js';
 import { montarNewman, montarSilla } from './conformacion.js';
+import { montarReaccion, montarSintesis, montarEsquema } from './reaccion.js';
 
 const TIPOS = {
   construir: montarEditor,
@@ -16,6 +17,9 @@ const TIPOS = {
   fischer: montarAFischer,
   newman: montarNewman,
   silla: montarSilla,
+  reaccion: montarReaccion,
+  sintesis: montarSintesis,
+  esquema: montarEsquema,
 };
 
 export function montarPuzle(cont, nivel, ctx) {

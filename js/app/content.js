@@ -10,6 +10,40 @@ export async function cargarIndice() {
   return indice;
 }
 
+let pruebas = null;
+const CLAVE_PRIVADO = 'protocolo-kekule:privado';
+
+/** Pruebas desbloqueadas con un código (guardadas solo en este dispositivo). */
+export function pruebasPrivadas() {
+  try { return JSON.parse(localStorage.getItem(CLAVE_PRIVADO) || '[]'); } catch { return []; }
+}
+
+export function guardarPrivada(prueba) {
+  const lista = pruebasPrivadas().filter((p) => p.id !== prueba.id);
+  lista.push(prueba);
+  localStorage.setItem(CLAVE_PRIVADO, JSON.stringify(lista));
+}
+
+export function borrarPrivadas() { localStorage.removeItem(CLAVE_PRIVADO); }
+
+/** Prueba con todos los archivos cifrados; devuelve las pruebas que abre el código. */
+export async function canjearCodigo(codigo) {
+  const { descifrar } = await import('./cifrado.js');
+  const { archivos } = await (await fetch(BASE + 'privado/indice.json')).json();
+  const abiertas = [];
+  for (const a of archivos) {
+    const paquete = await (await fetch(BASE + 'privado/' + a)).json();
+    const prueba = await descifrar(paquete, codigo);
+    if (prueba) { guardarPrivada({ ...prueba, privada: true }); abiertas.push(prueba); }
+  }
+  return abiertas;
+}
+
+export async function cargarPruebas() {
+  if (!pruebas) pruebas = (await (await fetch(BASE + 'pruebas.json')).json()).pruebas;
+  return [...pruebas, ...pruebasPrivadas()];
+}
+
 export async function cargarMundo(id) {
   if (mundos.has(id)) return mundos.get(id);
   const idx = await cargarIndice();

@@ -1,12 +1,20 @@
 {
   "descripcion": "La estructura de la nave está hecha de anillos de carbono. Para repararla tendrás que entender por qué unos anillos están **tensos**, cómo se pliega el **ciclohexano** y dónde prefieren colocarse sus sustituyentes.",
   "intro": [
-    { "texto": "El **hangar de estructuras**. Aquí todo son anillos: cicloalcanos, {CnH2n}. Algunos aguantan cualquier cosa; otros están tan tensos que se abren con mirarlos." },
-    { "texto": "Si lo hacemos bien, aprenderás a sentarte en una **silla** de ciclohexano. Si lo hacemos mal, el hangar se doblará como un ciclopropano." }
+    {
+      "texto": "El **hangar de estructuras**. Aquí todo son anillos: cicloalcanos, {CnH2n}. Algunos aguantan cualquier cosa; otros están tan tensos que se abren con mirarlos."
+    },
+    {
+      "texto": "Si lo hacemos bien, aprenderás a sentarte en una **silla** de ciclohexano. Si lo hacemos mal, el hangar se doblará como un ciclopropano."
+    }
   ],
   "outro": [
-    { "texto": "Hangar **reparado**. Recuerdo de nuevo la tensión de anillo, las sillas y los policíclicos." },
-    { "texto": "Lo siguiente es el **laboratorio de espejos**. Allí las moléculas tienen gemelos que no son iguales a ellas. Inquietante, ¿verdad?" }
+    {
+      "texto": "Hangar **reparado**. Recuerdo de nuevo la tensión de anillo, las sillas y los policíclicos."
+    },
+    {
+      "texto": "Lo siguiente es el **laboratorio de espejos**. Allí las moléculas tienen gemelos que no son iguales a ellas. Inquietante, ¿verdad?"
+    }
   ],
   "fichas": {
     "cicloalcanos": {
@@ -45,11 +53,35 @@
       "id": "m3-01",
       "tipo": "construir",
       "titulo": "Cerrar el círculo",
-      "dialogo": [{ "texto": "Primer componente estructural: un anillo de **cinco** carbonos. Usa la herramienta de **anillos** (⬡) o cierra tú la cadena arrastrando de un extremo al otro." }],
+      "dialogo": [
+        {
+          "texto": "Primer componente estructural: un anillo de **cinco** carbonos. Usa la herramienta de **anillos** (⬡) o cierra tú la cadena arrastrando de un extremo al otro."
+        }
+      ],
       "enunciado": "Construye el **ciclopentano**, {C5H10}.",
-      "editor": { "elementos": ["C"], "anillos": [3, 4, 5, 6] },
-      "objetivo": { "formula": "C5H10", "smiles": ["C1CCCC1"], "errores": { "C=CCCC": "Eso es un **alqueno** (1-penteno): misma fórmula, pero no es un ciclo." } },
-      "pistas": ["Toca ⬡ y elige el pentágono; después toca el lienzo."],
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "objetivo": {
+        "formula": "C5H10",
+        "smiles": [
+          "C1CCCC1"
+        ],
+        "errores": {
+          "C=CCCC": "Eso es un **alqueno** (1-penteno): misma fórmula, pero no es un ciclo."
+        }
+      },
+      "pistas": [
+        "Toca ⬡ y elige el pentágono; después toca el lienzo."
+      ],
       "ficha": "cicloalcanos"
     },
     {
@@ -57,38 +89,84 @@
       "tipo": "construir",
       "titulo": "Viga reforzada",
       "enunciado": "Construye el **1-etil-3-metilciclohexano**.",
-      "editor": { "elementos": ["C"], "anillos": [3, 4, 5, 6] },
-      "objetivo": {
-        "formula": "C9H18", "smiles": ["CCC1CCCC(C)C1"],
-        "errores": { "CCC1CCC(C)CC1": "Eso es el 1-etil-**4**-metil.", "CCC1CCCCC1C": "Eso es el 1-etil-**2**-metil." }
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": [
+          3,
+          4,
+          5,
+          6
+        ]
       },
-      "pistas": ["Anillo de seis; etilo en un carbono y metilo en el carbono que está **a dos posiciones**."]
+      "objetivo": {
+        "formula": "C9H18",
+        "smiles": [
+          "CCC1CCCC(C)C1"
+        ],
+        "errores": {
+          "CCC1CCC(C)CC1": "Eso es el 1-etil-**4**-metil.",
+          "CCC1CCCCC1C": "Eso es el 1-etil-**2**-metil."
+        }
+      },
+      "pistas": [
+        "Anillo de seis; etilo en un carbono y metilo en el carbono que está **a dos posiciones**."
+      ]
     },
     {
       "id": "m3-03",
       "tipo": "test",
       "titulo": "Anillos bajo tensión",
-      "dialogo": [{ "texto": "Mis sensores miden el calor de combustión de cada anillo del hangar. Ayúdame a interpretar los datos." }],
+      "dialogo": [
+        {
+          "texto": "Mis sensores miden el calor de combustión de cada anillo del hangar. Ayúdame a interpretar los datos."
+        }
+      ],
       "enunciado": "Tensión de anillo en cicloalcanos.",
       "preguntas": [
         {
           "texto": "Según la Tabla 3.2 del libro, ¿qué cicloalcano tiene **tensión total nula**?",
-          "opciones": ["Ciclohexano", "Ciclopentano", "Ciclobutano", "Ciclopropano"], "correcta": 0,
+          "opciones": [
+            "Ciclohexano",
+            "Ciclopentano",
+            "Ciclobutano",
+            "Ciclopropano"
+          ],
+          "correcta": 0,
           "explicacion": "El **ciclohexano** (0 kcal/mol) adopta la silla, con ángulos casi tetraédricos y sin enlaces eclipsados."
         },
         {
           "texto": "El ciclopropano tiene 27,6 kcal/mol de tensión. ¿Qué tipo de tensión es la principal?",
-          "opciones": ["Angular: sus ángulos C–C–C son de 60°", "Solo estérica", "Ninguna, es plano y estable", "Solo torsional"], "correcta": 0,
+          "opciones": [
+            "Angular: sus ángulos C–C–C son de 60°",
+            "Solo estérica",
+            "Ninguna, es plano y estable",
+            "Solo torsional"
+          ],
+          "correcta": 0,
           "explicacion": "Es plano por fuerza: ángulos de **60°** en lugar de 109,5° (tensión **angular**), además de tener todos los H **eclipsados** (tensión torsional)."
         },
         {
           "texto": "¿Qué consecuencia química tiene la tensión del ciclopropano?",
-          "opciones": ["Da reacciones de apertura del anillo, por ejemplo con H₂/Pd forma propano", "Es inerte frente a todo", "Se convierte espontáneamente en ciclohexano", "Solo reacciona con agua"], "correcta": 0,
+          "opciones": [
+            "Da reacciones de apertura del anillo, por ejemplo con H₂/Pd forma propano",
+            "Es inerte frente a todo",
+            "Se convierte espontáneamente en ciclohexano",
+            "Solo reacciona con agua"
+          ],
+          "correcta": 0,
           "explicacion": "Sus enlaces C–C son más débiles: el anillo se **abre** con facilidad para liberar tensión."
         },
         {
           "texto": "¿Por qué el ciclobutano y el ciclopentano **no** son planos?",
-          "opciones": ["Se pliegan para reducir la tensión torsional (H eclipsados)", "Porque sus carbonos son sp²", "Porque tienen dobles enlaces", "Sí son planos"], "correcta": 0,
+          "opciones": [
+            "Se pliegan para reducir la tensión torsional (H eclipsados)",
+            "Porque sus carbonos son sp²",
+            "Porque tienen dobles enlaces",
+            "Sí son planos"
+          ],
+          "correcta": 0,
           "explicacion": "Al plegarse (ciclobutano «mariposa», ciclopentano «sobre») los H dejan de estar totalmente eclipsados, aunque el ángulo empeore un poco."
         }
       ],
@@ -99,12 +177,31 @@
       "tipo": "isomeros",
       "titulo": "Cinco anillos de C₅",
       "enunciado": "Encuentra los **cinco** cicloalcanos de fórmula {C5H10} (los alquenos no valen).",
-      "editor": { "elementos": ["C"], "anillos": [3, 4, 5] },
-      "objetivo": {
-        "formula": "C5H10", "total": 5, "soloCiclos": true,
-        "nombres": { "C1CCCC1": "ciclopentano", "CC1CCC1": "metilciclobutano", "CCC1CC1": "etilciclopropano", "CC1(C)CC1": "1,1-dimetilciclopropano", "CC1CC1C": "1,2-dimetilciclopropano" }
+      "editor": {
+        "elementos": [
+          "C"
+        ],
+        "anillos": [
+          3,
+          4,
+          5
+        ]
       },
-      "pistas": ["Anillos de 5, de 4 + 1 metilo, de 3 + 2 carbonos (como etilo, o como dos metilos en el mismo carbono o en carbonos distintos)."],
+      "objetivo": {
+        "formula": "C5H10",
+        "total": 5,
+        "soloCiclos": true,
+        "nombres": {
+          "C1CCCC1": "ciclopentano",
+          "CC1CCC1": "metilciclobutano",
+          "CCC1CC1": "etilciclopropano",
+          "CC1(C)CC1": "1,1-dimetilciclopropano",
+          "CC1CC1C": "1,2-dimetilciclopropano"
+        }
+      },
+      "pistas": [
+        "Anillos de 5, de 4 + 1 metilo, de 3 + 2 carbonos (como etilo, o como dos metilos en el mismo carbono o en carbonos distintos)."
+      ],
       "exito": "Además, el 1,2-dimetilciclopropano tiene isómeros **cis** y **trans**: es tu primer encuentro con la estereoisomería."
     },
     {
@@ -112,11 +209,20 @@
       "tipo": "silla",
       "titulo": "Sentarse bien",
       "dialogo": [
-        { "texto": "Esto es una **silla** de ciclohexano. Cada carbono tiene dos posiciones: **axial** (vertical) y **ecuatorial** (hacia fuera)." },
-        { "texto": "Coloca el metilo donde quieras y prueba a **girar la silla**. Te enseño la tensión para que descubras dónde está más cómodo." }
+        {
+          "texto": "Esto es una **silla** de ciclohexano. Cada carbono tiene dos posiciones: **axial** (vertical) y **ecuatorial** (hacia fuera)."
+        },
+        {
+          "texto": "Coloca el metilo donde quieras y prueba a **girar la silla**. Te enseño la tensión para que descubras dónde está más cómodo."
+        }
       ],
       "enunciado": "**Metilciclohexano**. Coloca el CH₃ en el carbono 1 y deja la silla **más estable**.",
-      "sustituyentes": [{ "carbono": 0, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "CH₃"
+        }
+      ],
       "objetivo": "estable",
       "mostrarEnergia": true,
       "ficha": "silla",
@@ -126,9 +232,18 @@
       "id": "m3-06",
       "tipo": "silla",
       "titulo": "La silla imposible",
-      "dialogo": [{ "texto": "Un ejercicio del libro: «Dibujar las dos sillas del terc-butilciclohexano. Una de las dos prácticamente no existe». Dibújame **esa**." }],
+      "dialogo": [
+        {
+          "texto": "Un ejercicio del libro: «Dibujar las dos sillas del terc-butilciclohexano. Una de las dos prácticamente no existe». Dibújame **esa**."
+        }
+      ],
       "enunciado": "**terc-Butilciclohexano**. Dibuja la silla que **prácticamente no existe** (la menos estable).",
-      "sustituyentes": [{ "carbono": 0, "texto": "C(CH₃)₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "C(CH₃)₃"
+        }
+      ],
       "objetivo": "inestable",
       "mostrarEnergia": true,
       "ficha": "monosustituidos",
@@ -139,11 +254,22 @@
       "tipo": "silla",
       "titulo": "cis-1,2: empate",
       "enunciado": "Dibuja el **cis-1,2-dimetilciclohexano** en una silla. Prueba a girarla: ¿cambia algo?",
-      "sustituyentes": [{ "carbono": 0, "texto": "CH₃" }, { "carbono": 1, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "CH₃"
+        },
+        {
+          "carbono": 1,
+          "texto": "CH₃"
+        }
+      ],
       "relacion": "cis",
       "objetivo": "estable",
       "mostrarEnergia": true,
-      "pistas": ["Cis: los dos en la misma cara. Fíjate en si el axial de cada carbono apunta hacia arriba o hacia abajo."],
+      "pistas": [
+        "Cis: los dos en la misma cara. Fíjate en si el axial de cada carbono apunta hacia arriba o hacia abajo."
+      ],
       "ficha": "disustituidos",
       "exito": "En el isómero **cis-1,2** siempre hay un metilo axial y otro ecuatorial: las dos sillas tienen la **misma** energía."
     },
@@ -152,7 +278,16 @@
       "tipo": "silla",
       "titulo": "trans-1,4",
       "enunciado": "Dibuja el **trans-1,4-dimetilciclohexano** en su silla **más estable**.",
-      "sustituyentes": [{ "carbono": 0, "texto": "CH₃" }, { "carbono": 3, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "CH₃"
+        },
+        {
+          "carbono": 3,
+          "texto": "CH₃"
+        }
+      ],
       "relacion": "trans",
       "objetivo": "estable",
       "exito": "**Diecuatorial**. En la otra silla los dos metilos serían axiales."
@@ -161,9 +296,22 @@
       "id": "m3-09",
       "tipo": "silla",
       "titulo": "cis-1,3 (examen 2023)",
-      "dialogo": [{ "texto": "Del examen de 2023: el equilibrio conformacional del **1,3-dimetilciclohexano**. Empecemos por el isómero cis." }],
+      "dialogo": [
+        {
+          "texto": "Del examen de 2023: el equilibrio conformacional del **1,3-dimetilciclohexano**. Empecemos por el isómero cis."
+        }
+      ],
       "enunciado": "Dibuja el **cis-1,3-dimetilciclohexano** en su silla **más estable**.",
-      "sustituyentes": [{ "carbono": 0, "texto": "CH₃" }, { "carbono": 2, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "CH₃"
+        },
+        {
+          "carbono": 2,
+          "texto": "CH₃"
+        }
+      ],
       "relacion": "cis",
       "objetivo": "estable",
       "exito": "Cis-1,3 → **diecuatorial**. La silla diaxial es muy inestable: además de los H, los dos metilos axiales chocan entre sí."
@@ -172,9 +320,22 @@
       "id": "m3-10",
       "tipo": "silla",
       "titulo": "Examen 2022: isopropilo y metilo",
-      "dialogo": [{ "texto": "Del examen de 2022: «¿Qué isómero del **1-isopropil-4-metilciclohexano** es más estable?». Dibuja el **trans** en su mejor silla y lo comparamos." }],
+      "dialogo": [
+        {
+          "texto": "Del examen de 2022: «¿Qué isómero del **1-isopropil-4-metilciclohexano** es más estable?». Dibuja el **trans** en su mejor silla y lo comparamos."
+        }
+      ],
       "enunciado": "Dibuja el **trans-1-isopropil-4-metilciclohexano** en su silla **más estable**.",
-      "sustituyentes": [{ "carbono": 0, "texto": "CH(CH₃)₂" }, { "carbono": 3, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "CH(CH₃)₂"
+        },
+        {
+          "carbono": 3,
+          "texto": "CH₃"
+        }
+      ],
       "relacion": "trans",
       "objetivo": "estable",
       "exito": "Trans-1,4 → **los dos ecuatoriales**, sin interacciones 1,3-diaxiales. El cis siempre tiene uno axial: **el trans es más estable**."
@@ -184,41 +345,92 @@
       "tipo": "silla",
       "titulo": "Examen 2023: el ácido",
       "enunciado": "Dibuja la silla **más estable** del **ácido cis-4-metilciclohexano-1-carboxílico**.",
-      "sustituyentes": [{ "carbono": 0, "texto": "COOH" }, { "carbono": 3, "texto": "CH₃" }],
+      "sustituyentes": [
+        {
+          "carbono": 0,
+          "texto": "COOH"
+        },
+        {
+          "carbono": 3,
+          "texto": "CH₃"
+        }
+      ],
       "relacion": "cis",
       "objetivo": "estable",
-      "pistas": ["Cis-1,4: uno tiene que ser axial. Valores aproximados: CH₃ 1,7 y COOH 1,4 kcal/mol."],
+      "pistas": [
+        "Cis-1,4: uno tiene que ser axial. Valores aproximados: CH₃ 1,7 y COOH 1,4 kcal/mol."
+      ],
       "exito": "Uno axial y otro ecuatorial: queda **ecuatorial el más voluminoso** (CH₃, 1,7 kcal/mol, frente a COOH, ≈1,4)."
     },
     {
       "id": "m3-12",
       "tipo": "test",
       "titulo": "¿cis o trans?",
-      "enunciado": "Identifica el isómero representado (PEC-1, pregunta 3).",
-      "pistas": ["Cuña = hacia ti; raya = hacia atrás. Mismo tipo de enlace en los dos sustituyentes → misma cara."],
+      "enunciado": "Identifica el isómero representado.",
+      "pistas": [
+        "Cuña = hacia ti; raya = hacia atrás. Mismo tipo de enlace en los dos sustituyentes → misma cara."
+      ],
       "preguntas": [
         {
           "texto": "¿Qué isómero del 1,2-dimetilciclohexano es?",
-          "repr": { "smiles": "C[C@@H]1CCCC[C@@H]1C" }, "esMeso": true,
-          "opciones": ["cis", "trans"], "correcta": 0,
+          "repr": {
+            "smiles": "C[C@@H]1CCCC[C@@H]1C"
+          },
+          "esMeso": true,
+          "opciones": [
+            "cis",
+            "trans"
+          ],
+          "correcta": 0,
           "explicacion": "Los dos metilos están en la **misma cara**: **cis**. Además es una forma *meso*: tiene dos centros quirales (R,S) y un plano de simetría."
         },
         {
           "texto": "¿Y este?",
-          "repr": { "smiles": "C[C@@H]1CCCC[C@H]1C" }, "esMeso": false,
-          "opciones": ["cis", "trans"], "correcta": 1,
+          "repr": {
+            "smiles": "C[C@@H]1CCCC[C@H]1C"
+          },
+          "esMeso": false,
+          "opciones": [
+            "cis",
+            "trans"
+          ],
+          "correcta": 1,
           "explicacion": "Un metilo hacia arriba y otro hacia abajo: **trans**. Este sí es quiral (R,R o S,S)."
         },
         {
           "texto": "¿Qué isómero del 1,3-dimetilciclohexano es?",
-          "repr": { "smiles": "C[C@@H]1CCC[C@H](C)C1" }, "esMeso": true,
-          "opciones": ["cis", "trans"], "correcta": 0,
+          "repr": {
+            "smiles": "C[C@@H]1CCC[C@H](C)C1"
+          },
+          "esMeso": true,
+          "opciones": [
+            "cis",
+            "trans"
+          ],
+          "correcta": 0,
           "explicacion": "Misma cara: **cis** (también *meso*)."
         },
         {
           "texto": "En esta silla de 1,2-dimetilciclohexano, ¿qué isómero hay?",
-          "silla": { "sustituyentes": [{ "carbono": 0, "texto": "CH₃", "pos": "eq" }, { "carbono": 1, "texto": "CH₃", "pos": "eq" }] },
-          "opciones": ["cis", "trans"], "correcta": 1,
+          "silla": {
+            "sustituyentes": [
+              {
+                "carbono": 0,
+                "texto": "CH₃",
+                "pos": "eq"
+              },
+              {
+                "carbono": 1,
+                "texto": "CH₃",
+                "pos": "eq"
+              }
+            ]
+          },
+          "opciones": [
+            "cis",
+            "trans"
+          ],
+          "correcta": 1,
           "explicacion": "En carbonos contiguos, dos ecuatoriales apuntan uno algo hacia arriba y otro algo hacia abajo: **trans** (diecuatorial)."
         }
       ]
@@ -226,13 +438,31 @@
     {
       "id": "m3-13",
       "tipo": "construir",
-      "titulo": "Puentes (PEC-1)",
-      "dialogo": [{ "texto": "Las vigas maestras del hangar son moléculas **bicíclicas**. La PEC-1 pide formular el **1-cloro-7,7-dimetilbiciclo[2.2.1]heptano**." }],
-      "enunciado": "Construye el **1-cloro-7,7-dimetilbiciclo[2.2.1]heptano**.",
-      "editor": { "elementos": ["C", "Cl"], "anillos": [5, 6] },
-      "objetivo": { "formula": "C9H15Cl", "smiles": ["ClC12CCC(CC1)C2(C)C"] },
+      "titulo": "Puentes",
+      "dialogo": [
+        {
+          "texto": "Las vigas maestras del hangar son moléculas **bicíclicas**, como el **2-cloro-7,7-dimetilbiciclo[2.2.1]heptano**."
+        }
+      ],
+      "enunciado": "Construye el **2-cloro-7,7-dimetilbiciclo[2.2.1]heptano**.",
+      "editor": {
+        "elementos": [
+          "C",
+          "Cl"
+        ],
+        "anillos": [
+          5,
+          6
+        ]
+      },
+      "objetivo": {
+        "formula": "C9H15Cl",
+        "smiles": [
+          "ClC1CC2CCC1C2(C)C"
+        ]
+      },
       "pistas": [
-        "Biciclo[2.2.1]: dos cabezas de puente (C1 y C4) unidas por puentes de 2, 2 y 1 carbonos. El C7 es el puente de un solo carbono.",
+        "Biciclo[2.2.1]: dos cabezas de puente (C1 y C4) unidas por puentes de 2, 2 y 1 carbonos. El C7 es el puente de un solo carbono; el C2 está junto a la cabeza de puente C1.",
         "Dibuja un ciclohexano y une dos carbonos opuestos (C1 y C4) a través de un carbono extra (el C7)."
       ],
       "ficha": "policiclicos"
@@ -244,18 +474,39 @@
       "enunciado": "Nomenclatura de policíclicos.",
       "preguntas": [
         {
-          "texto": "¿Cómo se llama la decalina?", "smiles": "C1CCC2CCCCC2C1",
-          "opciones": ["Biciclo[4.4.0]decano", "Biciclo[5.5.0]decano", "Espiro[4.5]decano", "Biciclo[4.4.2]decano"], "correcta": 0,
+          "texto": "¿Cómo se llama la decalina?",
+          "smiles": "C1CCC2CCCCC2C1",
+          "opciones": [
+            "Biciclo[4.4.0]decano",
+            "Biciclo[5.5.0]decano",
+            "Espiro[4.5]decano",
+            "Biciclo[4.4.2]decano"
+          ],
+          "correcta": 0,
           "explicacion": "Dos anillos de 6 fusionados: puentes de **4, 4 y 0** carbonos entre las cabezas de puente; 10 C en total."
         },
         {
-          "texto": "PEC-1. ¿Cómo se llama?", "smiles": "CC12CCCCC1(C)CCC2",
-          "opciones": ["1,6-Dimetilbiciclo[4.3.0]nonano", "1,5-Dimetilbiciclo[4.3.0]nonano", "1,6-Dimetilbiciclo[4.4.0]nonano", "Dimetilhidrindano"], "correcta": 0,
-          "explicacion": "Seis y cinco fusionados: puentes de 4, 3 y 0 → **biciclo[4.3.0]nonano**. Numerando: C1 (cabeza), C2–C5 (puente largo), **C6** (la otra cabeza)… Metilos en las dos cabezas: **1,6**."
+          "texto": "¿Cómo se llama?",
+          "smiles": "CC12CCCCC1CCC2",
+          "opciones": [
+            "1-Metilbiciclo[4.3.0]nonano",
+            "6-Metilbiciclo[4.3.0]nonano",
+            "1-Metilbiciclo[4.4.0]nonano",
+            "Metilhidrindano"
+          ],
+          "correcta": 0,
+          "explicacion": "Seis y cinco fusionados: puentes de 4, 3 y 0 → **biciclo[4.3.0]nonano**. El metilo está en una cabeza de puente, que se numera como **C1**."
         },
         {
-          "texto": "¿Cómo se llama?", "smiles": "C1CCC2(CC1)CCCC2",
-          "opciones": ["Espiro[4.5]decano", "Biciclo[4.4.0]decano", "Espiro[5.4]decano", "Biciclo[5.4.0]decano"], "correcta": 0,
+          "texto": "¿Cómo se llama?",
+          "smiles": "C1CCC2(CC1)CCCC2",
+          "opciones": [
+            "Espiro[4.5]decano",
+            "Biciclo[4.4.0]decano",
+            "Espiro[5.4]decano",
+            "Biciclo[5.4.0]decano"
+          ],
+          "correcta": 0,
           "explicacion": "Los dos anillos comparten **un solo carbono** (espiro). Se citan los puentes de **menor a mayor**: espiro[**4.5**]decano."
         }
       ]
@@ -266,21 +517,49 @@
       "jefe": true,
       "titulo": "Emergencia: la viga maestra",
       "dialogo": [
-        { "quien": "sistema", "texto": "⚠ ALERTA · Deformación en la viga maestra del hangar · Análisis estructural requerido" },
-        { "texto": "La viga maestra se está deformando. Analízala antes de que el hangar se convierta en un ciclopropano gigante." }
+        {
+          "quien": "sistema",
+          "texto": "⚠ ALERTA · Deformación en la viga maestra del hangar · Análisis estructural requerido"
+        },
+        {
+          "texto": "La viga maestra se está deformando. Analízala antes de que el hangar se convierta en un ciclopropano gigante."
+        }
       ],
       "enunciado": "Supera las **tres fases** de la emergencia.",
       "pasos": [
         {
           "tipo": "construir",
-          "enunciado": "**Fase 1** (PEC-1). Construye el **2-isopropil-7,7-dimetilbiciclo[3.2.0]heptano**.",
-          "editor": { "elementos": ["C"], "anillos": [4, 5, 6] },
-          "objetivo": { "formula": "C12H22", "smiles": ["C12C(C(C)C)CCC1CC2(C)C"] }
+          "enunciado": "**Fase 1.** Construye el **2-etil-6,6-dimetilbiciclo[3.2.0]heptano**.",
+          "editor": {
+            "elementos": [
+              "C"
+            ],
+            "anillos": [
+              4,
+              5,
+              6
+            ]
+          },
+          "objetivo": {
+            "formula": "C11H20",
+            "smiles": [
+              "C12C(CC)CCC1C(C)(C)C2"
+            ]
+          }
         },
         {
           "tipo": "silla",
           "enunciado": "**Fase 2** (examen 2023). Dibuja la silla **más estable** del **trans-1-amino-3-terc-butilciclohexano**.",
-          "sustituyentes": [{ "carbono": 0, "texto": "NH₂" }, { "carbono": 2, "texto": "C(CH₃)₃" }],
+          "sustituyentes": [
+            {
+              "carbono": 0,
+              "texto": "NH₂"
+            },
+            {
+              "carbono": 2,
+              "texto": "C(CH₃)₃"
+            }
+          ],
           "relacion": "trans",
           "objetivo": "estable"
         },
@@ -290,7 +569,13 @@
           "preguntas": [
             {
               "texto": "¿Qué isómero del 1,3-dimetilciclohexano es **más estable**?",
-              "opciones": ["El cis, porque puede tener los dos metilos ecuatoriales", "El trans, porque siempre tiene un metilo ecuatorial", "Los dos son igual de estables", "Ninguno, prefieren el bote"], "correcta": 0,
+              "opciones": [
+                "El cis, porque puede tener los dos metilos ecuatoriales",
+                "El trans, porque siempre tiene un metilo ecuatorial",
+                "Los dos son igual de estables",
+                "Ninguno, prefieren el bote"
+              ],
+              "correcta": 0,
               "explicacion": "**cis-1,3** puede ser diecuatorial; el trans-1,3 siempre tiene un metilo axial."
             }
           ]

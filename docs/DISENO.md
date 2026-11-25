@@ -153,7 +153,7 @@ Cada tipo se corresponde con un tipo de pregunta de examen.
 
 ### 4.1 Construir 🧱 — *«Formular o nombrar»*
 El juego da un **nombre IUPAC** o una descripción, y tú **dibujas la molécula** en el editor. También existe la variante inversa: el juego muestra una molécula y eliges o escribes su nombre.
-- **Variante «caza de isómeros»:** encuentra los N isómeros de una fórmula, por ejemplo C₄H₉Br (4), C₅H₁₁Br (8) o C₄H₁₀O (7). Un marcador muestra cuántos llevas.
+- **Variante «caza de isómeros»:** encuentra los N isómeros de una fórmula, por ejemplo C₄H₉Br (4), C₄H₈Cl₂ (9) o C₄H₁₀O (7). Un marcador muestra cuántos llevas.
 - **Validación:** se comparan las estructuras con SMILES canónico (RDKit). Si el puzle pide estereoquímica, se compara también.
 
 ### 4.2 Estereo 🪞 — *«Determinar la configuración absoluta»*
@@ -227,6 +227,14 @@ El mecanismo se valida contra una secuencia de pasos elementales definida en el 
 
 Además hay **jefes de construcción**: moléculas grandes que se dibujan y analizan, como colesterol (8 centros quirales), morfina, testosterona o taxol. La tarea es construirlas, contar sus centros quirales, asignar R/S y encontrar la silla más estable de los anillos.
 
+### Pruebas de evaluación (en la bitácora) ✅
+- Pestaña **«Pruebas de evaluación»** dentro de la bitácora, con un **simulacro por PEC**.
+- Cada simulacro tiene las **mismas clases de preguntas** que la PEC del curso, cada una con **varias versiones con otras moléculas**. En cada intento se elige una versión al azar de cada pregunta y se barajan.
+- Sin pistas; nota sobre 10 (pregunta completa a la primera, la mitad con un fallo), desglose por tema y enlaces a las secciones que conviene repasar. Se guarda la mejor nota.
+- Por la misma razón, los niveles de la historia usan **moléculas análogas** a las de las PEC del curso en vigor: el repositorio es público y no debe contener las PEC resueltas.
+- *Simulacro PEC-1*: disponible (Fase 3). *Simulacro PEC-2*: cuando estén los Mundos 7-11.
+- **Ventana de códigos** (*Ajustes → Códigos*): las PEC reales del curso, **ya entregadas**, se guardan en el repositorio **cifradas** (AES-256-GCM, clave derivada del código con PBKDF2-SHA256, 600 000 iteraciones). Sin el código son ilegibles; el código no está en ningún archivo. Al canjearlo, la PEC se descifra y queda guardada solo en ese dispositivo, en *Bitácora → Pruebas de evaluación*, con sus apartados **en el orden original**. La PEC-2 se añadirá cuando esté entregada.
+
 ### Modo Examen
 - Genera **5 preguntas** al azar (una por cada tipo de pregunta de examen), ponderadas según las horas de la guía.
 - **Reloj de 2 horas**, sin pistas y sin acceso al reactivario («material permitido: ninguno»).
@@ -245,6 +253,7 @@ Además hay **jefes de construcción**: moléculas grandes que se dibujan y anal
   - Deshacer y rehacer. Fórmula molecular en directo y aviso de valencias imposibles (átomo en rojo).
   - Atajos de teclado en el ordenador.
 - **Pantallas:** Inicio → Mapa de la nave (mundos) → Mundo (lista de niveles) → Nivel → Resultado. A esto se suman el Reactivario, el Repaso diario, el modo Examen y los Ajustes.
+- **Lienzo de moléculas con paleta oscura** (predeterminada): moléculas, proyecciones, sillas y esquemas se dibujan sobre fondo oscuro, con trazos claros y colores de elementos más vivos, para no deslumbrar. En *Ajustes* se puede elegir el **lienzo claro** (como el libro), útil para capturas o para estudiar con luz de día.
 - **Estilo visual:** tema oscuro con tema claro opcional. El código de colores es el del libro: **nucleófilos en rojo, electrófilos en azul, radicales y grupos salientes en verde**, que la guía pide memorizar.
 - **Accesibilidad:** contraste AA, sin depender solo del color (iconos y texto) y tamaños táctiles ≥ 44 px.
 
@@ -354,7 +363,8 @@ Cada fase termina con algo **jugable y publicado** en GitHub Pages. Así puedes 
 ### Fase 3 · Mundos 5-6 (SN y eliminación · completa la PEC-1)
 - Motor con **estereoquímica dinámica**: SN2 con inversión, SN1 con racemización, E2 antiperiplanar y **transposiciones**.
 - Nuevos tipos de puzle: **Reacción**, **Esquema** y **Síntesis**, con su mecánica de programa paso a paso.
-- Simulacro de la **PEC-1**.
+- **Paleta oscura** para el lienzo de moléculas (petición durante la Fase 3) y opción de lienzo claro en Ajustes.
+- El simulacro de la **PEC-1** pasa a la Fase 6, junto con el modo Examen, que comparte su mecánica.
 - ✅ **Terminada cuando:** los casos de la PEC-1 y de los exámenes de los temas 5-6 se resuelven correctamente en el motor.
 
 ### Fase 4 · Mundos 7-8 (alcoholes, éteres y epóxidos)
@@ -423,3 +433,4 @@ Cada fase termina con algo **jugable y publicado** en GitHub Pages. Así puedes 
 | 25/11/2026 | 1 | Núcleo químico (grafo, valencias, fórmula, SMILES, RDKit), editor táctil (átomos, enlaces, anillos, fusión, cargas, deshacer, pellizcar para hacer zoom), puzles *construir / descubrir / isómeros / test / secuencia*, historia (prólogo y diálogos), bitácora, laboratorio libre, ajustes y exportar/importar el progreso |
 | 25/11/2026 | 2 (inicio) | **Mundo 1 completo**: 14 niveles y un jefe de 3 fases, con 9 fichas de bitácora |
 | 25/11/2026 | 2 | **Mundos 2, 3 y 4 completos** (alcanos, cicloalcanos, estereoisomería): 47 niveles nuevos (3 de ellos jefes) y 20 fichas. Motor de estereoquímica (R/S verificado con RDKit y con casos de libro: D-gliceraldehído y L-alanina), proyecciones de **Fischer, Newman, caballete y silla**, y 5 tipos de puzle nuevos: *newman*, *silla*, *quirales*, *rs* y *fischer*. Energías conformacionales con los valores del texto base (etano 3; butano gauche 0,9 y anticlinal 3,8; Tabla 3.3) |
+| 25/11/2026 | 3 | **Mundos 5 y 6 completos** (sustitución y eliminación): 31 niveles (2 de ellos jefes) y 12 fichas. **Motor de reacciones** con la Tabla 6.1 del libro: SN2 con inversión, SN1 con racemización y transposiciones de hidruro y de metilo, E2 antiperiplanar (E/Z estereoespecífico y trans-diaxial en ciclohexanos), E1, Saytzeff y Hofmann; verificado con los ejemplos del texto base, la PEC-1 y los exámenes. Puzles **reacción**, **esquema** y **síntesis** (programa de reactivos ejecutado paso a paso). **Lienzo de moléculas oscuro** |
